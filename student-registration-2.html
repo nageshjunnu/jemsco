@@ -1133,9 +1133,7 @@
 
       <script>
 			$(document).ready(function() {
-				$('#stuent-registration').submit(function(e) {               
-
-
+				$('#stuent-registration').submit(function(e) {   
 					e.preventDefault();
 					$.ajax({
 						type: 'POST',
@@ -1144,7 +1142,7 @@
 						dataType: 'json',
 						success: function(response) {
 							if (response.success) {
-								$("#stuent-registration")[0].reset();
+								//$("#stuent-registration")[0].reset();
 								const Toast = Swal.mixin({
 									toast: true,
 									position: 'top-end',
