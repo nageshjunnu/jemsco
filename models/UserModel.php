@@ -104,7 +104,7 @@ class UserModel {
             $date=date("Y/m/d h:i:sa");
             
 
-            $query = "INSERT INTO student (student_name, father_name, mother_name, class, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile,alrernate_mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+            $query = "INSERT INTO student (student_name, father_name, mother_name, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile,alrernate_mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
            
             $stmt = $connection->prepare($query);
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
