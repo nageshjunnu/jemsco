@@ -1,3 +1,25 @@
+<?php
+session_start();
+require_once '../models/UserModel.php';
+
+
+    if (!isset($_SESSION['email'])) {
+        header('Location: ../student-registration.html'); // Redirect to the login page if not logged in
+        exit();
+    }
+    if (isset($_SESSION['email'])) {
+      $email = $_SESSION['email'];
+       // echo json_encode(['id' => $username]);
+    } else {
+       // echo json_encode(['id' => null]);
+    }
+    //  echo $email;
+
+	$userModel = new UserModel();
+	$user = $userModel->getStudentByEmail($_SESSION['email']);
+	// print_r($user["id"]);
+	
+?>
 
 <!DOCTYPE html>
 <html>
