@@ -4,7 +4,7 @@ require_once '../models/UserModel.php';
 
 
     if (!isset($_SESSION['email'])) {
-        header('Location: student-registration.html'); // Redirect to the login page if not logged in
+        header('Location: ../student-registration.html'); // Redirect to the login page if not logged in
         exit();
     }
     if (isset($_SESSION['email'])) {
@@ -53,6 +53,35 @@ require_once '../models/UserModel.php';
                     z-index: 99999;
                     position: relative;
     }
+	a.button--primary {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    /* border-radius: 50px; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* color: #fff; */
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: 3px;
+    /* outline: 0; */
+    padding: 1em 1.5em;
+    /* position: relative; */
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    /* transition: opacity .3s ease; */
+    /* white-space: nowrap; */
+}
+
+a.button--primary, body input[type=button], input[type=submit], input[type=submit].primary {
+    background: #1babe2;
+}
         </style>
 
 
@@ -175,7 +204,7 @@ require_once '../models/UserModel.php';
 
             <!-- Razorpay payment button -->
             <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-            <button type="button" class="btn btn-lg btn-primary" id="razorpay-button" onclick="pay_now()">Pay Now</button>
+            <button type="button" class="btn btn-lg btn-primary button--primary" id="razorpay-button" onclick="pay_now()">Pay Now</button>
         </form>
 
         <div id="payment-response"></div>
@@ -393,6 +422,7 @@ require_once '../models/UserModel.php';
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
+	
 
   function pay_now(){
         var studentId = <?php echo $user["id"]; ?>;
@@ -465,7 +495,14 @@ require_once '../models/UserModel.php';
 
 
 </script>
+
+<script>
+	$(document).ready(function(){
+		var stored = localStorage.getItem("payment-data");
+		console.log(stored)
+	})
 </script>
+
 		<!-- SCRIPTS : begin -->
 		<script src="../library/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="../library/js/third-party.js" type="text/javascript"></script>

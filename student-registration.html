@@ -693,7 +693,7 @@
                               <div class="row">
                                  <div class="col-md-12">
                                     <h2 style="text-align: center; padding-top: 15px;"> Total Amount: <span class="recalculate-text" id="demo1"></span></h2>
-                                    <input type = "hidden" value="0.00" id="class_price" />
+                                    <input type = "hidden" value="0.00" name="total_price" id="class_price" />
                                     <input type="hidden" name ="classes" value="" id="arrayInput">
                                  </div>
                               </div>
@@ -1135,6 +1135,20 @@
 			$(document).ready(function() {
 				$('#stuent-registration').submit(function(e) {   
 					e.preventDefault();
+
+					var data = $("#stuent-registration").serialize().split("&");
+					console.log(data);
+					var obj={};
+					for(var key in data)
+					{
+						console.log(data[key]);
+						obj[data[key].split("=")[0]] = data[key].split("=")[1];
+					}
+				
+					console.log(obj);
+
+					localStorage.setItem('payment-data', JSON.stringify(obj));
+
 					$.ajax({
 						type: 'POST',
 						url: 'controllers/AuthController.php',
