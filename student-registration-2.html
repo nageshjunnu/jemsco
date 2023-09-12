@@ -571,7 +571,7 @@
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #2e73b4;" class="bottom-arrow bottom-arrow1" >
                                           <label class="optiondata">Option 1
-                                          <input type="checkbox" name="checkbox" value="354">
+                                          <input type="checkbox" name="checkbox" class="cso" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CSO</div>
@@ -584,7 +584,7 @@
                                     <div class="text-center option-boxs" id="second" >
                                        <div style="background-color: #ffc000;" class="bottom-arrow bottom-arrow2">
                                           <label class="optiondata">Option 2
-                                          <input type="checkbox" name="checkbox" value="354" >
+                                          <input type="checkbox" name="checkbox" class="ceo" value="354" >
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CEO</div>
@@ -597,7 +597,7 @@
                                     <div class="text-center option-boxs" id="three">
                                        <div style="background-color: #a9d08d;" class="bottom-arrow bottom-arrow3">
                                           <label class="optiondata">Option 3
-                                          <input type="checkbox" name="checkbox" value="354">
+                                          <input type="checkbox" name="checkbox" class="cmo" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CMO</div>
@@ -612,7 +612,7 @@
                                     <div class="text-center option-boxs">
                                        <div style="background-color: #fed966;"class="bottom-arrow bottom-arrow4">
                                           <label class="optiondata">Option 4
-                                          <input type="checkbox" name="checkbox" value="354">
+                                          <input type="checkbox" name="checkbox" class="cpo" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CPO</div>
@@ -625,7 +625,7 @@
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #7030a0;"class="bottom-arrow bottom-arrow5">
                                           <label class="optiondata">Option 5
-                                          <input type="checkbox"  name="checkbox" value="354" >
+                                          <input type="checkbox"  name="checkbox" class="cco" value="354" >
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CCO</div>
@@ -638,7 +638,7 @@
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #c75811;"class="bottom-arrow bottom-arrow6">
                                           <label class="optiondata">Option 6
-                                          <input type="checkbox"  name="checkbox" value="354">
+                                          <input type="checkbox"  name="checkbox" class="cmpc" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CMPC</div>
@@ -651,7 +651,7 @@
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #aa7941;"class="bottom-arrow bottom-arrow7">
                                           <label class="optiondata">Option 7
-                                          <input type="checkbox"  name="checkbox" value="354">
+                                          <input type="checkbox"  name="checkbox" class="cbpc" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CBPC</div>
@@ -664,7 +664,7 @@
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #d434d4;" class="bottom-arrow bottom-arrow8">
                                           <label class="optiondata">Option 8
-                                          <input type="checkbox"  name="checkbox" value="354">
+                                          <input type="checkbox"  name="checkbox" class="cbio" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CBIO</div>
@@ -677,7 +677,7 @@
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #01e1e3;" class="bottom-arrow bottom-arrow9">
                                           <label class="optiondata">Option 9
-                                          <input type="checkbox"  name="checkbox" value="354">
+                                          <input type="checkbox"  name="checkbox" class="ccso" value="354">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CCSO</div>
@@ -694,6 +694,7 @@
                                  <div class="col-md-12">
                                     <h2 style="text-align: center; padding-top: 15px;"> Total Amount: <span class="recalculate-text" id="demo1"></span></h2>
                                     <input type = "hidden" value="0.00" id="class_price" />
+                                    <input type="hidden" name ="classes[]" value="" id="arrayInput">
                                  </div>
                               </div>
                               <div class="row">
@@ -1052,16 +1053,22 @@
          currency: 'INR'
           });
           
-          
+          var values = [];
           checkboxContainer.addEventListener('change', e => {
-          
+         
+
          if (e.target.tagName == "INPUT") {
            const floatValue = parseFloat(e.target.value);
            if (e.target.checked) {
+            console.log(e.target.className);
+            values.push(e.target.className);
          	total += floatValue;
            } else {
          	total -= floatValue;
+            values = values.filter(x => x != e.target.className);
            }
+           console.log(values);
+           $("#arrayInput").val(values)
          }
           
          // recalculateText.innerHTML = formatter.format(total);
