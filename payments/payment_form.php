@@ -159,7 +159,13 @@ button:hover{
                     z-index: 99999;
                     position: relative;
     }
-	
+	.description ul {
+    text-align: left;
+}
+.description ul li {
+    /* text-align: left; */
+    list-style: none;
+}
         </style>
 
 
