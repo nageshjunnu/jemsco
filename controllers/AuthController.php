@@ -55,7 +55,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $student_name = $_POST['student_name'];
             $father_name = $_POST['father_name'];
             $mother_name = $father_name;
-            $class = $_POST['class'];
+            // $class = $_POST['class'];
             $address = $_POST['address'];
             $city = $_POST['city'];
             $district = $_POST['district'];
@@ -97,7 +97,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             
             if($userAlready == "")
             {
-                if ($userModel->createStudent($student_name, $father_name, $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
+                if ($userModel->createStudent($student_name, $father_name, $mother_name, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
                     session_start();
                     $_SESSION['email'] = $email;
                     echo json_encode(['success' => true]);
