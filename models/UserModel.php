@@ -119,7 +119,6 @@ class UserModel {
             }
         }
          catch (PDOException $e) {
-                // return "false";
                 die("Database error: " . $e->getMessage());
             }
     }
