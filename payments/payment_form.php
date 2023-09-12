@@ -1,25 +1,4 @@
-<?php
-session_start();
-require_once '../models/UserModel.php';
 
-
-    if (!isset($_SESSION['email'])) {
-        header('Location: ../student-registration.html'); // Redirect to the login page if not logged in
-        exit();
-    }
-    if (isset($_SESSION['email'])) {
-      $email = $_SESSION['email'];
-       // echo json_encode(['id' => $username]);
-    } else {
-       // echo json_encode(['id' => null]);
-    }
-    //  echo $email;
-
-	$userModel = new UserModel();
-	$user = $userModel->getStudentByEmail($_SESSION['email']);
-	// print_r($user["id"]);
-	
-?>
 <!DOCTYPE html>
 <html>
 	
@@ -45,7 +24,134 @@ require_once '../models/UserModel.php';
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <style>
-            
+			
+:root{
+    --pinkish-red: #C35A74;
+    --medium-blue: #307BAA;
+    --greenish-blue: #53BAB5;
+    --bright-orange: #FF7445;
+    --white-smoke: #F5F5F4;
+    --white: #FFF;
+    --dark-gray: #7D7C7C;
+    --black: #000;
+}
+
+
+
+.content {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* width: 1200px; */
+    margin: 100px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    /* height: 586px; */
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 1;
+    margin-right: 10px;
+    background: var(--white);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
+}
+
+.title{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    color: var(--white-smoke);
+}
+
+.basic .title{
+    background: var(--pinkish-red);
+}
+
+.standard .title{
+    background: var(--medium-blue);
+}
+
+.business .title{
+    background: var(--greenish-blue);
+}
+
+.view{
+    display: block;
+    width: 100%;
+    padding: 30px 0 20px;
+
+    background: var(--white-smoke);
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+.icon img{
+    width: 100px;
+}
+
+.cost {
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10px;
+    display: grid;
+}
+
+.amount{
+    font-size: 2.8em;
+    font-weight: bolder;
+}
+
+.detail{
+    margin: auto 0 auto 5px;
+    width: 70px;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 15px;
+    color: #7D7C7C;
+}
+
+.description{
+    margin: 30px auto;
+    /*font-size: 0.8em;
+    color: #7D7C7C;*/
+}
+
+
+.button{
+    margin: 0 auto 30px;
+}
+
+button{
+    height: 40px;
+    width: 250px;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #7D7C7C;
+    border: 2px solid var(--dark-gray);
+    border-radius: 50px;
+
+    background: transparent;
+}
+
+button:hover{
+    color: var(--white-smoke);
+    transition: 0.5s;
+    border: none;
+
+    background: var(--bright-orange);
+}
+
             form#payment-form {
                     text-align: center;
                     font-size: 21px;
@@ -53,35 +159,7 @@ require_once '../models/UserModel.php';
                     z-index: 99999;
                     position: relative;
     }
-	a.button--primary {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    /* border-radius: 50px; */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    /* color: #fff; */
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 800;
-    letter-spacing: 3px;
-    /* outline: 0; */
-    padding: 1em 1.5em;
-    /* position: relative; */
-    text-decoration: none;
-    /* text-transform: uppercase; */
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    /* transition: opacity .3s ease; */
-    /* white-space: nowrap; */
-}
-
-a.button--primary, body input[type=button], input[type=submit], input[type=submit].primary {
-    background: #1babe2;
-}
+	
         </style>
 
 
@@ -189,7 +267,92 @@ a.button--primary, body input[type=button], input[type=submit], input[type=submi
 			</div>
 		</header>
 		<!-- HEADER : end -->
+		<section>
+        <div class="content">
 
+            <div class="basic box">
+                <h2 class="title">Basic</h2>
+                <div class="view">
+                    <div class="icon">
+                        <img src="https://i.postimg.cc/2jcfMcf4/hot-air-balloon.png" alt="hot-air-balloon">
+                    </div>
+                    <div class="cost">
+                        <p class="amount">$09</p>
+                        <p class="detail">per student per month</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Harum, beatae laudantium.</li>
+                        <li>Odit, fugit saepe.</li>
+                        <li>Harum, veniam suscipit!</li>
+                        <li>A, aut veritatis!</li>
+                        <li>Aliquid, quasi repellat!</li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <button type="submit" >START FREE 7 DAYS TRIAL</button>
+                </div>
+            </div>
+    
+            <div class="standard box">
+                <h2 class="title">Standard</h2>
+                <div class="view">
+                    <div class="icon">
+                        <img src="https://i.postimg.cc/DzrTN72Z/airplane.png" alt="airplane">
+                    </div>
+                    <div class="cost">
+                        <p class="amount">$99</p>
+                        <p class="detail">per student per year</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Harum, beatae laudantium.</li>
+                        <li>Odit, fugit saepe.</li>
+                        <li>Harum, veniam suscipit!</li>
+                        <li>A, aut veritatis!</li>
+                        <li>Aliquid, quasi repellat!</li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <button type="submit" >START FREE 7 DAYS TRIAL</button>
+                </div>
+            </div>
+    
+            <div class="business box">
+                <h2 class="title">Business</h2>
+                <div class="view">
+                    <div class="icon">
+                        <img src="https://i.postimg.cc/wvFd6FRY/startup.png" alt="startup">
+                    </div>
+                    <div class="cost">
+                        <p class="amount">$199</p>
+                        <p class="detail">per team per year</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Harum, beatae laudantium.</li>
+                        <li>Odit, fugit saepe.</li>
+                        <li>Harum, veniam suscipit!</li>
+                        <li>A, aut veritatis!</li>
+                        <li>Aliquid, quasi repellat!</li>
+                    </ul>
+                </div>
+                <div class="button">
+                    <button type="submit" >START FREE 7 DAYS TRIAL</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 
@@ -201,12 +364,35 @@ a.button--primary, body input[type=button], input[type=submit], input[type=submi
             <input type="hidden" id="student_id" name="student_id" value="1"> <!-- Replace with the actual student ID -->
             <input type="hidden" id="amount" name="amount" value="1000.00"> <!-- Replace with the actual amount -->
             <!-- Add other necessary form fields -->
-
+			<div class="content">
+            <div class="standard box">
+                <h2 class="title">Standard</h2>
+                <div class="view">
+                    
+                    <div class="cost">
+                        <p class="amount">99.00 rs</p>
+                        <p class="classes">ceo,cso,sss</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Name : <span id ="student_name"></span></li>
+                        <li>School Name : <span id ="school_name"></span></li>
+                        <li>School Address : <span id ="school_address"></span></li>
+                        <li>Mobile : <span id ="mobile"></span></li>
+                        <li>Email : <span id ="email"></span></li>
+                    </ul>
+                </div>
+                <div class="button">
+				<button type="button" class="btn btn-lg btn-primary button--primary" id="razorpay-button" onclick="pay_now()">Pay Now</button>
+                </div>
+            </div>
+        </div>
             <!-- Razorpay payment button -->
-            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-            <button type="button" class="btn btn-lg btn-primary button--primary" id="razorpay-button" onclick="pay_now()">Pay Now</button>
+            
+           
         </form>
-
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <div id="payment-response"></div>
     </div>
   </div>
@@ -427,8 +613,9 @@ a.button--primary, body input[type=button], input[type=submit], input[type=submi
   function pay_now(){
         var studentId = <?php echo $user["id"]; ?>;
 		console.log("student id", studentId);
-	
-        var amount = $('#amount').val();
+		var storedv = JSON.parse(localStorage.getItem("payment-data"));
+		// console.log(JSON.parse(stored))
+        var amount = storedv.total_price;
 
           //var actual_amount = amount;
 		  var options = {
@@ -500,6 +687,15 @@ a.button--primary, body input[type=button], input[type=submit], input[type=submi
 	$(document).ready(function(){
 		var stored = localStorage.getItem("payment-data");
 		console.log(JSON.parse(stored))
+		stored = JSON.parse(stored);
+		$("#student_name").text(stored.student_name)
+		$("#school_name").text(stored.school_name)
+		$("#school_address").text(stored.school_address)
+		$("#mobile").text(stored.mobile)
+		$("#email").text(stored.email)
+		$(".amount").text(stored.total_price)
+		$(".classes").text(stored.classes)
+
 	})
 </script>
 
