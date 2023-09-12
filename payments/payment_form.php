@@ -499,7 +499,7 @@ a.button--primary, body input[type=button], input[type=submit], input[type=submi
 <script>
 	$(document).ready(function(){
 		var stored = localStorage.getItem("payment-data");
-		console.log(stored)
+		console.log(JSON.parse(stored))
 	})
 </script>
 
