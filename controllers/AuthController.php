@@ -78,17 +78,17 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $board = $_POST['board'];
             $catalyst_olympiad = $_POST['catalyst_olympiad'];
 
-
+            $bytes = random_bytes(16);
             // Basic form validation
             if (empty($name) || empty($address) || empty($district) || empty($state) || empty($pincode) || empty($is_trust_society) || empty($phone)) {
                 echo json_encode(['success' => false, 'message' => 'All fields are required.']);
                 return;
             }
-
+            $password = bin2hex($bytes);
             // Save data to the database using the Student model
             $student = new SchoolModel();
 
-            if ($student->schoolReg($name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
+            if ($student->schoolReg($name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email,$password, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
                 echo json_encode(['success' => true, 'message' => 'School Registration successful!']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'School Registration failed.']);
