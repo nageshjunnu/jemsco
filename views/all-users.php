@@ -1,6 +1,6 @@
 <?php
 
-// require_once '../models/UserModel.php';
+require_once '../models/UserModel.php';
 // require_once '../controllers/schoolsControllers.php';
 
 $usersModel = new UserModel();
