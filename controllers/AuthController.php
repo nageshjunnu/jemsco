@@ -3,6 +3,11 @@
 // ini_set('display_errors', '1');
 // echo "hello";
 // die;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Include the PHPMailer autoloader
 require_once '../models/UserModel.php';
 require_once '../controllers/StudentController.php';
 
@@ -52,29 +57,29 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
     function student_registration() {
         // Handle the registration form submission here.
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $student_name = $_POST['student_name'];
-            $father_name = $_POST['father_name'];
+            $student_name = $_POST['student_name']?? "";
+            $father_name = $_POST['father_name']?? "";
             $mother_name = $father_name;
-            $class = $_POST['classes'];
-            $address = $_POST['address'];
-            $city = $_POST['city'];
-            $district = $_POST['district'];
-            $state = $_POST['state'];
+            $class = $_POST['classes']?? "";
+            $address = $_POST['address']?? "";
+            $city = $_POST['city']?? "";
+            $district = $_POST['district']?? "";
+            $state = $_POST['state']?? "";
             $pincode = $_POST['pincode'];
-            $school_name = $_POST['school_name'];
-            $school_address = $_POST['school_address'];
-            $school_city = $_POST['school_city'];
-            $school_district = $_POST['school_district'];
-            $school_state = $_POST['school_state'];
-            $school_pincode = $_POST['school_pincode'];
-            $mobile = $_POST['mobile'];
-            $alrernate_mobile = $_POST['alternate_mobile'];
-            $email = $_POST['email'];
-            $board_syllabus = $_POST['board_syllabus'];
-            $catalyst_olympiad = $_POST['class'];
-            $roll_number = "jemsco".$_POST['student_name'];
+            $school_name = $_POST['school_name']?? "";
+            $school_address = $_POST['school_address']?? "";
+            $school_city = $_POST['school_city']?? "";
+            $school_district = $_POST['school_district']?? "";
+            $school_state = $_POST['school_state']?? "";
+            $school_pincode = $_POST['school_pincode']?? "";
+            $mobile = $_POST['mobile']?? "";
+            $alrernate_mobile = $_POST['alternate_mobile']?? "";
+            $email = $_POST['email']?? "";
+            $board_syllabus = $_POST['board_syllabus']?? "";
+            $catalyst_olympiad = $_POST['class']?? "";
+            $roll_number = $_POST['student_name']?? "";
             $role = "student"; // Assuming this is selected during registration.
-            $password = "jemsco".$_POST['student_name'];
+            $password = "jemsco".$_POST['student_name']?? "";
             $username = $email;
             // Validate user input.
             // Implement proper input validation and password hashing.
@@ -94,14 +99,23 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $roll_number2= $lastTwoNumbers.$lastStudent['id']+1;
             
             $roll_number = strtoupper($roll_number1.$roll_number2);
+            $password = $roll_number;
             
             if($userAlready == "")
             {
                 if ($userModel->createStudent($student_name, $father_name, $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
                     session_start();
                     $_SESSION['email'] = $email;
-                    echo json_encode(['success' => true]);
-                    exit;
+                    
+                    if(sendmail($email)){
+                        echo json_encode(['success' => true, 'message'=>'Email Sent Successfully']);
+                        exit;
+                    }
+                    else{
+                        echo json_encode(['success' => true, 'message'=>'Email Failed']);
+                        exit;
+                    }
+                   
                 } else {
                     echo json_encode(['success' => false, 'message' => 'Registration failed']);
                     exit;
@@ -163,6 +177,55 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
                 echo json_encode(['success' => false, 'message' => 'Account Does not exists. Please Register']);
                     exit;
             }
+        }
+    }
+
+    function sendmail($student)
+    {
+        
+
+        // Initialize PHPMailer
+        $mail = new PHPMailer(true);
+
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->SMTPAuth   = true;
+            $mail->SMTPSecure = 'tls';
+            $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
+            $mail->Port       = 587; // Replace with your SMTP port
+            $mail->Username   = 'nagesjemsco2023@gmail.com';
+            $mail->Password   = 'admin_2023@';
+
+            // Sender and recipient
+            $mail->setFrom('jemsco2023@gmail.com', 'JEMSCO 2023');
+            $mail->addAddress('nageshy.php@gmail.com', 'Nagesh');
+
+            // Email content
+            $mail->isHTML(true);
+            $mail->Subject = 'Student Registration Success';
+            $mail->Body    = "<!DOCTYPE html>            <html>
+            <head>
+                <title>Student Registration Success</title>
+            </head>
+            <body>
+                <h1>Welcome, Nagesh!</h1>
+                <p>Your registration for CSO,CEO has been successfully processed.</p>
+                <p>Thank you for choosing our institution!</p>
+            </body>
+            </html>            "; // Load your email template file
+
+            // Replace placeholders in the email template
+            $studentName = 'John Doe'; // Replace with the actual student name
+            $courseName = 'Computer Science'; // Replace with the actual course name
+            $mail->Body = str_replace('John', $studentName, $mail->Body);
+            $mail->Body = str_replace('CEO', $courseName, $mail->Body);
+
+            $mail->send();
+            return true;
+        } catch (Exception $e) {
+             echo "Email could not be sent. Error: {$mail->ErrorInfo}";
+            //return false
         }
     }
 
