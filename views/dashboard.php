@@ -7,7 +7,7 @@ require_once '../models/SchoolModel.php';
 
 $studentModel = new SchoolModel();
 $totalStudents = $studentModel->getStudentsCount();
-print_r($totalStudents);
+// print_r($totalStudents);
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -21,8 +21,8 @@ print_r($totalStudents);
 							<div class="d-flex justify-content-between">
 								<div>
 									<h4 class="text-fade">Total Students</h4>
-									<h4 class="fw-600">1,542</h4>
-									<p class="mb-0"><span class="text-success">12%</span> Increase</p>
+									<h4 class="fw-600"><?php echo $totalStudents['total']; ?></h4>
+									<p class="mb-0"><span class="text-success"><?php echo $totalStudents['total']/100; ?>%</span> Increase</p>
 								</div>
 								<div>
 									<img src="assets/images/svg-icon/color-svg/custom-24.svg" class="w-100" alt="" />
