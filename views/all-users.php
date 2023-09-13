@@ -6,9 +6,9 @@ require_once '../models/UserModel.php';
 $usersModel = new UserModel();
 $usersdata = $usersModel->getAllUsers();
 
-echo "<pre>";
-print_r($usersdata);
-echo "</pre>";
+// echo "<pre>";
+// print_r($usersdata);
+// echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
 
