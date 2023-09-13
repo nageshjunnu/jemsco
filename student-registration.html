@@ -1156,8 +1156,8 @@
 						dataType: 'json',
 						success: function(response) {
 							if (response.success) {
-								//$("#stuent-registration")[0].reset();
-								const Toast = Swal.mixin({
+								$("#stuent-registration")[0].reset();
+								/*const Toast = Swal.mixin({
 									toast: true,
 									position: 'top-end',
 									showConfirmButton: false,
@@ -1172,12 +1172,12 @@
 								  Toast.fire({
 									icon: 'success',
 									title: 'Registration successful'
-								  })
+								  })*/
 								  window.location ="payments/payment_form.php"
 								//alert('Registration successful');
 								// You can redirect the user to the login page or perform other actions.
 							} else {
-								const Toast = Swal.mixin({
+								/*const Toast = Swal.mixin({
 									toast: true,
 									position: 'top-end',
 									showConfirmButton: false,
@@ -1192,9 +1192,9 @@
 								  Toast.fire({
 									icon: 'warning',
 									title: 'Registration failed: ' + response.message
-								  })
+								  })*/
                           return false;
-								//alert('Registration failed: ' + response.message);
+								alert('Registration failed: ' + response.message);
 							}
 						}
 					});
