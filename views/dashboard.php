@@ -38,7 +38,7 @@ $totalStudents = $studentModel->getStudentsCount();
 						<div class="box-body">
 							<div class="d-flex justify-content-between">
 								<div>
-									<h4 class="text-fade">New Students</h4>
+									<h4 class="text-fade">Total Schools</h4>
 									<h4 class="fw-600">742</h4>
 									<p class="mb-0"><span class="text-success">09%</span> Increase</p>
 								</div>
@@ -136,7 +136,7 @@ $totalStudents = $studentModel->getStudentsCount();
 							</div>
 						</div>
 					</div>
-					<div class="box">
+					<!-- <div class="box">
 						<div class="box-header with-border">
 						  	<h4 class="box-title">Professors List</h4>
 						  	<div class="box-controls pull-right">
@@ -255,10 +255,10 @@ $totalStudents = $studentModel->getStudentsCount();
 								</table>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="col-xl-4 col-12">
-					<div class="box">
+					<!-- <div class="box">
 						<div class="box-header">
 							<h4 class="box-title">
 								Upcoming Events
@@ -411,8 +411,8 @@ $totalStudents = $studentModel->getStudentsCount();
 						<div class="box-footer p-0 no-border">
 							<a href="#" class="btn btn-primary-light w-p100">More Events »</a>
 						</div>
-					</div>
-					<div class="box">
+					</div> -->
+					<!-- <div class="box">
 						<div class="box-header">
 							<h4 class="box-title">Complaint Report</h4>
 						</div>
@@ -498,7 +498,7 @@ $totalStudents = $studentModel->getStudentsCount();
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="box">
 						<div class="box-header">
 							<h4 class="box-title">New Admission Report</h4>
