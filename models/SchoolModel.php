@@ -31,6 +31,15 @@ class SchoolModel {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getStudentsCount() {
+        $query = "SELECT count(*) as total from student where status = 1";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 

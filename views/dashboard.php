@@ -2,7 +2,13 @@
 <?php include("header.php"); ?>
   
  <?php include("sidebar.php"); ?>
+<?php
+require_once '../models/SchoolModel.php';
 
+$studentModel = new SchoolModel();
+$totalStudents = $studentModel->getStudentsCount();
+print_r($totalStudents);
+?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">
