@@ -68,6 +68,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $gst = $_POST['gst'];
             $phone = $_POST['phone'];
             $alternate_phone = $_POST['alternate_phone'];
+            $email = $_POST['email'];
             $alternate_email = $_POST['alternate_email'];
             $principal = $_POST['principal'];
             $principal_phone = $_POST['principal_phone'];
