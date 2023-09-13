@@ -13,9 +13,9 @@ try {
     // Server settings
     $mail->isSMTP();
     $mail->SMTPAuth   = true;
-    $mail->SMTPSecure = 'ssl';
+    $mail->SMTPSecure = 'tls';
     $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
-    $mail->Port       = 465; // Replace with your SMTP port
+    $mail->Port       = 587; // Replace with your SMTP port
     $mail->Username   = 'nagesh@orchids.edu.in';
     $mail->Password   = 'Junnu_2023';
 
@@ -26,7 +26,7 @@ try {
     //         'allow_self_signed' => true
     //     )
     // );
-    $mail->SMTPDebug = 0;
+    // $mail->SMTPDebug = 2;
     
     // Sender and recipient
     $mail->setFrom('jemsco2023@gmail.com', 'JEMSCO 2023');
@@ -40,7 +40,7 @@ try {
         <title>Student Registration Success</title>
     </head>
     <body>
-        <h1>Welcome, JEMSCO!</h1>
+        <h1>Welcome, Nagesh!</h1>
         <p>Your registration for CSO,CEO has been successfully processed.</p>
         <p>Thank you for choosing our institution!</p>
     </body>
@@ -51,16 +51,10 @@ try {
     $courseName = 'Computer Science'; // Replace with the actual course name
     $mail->Body = str_replace('John', $studentName, $mail->Body);
     $mail->Body = str_replace('CEO', $courseName, $mail->Body);
-
+    $mail->SMTPDebug = SMTP::DEBUG_CONNECTION; // or DEBUG_SERVER for more detailed information
+    $mail->Debugoutput = 'error_log'; // or 'echo' to display in the browser
     $mail->send();
-    if(!$mail->Send()) {
-        $error = 'Mail error: '.$mail->ErrorInfo; 
-        return false;
-    } else {
-        $error = 'Message sent!';
-        return true;
-    }
-    echo $error ;
+    echo "success";
     return true;
 } catch (Exception $e) {
      echo "Email could not be sent. Error: {$mail->ErrorInfo}";
