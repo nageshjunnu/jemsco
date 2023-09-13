@@ -1,5 +1,5 @@
 <?php
-require_once '../models/schoolsControllers.php';
+require_once '../models/SchoolModel.php';
 
 class SchoolContoller {
    
