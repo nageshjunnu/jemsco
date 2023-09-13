@@ -55,7 +55,7 @@
 					</span>
 				  </a>
 				  <ul class="treeview-menu">
-					<li><a href="professors_list.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Users List</a></li>
+					<li><a href="all-users.php"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Users List</a></li>
 					<!-- <li><a href="professors.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Professors Details</a></li> -->
 				  </ul>
 				</li>
@@ -78,12 +78,12 @@
 					<span>Schools</span>
 				  </a>
 				</li>
-				<li>
+				<!-- <li>
 				  <a href="contact_app_chat.html">
 					<i class="icon-Chat2"></i>
 					<span>Chat</span>
 				  </a>
-				</li>				  
+				</li>				   -->
 				 	     
 			  </ul>
 			  

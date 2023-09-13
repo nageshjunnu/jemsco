@@ -10,7 +10,7 @@ class UserModel {
         // Implement your database query here to create a new user.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (username, password, role) VALUES (:username, :password, :role)";
+        $query = "INSERT INTO users (username, password, role, status) VALUES (:username, :password, :role, :status)";
         $con = new dbModel();
         $connection = $con->conn();
         
@@ -19,6 +19,8 @@ class UserModel {
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':role', $role);
+        $stmt->bindParam(':status', 0);
+
 
         if ($stmt->execute()) {
             return true;
@@ -37,6 +39,17 @@ class UserModel {
         $stmt->bindParam(':username', $username);
         $stmt->execute();
 
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getUsers() {
+        // Implement your database query here to fetch user details by username.
+        $query = "SELECT * FROM users";
+        $con = new dbModel();
+        $connection = $con->conn();
+       
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
