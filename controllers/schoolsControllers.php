@@ -1,10 +1,10 @@
 <?php
-require_once '../models/UserModel.php';
+require_once '../models/schoolsControllers.php';
 
 class SchoolContoller {
    
     public function showAllSchool() {
-        $userModel = new UserModel();
+        $userModel = new SchoolModel();
         $schools = $userModel->getAllSchool();
         return $schools;
     }
