@@ -1,13 +1,13 @@
 <?php
 
-require_once '../models/UserModel.php';
+// require_once '../models/UserModel.php';
 // require_once '../controllers/schoolsControllers.php';
 
 $usersModel = new UserModel();
-$users = $usersModel->getUsers();
+$usersdata = $usersModel->getUsers();
 
 echo "<pre>";
-print_r($users);
+print_r($usersdata);
 echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
@@ -66,14 +66,14 @@ echo "</pre>";
 							</tr>
 						</thead>
 						<tbody>
-						<?php foreach ($users as $user): ?>
+						<?php foreach ($usersdata as $item): ?>
 
 							<tr>
-								<td><?php echo $user['name']; ?></td>
-								<td><?php echo $user['email']; ?></td>
-								<td><?php echo $user['mobile']; ?></td>
-								<td><?php echo $user['role']; ?></td>
-								<td><?php if($user['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
+								<td><?php echo $item['name']; ?></td>
+								<td><?php echo $item['email']; ?></td>
+								<td><?php echo $item['mobile']; ?></td>
+								<td><?php echo $item['role']; ?></td>
+								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
 								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <span class="badge badge-info">Edit</span> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
