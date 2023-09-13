@@ -21,7 +21,7 @@ $totalStudents = $studentModel->getStudentsCount();
 							<div class="d-flex justify-content-between">
 								<div>
 									<h4 class="text-fade">Total Students</h4>
-									<h4 class="fw-600"><?php echo $totalStudents['total']; ?></h4>
+									<h4 class="fw-600"><?php print_r($totalStudents); echo $totalStudents['total']; ?></h4>
 									<p class="mb-0"><span class="text-success"><?php echo $totalStudents['total']/100; ?>%</span> Increase</p>
 								</div>
 								<div>
