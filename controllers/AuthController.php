@@ -196,7 +196,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
               //echo 'Message: ' .$e->getMessage();
             }
                 
-                if($userActive == 1 &&  $role == "admin")
+                if($userActive == 1)
                 {
                 
                     if ($user && password_verify($password, $user['password'])) {
