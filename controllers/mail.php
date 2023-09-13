@@ -13,9 +13,9 @@ try {
     // Server settings
     $mail->isSMTP();
     $mail->SMTPAuth   = true;
-    $mail->SMTPSecure = 'tls';
+    $mail->SMTPSecure = 'ssl';
     $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
-    $mail->Port       = 587; // Replace with your SMTP port
+    $mail->Port       = 465; // Replace with your SMTP port
     $mail->Username   = 'nagesh@orchids.edu.in';
     $mail->Password   = 'Junnu_2023';
 
@@ -26,7 +26,7 @@ try {
     //         'allow_self_signed' => true
     //     )
     // );
-    // $mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 0;
     
     // Sender and recipient
     $mail->setFrom('jemsco2023@gmail.com', 'JEMSCO 2023');
@@ -53,7 +53,14 @@ try {
     $mail->Body = str_replace('CEO', $courseName, $mail->Body);
 
     $mail->send();
-    echo "success";
+    if(!$mail->Send()) {
+        $error = 'Mail error: '.$mail->ErrorInfo; 
+        return false;
+    } else {
+        $error = 'Message sent!';
+        return true;
+    }
+    echo $error ;
     return true;
 } catch (Exception $e) {
      echo "Email could not be sent. Error: {$mail->ErrorInfo}";
