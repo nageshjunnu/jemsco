@@ -41,7 +41,7 @@
 			  <ul class="sidebar-menu" data-widget="tree">	
 				<li class="header">Main Menu</li>
 				<li>
-				  <a href="index.html">
+				  <a href="dashboard.php">
 					<i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
 					<span>Dashboard</span>
 				  </a>
