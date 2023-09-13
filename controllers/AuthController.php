@@ -197,14 +197,14 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $mail->Username   = 'nagesh@orchids.edu.in';
             $mail->Password   = 'Junnu_2023';
 
-            $mail->SMTPOptions = array(
-                'ssl' => array(
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                )
-            );
-            $mail->SMTPDebug = 2;
+            // $mail->SMTPOptions = array(
+            //     'ssl' => array(
+            //         'verify_peer' => false,
+            //         'verify_peer_name' => false,
+            //         'allow_self_signed' => true
+            //     )
+            // );
+            // $mail->SMTPDebug = 2;
             
             // Sender and recipient
             $mail->setFrom('jemsco2023@gmail.com', 'JEMSCO 2023');
