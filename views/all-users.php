@@ -6,9 +6,9 @@ require_once '../models/UserModel.php';
 $usersModel = new UserModel();
 $users = $usersModel->getUsers();
 
-// echo "<pre>";
-// print_r($students);
-// echo "</pre>";
+echo "<pre>";
+print_r($users);
+echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
 
@@ -62,7 +62,7 @@ $users = $usersModel->getUsers();
 								<th>Mobile</th>
 								<th>Role</th>
 								<th>Status</th>
-								<th>Status</th>
+								<th>Action  </th>
 							</tr>
 						</thead>
 						<tbody>
