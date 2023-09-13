@@ -4,7 +4,7 @@ require_once '../config/config.php';
 // ini_set('display_errors', '1');
 
 class UserModel {
-    private $db;
+  
 
     public function createUser($username, $password, $role) {
         // Implement your database query here to create a new user.

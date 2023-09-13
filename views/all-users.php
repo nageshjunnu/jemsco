@@ -1,10 +1,10 @@
 <?php
 
 require_once '../models/UserModel.php';
-require_once '../controllers/schoolsControllers.php';
+// require_once '../controllers/schoolsControllers.php';
 
 $usersModel = new UserModel();
-$users = $userModel->getUsers();
+$users = $usersModel->getUsers();
 
 // echo "<pre>";
 // print_r($students);
