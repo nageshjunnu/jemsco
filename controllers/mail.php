@@ -21,7 +21,7 @@ try {
     $mail->Password   = 'jrczsstkxwgyotvi';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
+    $mail->SMTPDebug =2;
     //Recipients
     $mail->setFrom("nagesh@orchids.edu.in", 'Orchids International School');
     $mail->addAddress("nagesh.yelumala@gmail.com", "nagesh");     //Add a recipient
