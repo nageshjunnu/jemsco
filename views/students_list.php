@@ -8,18 +8,18 @@ require_once '../controllers/StudentController.php';
 // ini_set('display_errors', '1');
 
 // Check if the user is logged in (session variable exists)
-if (!isset($_SESSION['id'])) {
-    header('Location: auth_login.html'); // Redirect to the login page if not logged in
-    exit();
-}
-if (isset($_SESSION['id'])) {
-    $username = $_SESSION['id'];
-   // echo json_encode(['id' => $username]);
-} else {
-   // echo json_encode(['id' => null]);
-}
-$userModel = new UserModel();
-$user = $userModel->getUserById($_SESSION['id']);
+// if (!isset($_SESSION['id'])) {
+//     header('Location: auth_login.html'); // Redirect to the login page if not logged in
+//     exit();
+// }
+// if (isset($_SESSION['id'])) {
+//     $username = $_SESSION['id'];
+//    // echo json_encode(['id' => $username]);
+// } else {
+//    // echo json_encode(['id' => null]);
+// }
+// $userModel = new UserModel();
+// $user = $userModel->getUserById($_SESSION['id']);
 
 $studenstModel = new StudentController();
 $students = $studenstModel->showAllStudents();
