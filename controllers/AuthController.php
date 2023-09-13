@@ -9,6 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php'; // Include the PHPMailer autoloader
 require_once '../models/UserModel.php';
+require_once '../models/SchoolModel.php';
 require_once '../controllers/StudentController.php';
 
 
@@ -57,21 +58,37 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
      function SchoolRegistrationController() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Retrieve and validate form data
-            $firstName = $_POST['first_name'];
-            $lastName = $_POST['last_name'];
-            $email = $_POST['email'];
-            $dob = $_POST['dob'];
-            $grade = $_POST['grade'];
+            $name = $_POST['name'];
+            $address = $_POST['address'];
+            $city = $_POST['city'];
+            $district = $_POST['district'];
+            $state = $_POST['state'];
+            $pincode = $_POST['pincode'];
+            $is_trust_society = $_POST['is_trust_society'];
+            $gst = $_POST['gst'];
+            $phone = $_POST['phone'];
+            $alternate_phone = $_POST['alternate_phone'];
+            $alternate_email = $_POST['alternate_email'];
+            $principal = $_POST['principal'];
+            $principal_phone = $_POST['principal_phone'];
+            $principal_email = $_POST['principal_email'];
+            $co_ordinator_name = $_POST['co_ordinator_name'];
+            $co_ordinator_phone = $_POST['co_ordinator_phone'];
+            $co_ordinator_email = $_POST['co_ordinator_email'];
+            $board = $_POST['board'];
+            $catalyst_olympiad = $_POST['catalyst_olympiad'];
+
 
             // Basic form validation
-            if (empty($firstName) || empty($lastName) || empty($email) || empty($dob) || empty($grade)) {
+            if (empty($name) || empty($address) || empty($district) || empty($state) || empty($pincode) || empty($is_trust_society) || empty($phone)) {
                 echo json_encode(['success' => false, 'message' => 'All fields are required.']);
                 return;
             }
 
             // Save data to the database using the Student model
-            $student = new Student($this->db);
-            if ($student->save($firstName, $lastName, $email, $dob, $grade)) {
+            $student = new SchoolModel();
+
+            if ($student->schoolReg($name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
                 echo json_encode(['success' => true, 'message' => 'School Registration successful!']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'School Registration failed.']);
