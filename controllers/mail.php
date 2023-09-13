@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -14,16 +15,15 @@ try {
     //Server settings
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'mail.jemsco.in';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'funfairorchids@gmail.com
-';                        //SMTP username
-    $mail->Password   = 'jrczsstkxwgyotvi';                               //SMTP password
+    $mail->Username   = 'info@jemsco.in';                        //SMTP username
+    $mail->Password   = 'N8MQ[Cgi';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->SMTPDebug =2;
     //Recipients
-    $mail->setFrom("nagesh@orchids.edu.in", 'Orchids International School');
+    $mail->setFrom("info@jemsco.in", 'JEMSCO');
     $mail->addAddress("nagesh.yelumala@gmail.com", "nagesh");     //Add a recipient
     // $mail->addAddress('kruthika.k@orchids.edu.in');               //Name is optional
     $mail->addReplyTo('nagesh@orchids.edu.in', 'Fun Fair');
