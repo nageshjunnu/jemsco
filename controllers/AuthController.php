@@ -194,8 +194,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $mail->SMTPSecure = 'tls';
             $mail->Host       = 'smtp.gmail.com'; // Replace with your SMTP server
             $mail->Port       = 587; // Replace with your SMTP port
-            $mail->Username   = 'nagesjemsco2023@gmail.com';
-            $mail->Password   = 'admin_2023@';
+            $mail->Username   = 'nagesh@orchids.edu.in';
+            $mail->Password   = 'Junnu_2023';
 
             $mail->SMTPOptions = array(
                 'ssl' => array(
