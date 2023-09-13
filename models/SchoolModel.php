@@ -22,6 +22,15 @@ class SchoolModel {
             return false;
         }
     }
+
+    public function getAllSchool() {
+        $query = "SELECT * FROM schools";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 
