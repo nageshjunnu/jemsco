@@ -17,7 +17,7 @@ require_once '../models/UserModel.php';
 
 	$userModel = new UserModel();
 	$user = $userModel->getStudentByEmail($_SESSION['email']);
-	// print_r($user["id"]);
+	print_r($user);
 	
 ?>
 
@@ -29,7 +29,7 @@ require_once '../models/UserModel.php';
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact | TownPress - Municipality HTML Template</title>
+        <title>Jemsco 2023</title>
         <link rel="shortcut icon" href="images/favicon.png">
 
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -46,149 +46,152 @@ require_once '../models/UserModel.php';
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <style>
-			
-:root{
-    --pinkish-red: #C35A74;
-    --medium-blue: #307BAA;
-    --greenish-blue: #53BAB5;
-    --bright-orange: #FF7445;
-    --white-smoke: #F5F5F4;
-    --white: #FFF;
-    --dark-gray: #7D7C7C;
-    --black: #000;
-}
+					
+		:root{
+			--pinkish-red: #C35A74;
+			--medium-blue: #307BAA;
+			--greenish-blue: #53BAB5;
+			--bright-orange: #FF7445;
+			--white-smoke: #F5F5F4;
+			--white: #FFF;
+			--dark-gray: #7D7C7C;
+			--black: #000;
+		}
 
 
 
-.content {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* width: 1200px; */
-    margin: 100px;
-}
+		.content {
+			/* display: flex; */
+			/* justify-content: space-between; */
+			/* width: 1200px; */
+			margin: 100px;
+		}
 
-.box {
-    display: flex;
-    flex-direction: column;
-    /* height: 586px; */
-    border-radius: 20px;
-    margin-left: 10px;
-    padding: 1;
-    margin-right: 10px;
-    background: var(--white);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
-}
+		.box {
+			display: flex;
+			flex-direction: column;
+			/* height: 586px; */
+			border-radius: 20px;
+			margin-left: 10px;
+			padding: 1;
+			margin-right: 10px;
+			background: var(--white);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
+		}
 
-.title{
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-weight: lighter;
-    text-align: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+		.title{
+			width: 100%;
+			padding: 10px 0;
+			font-size: 1.2em;
+			font-weight: lighter;
+			text-align: center;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
 
-    color: var(--white-smoke);
-}
+			color: var(--white-smoke);
+		}
 
-.basic .title{
-    background: var(--pinkish-red);
-}
+		.basic .title{
+			background: var(--pinkish-red);
+		}
 
-.standard .title{
-    background: var(--medium-blue);
-}
+		.standard .title{
+			background: var(--medium-blue);
+		}
 
-.business .title{
-    background: var(--greenish-blue);
-}
+		.business .title{
+			background: var(--greenish-blue);
+		}
 
-.view{
-    display: block;
-    width: 100%;
-    padding: 30px 0 20px;
+		.view{
+			display: block;
+			width: 100%;
+			padding: 30px 0 20px;
 
-    background: var(--white-smoke);
-}
+			background: var(--white-smoke);
+		}
 
-.icon{
-    display: flex;
-    justify-content: center;
-}
+		.icon{
+			display: flex;
+			justify-content: center;
+		}
 
-.icon img{
-    width: 100px;
-}
+		.icon img{
+			width: 100px;
+		}
 
-.cost {
-    /* display: flex; */
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 10px;
-    display: grid;
-}
+		.cost {
+			/* display: flex; */
+			justify-content: center;
+			flex-direction: row;
+			margin-top: 10px;
+			display: grid;
+		}
 
-.amount{
-    font-size: 2.8em;
-    font-weight: bolder;
-}
+		.amount{
+			font-size: 2.8em;
+			font-weight: bolder;
+		}
 
-.detail{
-    margin: auto 0 auto 5px;
-    width: 70px;
-    font-size: 0.7em;
-    font-weight: bold;
-    line-height: 15px;
-    color: #7D7C7C;
-}
+		.detail{
+			margin: auto 0 auto 5px;
+			width: 70px;
+			font-size: 0.7em;
+			font-weight: bold;
+			line-height: 15px;
+			color: #7D7C7C;
+		}
 
-.description{
-    margin: 30px auto;
-    /*font-size: 0.8em;
-    color: #7D7C7C;*/
-}
+		.description{
+			margin: 30px auto;
+			/*font-size: 0.8em;
+			color: #7D7C7C;*/
+		}
 
 
-.button{
-    margin: 0 auto 30px;
-}
+		.button{
+			margin: 0 auto 30px;
+		}
 
-button{
-    height: 40px;
-    width: 250px;
-    font-size: 0.7em;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #7D7C7C;
-    border: 2px solid var(--dark-gray);
-    border-radius: 50px;
+		button{
+			height: 40px;
+			width: 250px;
+			font-size: 0.7em;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			color: #7D7C7C;
+			border: 2px solid var(--dark-gray);
+			border-radius: 50px;
 
-    background: transparent;
-}
+			background: transparent;
+		}
 
-button:hover{
-    color: var(--white-smoke);
-    transition: 0.5s;
-    border: none;
+		button:hover{
+			color: var(--white-smoke);
+			transition: 0.5s;
+			border: none;
 
-    background: var(--bright-orange);
-}
+			background: var(--bright-orange);
+		}
 
-            form#payment-form {
-                    text-align: center;
-                    font-size: 21px;
-                    margin: 0 0 0px 0;
-                    z-index: 99999;
-                    position: relative;
-    }
-	.description ul {
-    text-align: left;
-}
-.description ul li {
-    /* text-align: left; */
-    list-style: none;
-}
-        </style>
+					form#payment-form {
+							text-align: center;
+							font-size: 21px;
+							margin: 0 0 0px 0;
+							z-index: 99999;
+							position: relative;
+			}
+			.description ul {
+			text-align: left;
+		}
+		.description ul li {
+			/* text-align: left; */
+			list-style: none;
+		}
+		p.classes {
+				text-transform: uppercase;
+			}
+				</style>
 
 
 	</head>
@@ -312,11 +315,11 @@ button:hover{
             <!-- Add other necessary form fields -->
 			<div class="content">
             <div class="standard box">
-                <h2 class="title">Payment</h2>
+                <h2 class="title">Registration Successfull</h2>
                 <div class="view">
                     
                     <div class="cost">
-                        <p class="amount">99.00 rs</p>
+                        <p class="amount">00.00 ₹</p>
                         <p class="classes">ceo,cso,sss</p>
                     </div>
                 </div>
