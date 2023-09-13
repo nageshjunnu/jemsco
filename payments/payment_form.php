@@ -17,7 +17,7 @@ require_once '../models/UserModel.php';
 
 	$userModel = new UserModel();
 	$user = $userModel->getStudentByEmail($_SESSION['email']);
-	print_r($user);
+	// print_r($user);
 	
 ?>
 
@@ -153,18 +153,18 @@ require_once '../models/UserModel.php';
 			margin: 0 auto 30px;
 		}
 
-		button{
-			height: 40px;
-			width: 250px;
-			font-size: 0.7em;
-			font-weight: bold;
-			letter-spacing: 0.5px;
-			color: #7D7C7C;
-			border: 2px solid var(--dark-gray);
-			border-radius: 50px;
-
-			background: transparent;
-		}
+		button {
+    height: 40px;
+    width: 250px;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    border: 2px solid #00438b;
+    border-radius: 50px;
+    background: #00438b;
+    box-shadow: 1px 1px 14px 8px #ddd;
+}
 
 		button:hover{
 			color: var(--white-smoke);
@@ -320,16 +320,16 @@ require_once '../models/UserModel.php';
                     
                     <div class="cost">
                         <p class="amount">00.00 ₹</p>
-                        <p class="classes">ceo,cso,sss</p>
+                        <p class="classes"><?php echo $user['class']; ?></p>
                     </div>
                 </div>
                 <div class="description">
                     <ul>
-                        <li>Name : <span id ="student_name"></span></li>
-                        <li>School Name : <span id ="school_name"></span></li>
-                        <li>School Address : <span id ="school_address"></span></li>
-                        <li>Mobile : <span id ="mobile"></span></li>
-                        <li>Email : <span id ="email"></span></li>
+                        <li>Name : <?php echo $user['student_name']; ?></li>
+                        <li>School Name : <?php echo $user['school_name']; ?></li>
+                        <li>School Address : <?php echo $user['school_address']; ?></li>
+                        <li>Mobile : <?php echo $user['mobile']; ?></li>
+                        <li>Email : <?php echo $user['email']; ?></li>
                     </ul>
                 </div>
                 <div class="button">
@@ -635,15 +635,15 @@ require_once '../models/UserModel.php';
 <script>
 	$(document).ready(function(){
 		var stored = localStorage.getItem("payment-data");
-		console.log(JSON.parse(stored))
+		//console.log(JSON.parse(stored))
 		stored = JSON.parse(stored);
-		$("#student_name").text(stored.student_name)
-		$("#school_name").text(stored.school_name)
-		$("#school_address").text(stored.school_address.replace(/%2/g, ', '))
-		$("#mobile").text(stored.mobile)
-		$("#email").text(stored.email.replace(/%40/g, '@'))
-		$(".amount").text(stored.total_price+" ₹")
-		$(".classes").text("Class Selected - "+stored.classes.replace(/%2/g, ', '))
+		// $("#student_name").text(stored.student_name)
+		// $("#school_name").text(stored.school_name)
+		// $("#school_address").text(stored.school_address.replace(/%2/g, ', '))
+		// $("#mobile").text(stored.mobile)
+		// $("#email").text(stored.email.replace(/%40/g, '@'))
+		// $(".amount").text(stored.total_price+" ₹")
+		// $(".classes").text("Class Selected - "+stored.classes.replace(/%2/g, ', '))
 
 	})
 </script>
