@@ -4,7 +4,7 @@ require_once '../models/UserModel.php';
 // require_once '../controllers/schoolsControllers.php';
 
 $usersModel = new UserModel();
-$usersdata = $usersModel->getUsers();
+$usersdata = $usersModel->getAllUsers();
 
 echo "<pre>";
 print_r($usersdata);

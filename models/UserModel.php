@@ -42,15 +42,14 @@ class UserModel {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function getUsers() {
+    public function getAllUsers() {
         // Implement your database query here to fetch user details by username.
         $query = "SELECT * FROM users";
         $con = new dbModel();
         $connection = $con->conn();
-       
         $stmt = $connection->prepare($query);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getUserById($id) {
@@ -76,6 +75,7 @@ class UserModel {
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
+        
     }
 
     public function authenticate($username) {
