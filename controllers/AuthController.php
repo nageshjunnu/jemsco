@@ -54,6 +54,31 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
         }
     }
 
+     function SchoolRegistrationController() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Retrieve and validate form data
+            $firstName = $_POST['first_name'];
+            $lastName = $_POST['last_name'];
+            $email = $_POST['email'];
+            $dob = $_POST['dob'];
+            $grade = $_POST['grade'];
+
+            // Basic form validation
+            if (empty($firstName) || empty($lastName) || empty($email) || empty($dob) || empty($grade)) {
+                echo json_encode(['success' => false, 'message' => 'All fields are required.']);
+                return;
+            }
+
+            // Save data to the database using the Student model
+            $student = new Student($this->db);
+            if ($student->save($firstName, $lastName, $email, $dob, $grade)) {
+                echo json_encode(['success' => true, 'message' => 'School Registration successful!']);
+            } else {
+                echo json_encode(['success' => false, 'message' => 'School Registration failed.']);
+            }
+        }
+    }
+
     function student_registration() {
         // Handle the registration form submission here.
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -238,6 +263,10 @@ if (strpos($url,'auth_login') !== false) {
 }else if (strpos($url,'student') !== false) {
   
     student_registration();
+}
+else if (strpos($url,'school') !== false) {
+  
+    SchoolRegistrationController();
 } else {
     echo 'No .';
 }

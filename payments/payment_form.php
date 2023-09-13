@@ -642,7 +642,7 @@ require_once '../models/UserModel.php';
 		// $("#school_address").text(stored.school_address.replace(/%2/g, ', '))
 		// $("#mobile").text(stored.mobile)
 		// $("#email").text(stored.email.replace(/%40/g, '@'))
-		// $(".amount").text(stored.total_price+" ₹")
+		$(".amount").text(stored.total_price+" ₹")
 		// $(".classes").text("Class Selected - "+stored.classes.replace(/%2/g, ', '))
 
 	})
