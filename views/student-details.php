@@ -58,7 +58,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							</ol>
 						</nav>
 					</div>
-					<div style="float:right;"><a href = "student-edit.php?id=<?php echo $student['id']; ?>" ><span class="badge badge-lg badge-info">Edit</span></a></div>
+					
 				</div>				
 			</div>
 		</div>
@@ -95,6 +95,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									<p><?php echo $students['address'];?></p>
 								</div>
 							</div>
+							<div><a href = "student-edit.php?id=<?php echo $student['id']; ?>" > <button class="btn btn-primary waves-effect waves-light mt-10">Edit</button></a></div> 
 							<hr>
 							<br>
 							<!-- <div class="row mt-15">
