@@ -41,6 +41,33 @@ class SchoolModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getSchoolsCount() {
+        $query = "SELECT count(*) as total from schools where status = 1";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getTotalRecievedAmount() {
+        $query = "SELECT SUM(amount) as total from student_payments where payment_status = 'completed'";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getTotalPendingAmount() {
+        $query = "SELECT SUM(amount) as total from student_payments where payment_status = 'pending'";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getSchoolByEmail($email) {
         // Implement your database query here to fetch user details by username.
         $query = "SELECT * FROM schools WHERE email = :email";

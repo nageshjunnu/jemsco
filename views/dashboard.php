@@ -7,7 +7,14 @@ require_once '../models/SchoolModel.php';
 
 $studentModel = new SchoolModel();
 $totalStudents = $studentModel->getStudentsCount();
-print_r($totalStudents);
+
+$totalschools = $studentModel->getSchoolsCount();
+
+$TotalrecievedTayments = $studentModel->getTotalRecievedAmount();
+
+$TotalPendingTayments = $studentModel->getTotalPendingAmount();
+
+// print_r($totalStudents);
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -23,7 +30,7 @@ print_r($totalStudents);
 									<h4 class="text-fade">Total Students</h4>
 									<?php foreach ($totalStudents as $totalStudent): ?>
 									<h4 class="fw-600"><?php  echo $totalStudent['total'];  ?></h4>
-									<p class="mb-0"><span class="text-success"><?php echo $totalStudent['total']/100; ?>%</span> Increase</p>
+									<!-- <p class="mb-0"><span class="text-success"><?php echo $totalStudent['total']/100; ?>%</span> Increase</p> -->
 									<?php endforeach; ?>
 								</div>
 								<div>
@@ -39,8 +46,10 @@ print_r($totalStudents);
 							<div class="d-flex justify-content-between">
 								<div>
 									<h4 class="text-fade">Total Schools</h4>
-									<h4 class="fw-600">742</h4>
-									<p class="mb-0"><span class="text-success">09%</span> Increase</p>
+									<?php foreach ($totalschools as $schools): ?>
+									<h4 class="fw-600"><?php  echo $schools['total'];  ?></h4>
+									<!-- <p class="mb-0"><span class="text-success"><?php echo $schools['total']/100; ?>%</span> Increase</p> -->
+									<?php endforeach; ?>
 								</div>
 								<div>
 									<img src="assets/images/svg-icon/color-svg/custom-25.svg" class="w-100" alt="" />
@@ -55,8 +64,10 @@ print_r($totalStudents);
 							<div class="d-flex justify-content-between">
 								<div>
 									<h4 class="text-fade">Fees Collection</h4>
-									<h4 class="fw-600">$542</h4>
-									<p class="mb-0"><span class="text-success">49%</span> Total</p>
+									<?php foreach ($TotalrecievedTayments as $payment): ?>
+									<h4 class="fw-600"><?php  echo $payment['total'];  ?></h4>
+									<!-- <p class="mb-0"><span class="text-success"><?php echo $payment['total']/100; ?>%</span> Increase</p> -->
+									<?php endforeach; ?>
 								</div>
 								<div>
 									<img src="assets/images/svg-icon/color-svg/custom-26.svg" class="w-100" alt="" />
@@ -71,8 +82,10 @@ print_r($totalStudents);
 							<div class="d-flex justify-content-between">
 								<div>
 									<h4 class="text-fade">Fees Pending</h4>
-									<h4 class="fw-600">$785</h4>
-									<p class="mb-0"><span class="text-danger">-51%</span> Total</p>
+									<?php foreach ($TotalPendingTayments as $pending): ?>
+									<h4 class="fw-600"><?php  echo $pending['total'];  ?></h4>
+									<!-- <p class="mb-0"><span class="text-success"><?php echo $pending['total']/100; ?>%</span> Increase</p> -->
+									<?php endforeach; ?>
 								</div>
 								<div>
 									<img src="assets/images/svg-icon/color-svg/custom-27.svg" class="w-100" alt="" />
@@ -81,7 +94,7 @@ print_r($totalStudents);
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-8 col-12">
+				<!-- <div class="col-xl-8 col-12">
 					<div class="box">
 						<div class="box-header">
 							<h4 class="box-title">
@@ -256,7 +269,7 @@ print_r($totalStudents);
 							</div>
 						</div>
 					</div> -->
-				</div>
+				<!-- </div> -->
 				<div class="col-xl-4 col-12">
 					<!-- <div class="box">
 						<div class="box-header">
@@ -499,7 +512,7 @@ print_r($totalStudents);
 							</div>
 						</div>
 					</div> -->
-					<div class="box">
+					<!-- <div class="box">
 						<div class="box-header">
 							<h4 class="box-title">New Admission Report</h4>
 						</div>
@@ -522,8 +535,8 @@ print_r($totalStudents);
 								<div class="progress-bar progress-bar-success" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
-					</div>
-					<div class="box">
+					</div> -->
+					<!-- <div class="box">
 						<div class="box-header">
 							<h4 class="box-title">Fees Collection Report</h4>
 						</div>
@@ -546,7 +559,7 @@ print_r($totalStudents);
 								<div class="progress-bar progress-bar-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>							
 		</section>
