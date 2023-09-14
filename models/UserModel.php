@@ -181,14 +181,15 @@ class UserModel {
 
     public function updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state ) {
 
-        $stmt = "UPDATE student SET student_name = '$student_name', father_name = '$father_name' , mobile = '$mobile', email = '$email', alrernate_mobile = '$alrernate_mobile', address = '$address', city = '$city ', district = '$district', state = '$state', pincode = '$pincode', school_name = '$school_name', school_address = '$school_address', school_city = '$school_city',  school_district = '$school_district', school_state = '$school_state' WHERE id = $studentId";
+        $query = "UPDATE student SET student_name = '$student_name', father_name = '$father_name' , mobile = '$mobile', email = '$email', alrernate_mobile = '$alrernate_mobile', address = '$address', city = '$city ', district = '$district', state = '$state', pincode = '$pincode', school_name = '$school_name', school_address = '$school_address', school_city = '$school_city',  school_district = '$school_district', school_state = '$school_state' WHERE id = $studentId";
 
         // echo $stmt;
 
         $con = new dbModel();
         $connection = $con->conn();
-        
-        if ($connection->query($stmt)) {
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        if ($stmt->rowCount() == 1) {
             return true;
         } else {
             return false;
