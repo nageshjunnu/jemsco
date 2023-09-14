@@ -40,6 +40,19 @@ class SchoolModel {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getSchoolByEmail($email) {
+        // Implement your database query here to fetch user details by username.
+        $query = "SELECT * FROM schools WHERE email = :email";
+        $con = new dbModel();
+        $connection = $con->conn();
+       
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 
 

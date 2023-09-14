@@ -84,12 +84,18 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             
             $password = bin2hex($bytes);
             // Save data to the database using the Student model
-            $student = new SchoolModel();
-
-            if ($student->schoolReg($name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email,$password, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
-                echo json_encode(['success' => true, 'message' => 'School Registration successful!']);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'School Registration failed.']);
+            $schoolModel = new SchoolModel();
+            $schoolEmail = $schoolModel->getSchoolByEmail($email);
+            if($schoolEmail == "")
+            {
+                if ($schoolModel->schoolReg($name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email,$password, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
+                    echo json_encode(['success' => true, 'message' => 'School Registration successful!']);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'School Registration failed.']);
+                }
+            }
+            else{
+                echo json_encode(['success' => false, 'message' => 'School Already Exists!!!.']);
             }
         }
     }
