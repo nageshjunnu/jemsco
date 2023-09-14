@@ -117,10 +117,11 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									</div>
 									</div>
 								</div>
+									
+									<div class="box-body">
 									<h4 class="box-title text-info mb-0 mt-20"><i class="ti-save me-15"></i> Address info</h4>
 									<hr class="my-15">
 									
-									<div class="box-body">
 									<div class="row">	
 									<div class="col-md-6">
 									<div class="form-group">
