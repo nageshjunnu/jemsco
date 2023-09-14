@@ -92,7 +92,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									<div class="form-group">
 									  <label class="form-label">Parent Name</label>
 									  <input type="text" class="form-control" name="father_name" value="<?php echo $students['father_name'];?>">
-									  <input type="hidden" value="<?php echo $students['father_name'];?>" name="id">
+									  <input type="hidden" value="<?php echo $students['father_name'];?>" name="father_name">
 									</div>
 								  </div>
 								  <div class="col-md-6">
