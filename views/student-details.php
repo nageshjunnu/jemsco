@@ -53,7 +53,8 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 						<nav>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Student Details</li>
+								<li class="breadcrumb-item active" aria-current="page"> <?php echo $students['roll_number'];?> 
+								<?php if($students['status'] == 1){ ?><span class="badge badge-success">Active</span><?php }else{ ?><span class="badge badge-warning">In Active</span><?php } ?></li>
 							</ol>
 						</nav>
 					</div>
@@ -159,53 +160,34 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							</div> -->
 							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">Selected Exams</h4>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Primary education from XYZ school</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">SSC from ABC School</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">HSC from ABC School</h6>
+								<h6 class="ms-10 text-dark"><?php echo $students['class'];?></h6>
 							</div>
 							
-							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">Certification</h4>
+							
+							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">School Details</h4>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+								<h6 class="ms-10 text-dark">School Name : <?php echo $students['school_name'];?></h6>
 							</div>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
+								<h6 class="ms-10 text-dark">School Address : <?php echo $students['school_address'];?></h6>
 							</div>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+								<h6 class="ms-10 text-dark">School City : <?php echo $students['school_city'];?></h6>
 							</div>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
+								<h6 class="ms-10 text-dark">School District : <?php echo $students['school_district'];?></h6>
 							</div>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+								<h6 class="ms-10 text-dark">School State : <?php echo $students['school_state'];?></h6>
 							</div>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
+								<h6 class="ms-10 text-dark">Pincode : <?php echo $students['school_pincode'];?></h6>
 							</div>
 							
-							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">Subjects</h4>
+							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">Board</h4>
+							
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-							</div>
-							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark">Excepteur sint occaecat cupidatat non proident.</h6>
+								<h6 class="ms-10 text-dark"> <?php echo $students['board_syllabus'];?></h6>
 							</div>
 						</div>
 					</div>
