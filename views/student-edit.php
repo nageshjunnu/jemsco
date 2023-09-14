@@ -71,9 +71,10 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 					  <div class="box">
 						<div class="box-header with-border">
 						  <h4 class="box-title"><?php echo $students['student_name'];?></h4>
+						  <form class="form">
 						</div>
 						<!-- /.box-header -->
-						<form class="form">
+						
 							<div class="box-body">
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> Personal Info</h4>
 								<hr class="my-15">
@@ -144,28 +145,15 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									  <input type="text" class="form-control" name="pincode" value="<?php echo $students['pincode'];?>" placeholder="<?php echo $students['pincode'];?>">
 								</div>
 							</div>
-							<!-- /.box-body -->
-							<div class="box-footer">
-								<button type="button" class="btn btn-warning me-1">
-								  <i class="ti-trash"></i> Cancel
-								</button>
-								<button type="submit" class="btn btn-primary">
-								  <i class="ti-save-alt"></i> Save
-								</button>
-							</div>  
-						</form>
+							
+						
 					  </div>
 					  <!-- /.box -->			
-				</div>  
-
-
-
-                <div class="col-lg-6 col-12">
+              		  <div class="col-lg-6 col-12">
 					  <div class="box">
 						<div class="box-header with-border">
 						</div>
-						<!-- /.box-header -->
-						<form class="form">
+					
 							<div class="box-body">
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> School Info</h4>
 								<hr class="my-15">
@@ -249,9 +237,10 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 								  <i class="ti-save-alt"></i> Save
 								</button>
 							</div>  
-						</form>
+						
 					  </div>
-					  <!-- /.box -->			
+					  <!-- /.box -->		
+					  </form>	
 				</div>  
 		    </div>
 		
