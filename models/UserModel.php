@@ -188,7 +188,7 @@ class UserModel {
             $con = new dbModel();
             $connection = $con->conn();
 
-            $stmt = $this->conn->prepare($query);
+            $stmt = $connection->prepare($query);
             $stmt->bindParam(':student_name', $student_name);
             $stmt->bindParam(':father_name', $father_name);
             $stmt->bindParam(':mobile', $mobile);
