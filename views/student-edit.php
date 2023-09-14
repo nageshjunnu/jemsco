@@ -66,12 +66,13 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 
 		<!-- Main content -->
 		<section class="content">
-			<div class="row">			  
+			<div class="row">
+			<form class="form">			  
 				<div class="col-lg-6 col-12">
 					  <div class="box">
 						<div class="box-header with-border">
 						  <h4 class="box-title"><?php echo $students['student_name'];?></h4>
-						  <form class="form">
+						  
 						</div>
 						<!-- /.box-header -->
 						
@@ -238,8 +239,9 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							</div>
 					  </div>
 					  <!-- /.box -->		
-					  </form>	
+					 
 				</div>  
+				</form>	
 		    </div>
 		
 			<!--/.col (left) -->
