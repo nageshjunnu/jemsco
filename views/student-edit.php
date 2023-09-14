@@ -264,6 +264,8 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 	  </div>
   </div>
   <!-- /.content-wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
 	$(document).ready(function() {
 		$("#updateStudentForm").submit(function(event) {
