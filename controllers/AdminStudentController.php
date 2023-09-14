@@ -50,7 +50,7 @@ function updateStudent() {
                  exit;
             }
         } else {
-            echo json_encode(['success' => false, 'message' => 'Failed']);
+            echo json_encode(['success' => false, 'message' => 'No Id Available']);
                  exit;
         }
     }
