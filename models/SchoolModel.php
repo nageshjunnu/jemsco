@@ -16,7 +16,7 @@ class SchoolModel {
         $stmt->execute([$name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad, 1 ]);        
         
         
-        if ($stmt->execute()) {
+        if ($stmt->rowCount() == 1) {
             return true;
         } else {
             return false;
