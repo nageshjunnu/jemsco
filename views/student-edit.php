@@ -66,7 +66,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 
 		<!-- Main content -->
 		<section class="content">
-		<form class="form">	
+		<form class="form" id="updateStudentForm">	
 			<div class="row">
 					  
 				<div class="col-lg-6 col-12">
@@ -85,18 +85,25 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									<div class="form-group">
 									  <label class="form-label">Student Name</label>
 									  <input type="text" class="form-control" name="student_name" value="<?php echo $students['student_name'];?>">
+									  <input type="hidden" value="<?php echo $students['studentId'];?>" name="id">
+									</div>
+								  </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label class="form-label">Parent Name</label>
+									  <input type="text" class="form-control" name="father_name" value="<?php echo $students['father_name'];?>">
+									  <input type="hidden" value="<?php echo $students['father_name'];?>" name="id">
 									</div>
 								  </div>
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">Role</label>
-									  <select class="form-select"  name="role" >
+									  <select class="form-select"  name="role" readonly>
 										<option value="<?php echo $students['role'];?>" <?php if($students['role'] == "student"){ echo "selected"; } ?>>Stuent</option>
 									  </select>
 									</div>
 								  </div>
-								</div>
-								<div class="row">
+								
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">E-mail</label>
@@ -257,5 +264,57 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 	  </div>
   </div>
   <!-- /.content-wrapper -->
-  
+  <script>
+	$(document).ready(function() {
+		$("#updateStudentForm").submit(function(event) {
+			event.preventDefault();
+			
+			$.ajax({
+				type: "POST",
+				url: "../controllers/AuthController.php",
+				data: $(this).serialize(),
+				dataType: "json",
+				success: function(response) {
+					if (response.success) {
+						console.log(response.message);
+						const Toast = Swal.mixin({
+							toast: true,
+							position: 'top-end',
+							showConfirmButton: false,
+							timer: 3000,
+							timerProgressBar: true,
+							didOpen: (toast) => {
+								toast.addEventListener('mouseenter', Swal.stopTimer)
+								toast.addEventListener('mouseleave', Swal.resumeTimer)
+							}
+							})
+							
+							Toast.fire({
+							icon: 'success',
+							title: 'Update successful'
+							})
+					} else {
+						console.log(response.message);
+						const Toast = Swal.mixin({
+							toast: true,
+							position: 'top-end',
+							showConfirmButton: false,
+							timer: 3000,
+							timerProgressBar: true,
+							didOpen: (toast) => {
+								toast.addEventListener('mouseenter', Swal.stopTimer)
+								toast.addEventListener('mouseleave', Swal.resumeTimer)
+							}
+							})
+							
+							Toast.fire({
+							icon: 'warning',
+							title: 'Updation failed: ' + response.message
+							})
+					}
+				}
+			});
+		});
+	});
+</script>
    <?php include("footer.php");?>

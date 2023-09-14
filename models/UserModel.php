@@ -179,5 +179,18 @@ class UserModel {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state ) {
+
+        $stmt = "UPDATE student SET student_name = '$student_name', father_name = '$father_name' , mobile = '$mobile', email = '$email', alrernate_mobile = '$alrernate_mobile', address = '$address', city = '$city ', district = '$district', state = '$state', pincode = '$pincode', school_name = '$school_name', school_address = '$school_address', school_city = '$school_city',  school_district = '$school_district', school_state = '$school_state' WHERE id = $studentId";
+        $con = new dbModel();
+        $connection = $con->conn();
+
+        if ($connection->query($stmt) === TRUE) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 ?>
