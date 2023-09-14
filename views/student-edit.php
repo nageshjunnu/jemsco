@@ -1,12 +1,12 @@
 <?php include("header.php"); ?>
   
   <?php include("sidebar.php"); 
-  
+  error_reporting(E_ALL);
+ini_set('display_errors', '1');
   // session_start();
 // require_once '../models/UserModel.php';
 require_once '../controllers/StudentController.php';
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
+
 
 // Check if the user is logged in (session variable exists)
 // if (!isset($_SESSION['id'])) {
