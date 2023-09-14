@@ -22,14 +22,14 @@ require_once '../controllers/StudentController.php';
 // $userModel = new UserModel();
 // $user = $userModel->getUserById($_SESSION['id']);
 
-// if(isset($_GET['id']))
-// {
-//     $studentId = $_GET['id'];
-// }
-// else{
-//     header('Location: students_list.php'); // Redirect to the login page if not logged in
-//     exit();
-// }
+if(isset($_GET['id']))
+{
+    $studentId = $_GET['id'];
+}
+else{
+    header('Location: students_list.php'); // Redirect to the login page if not logged in
+    exit();
+}
 
 $studenstModel = new StudentController();
 $students = $studenstModel->getStudentDetailsById($studentId);
