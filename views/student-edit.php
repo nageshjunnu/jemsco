@@ -274,7 +274,7 @@ echo "</pre>";
 			
 			$.ajax({
 				type: "POST",
-				url: "../controllers/AuthController.php",
+				url: "../controllers/AdminStudentController.php",
 				data: $(this).serialize(),
 				dataType: "json",
 				success: function(response) {
