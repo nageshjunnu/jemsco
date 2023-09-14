@@ -70,7 +70,7 @@ $user = $userModel->getUserById($_SESSION['id']);
 					<i class="icon-Menu"><span class="path1"></span><span class="path2"></span></i>
 			    </a>
 			</li>
-			<li class="btn-group d-lg-inline-flex d-none">
+			<!-- <li class="btn-group d-lg-inline-flex d-none">
 				<div class="app-menu">
 					<div class="search-bx mx-5">
 						<form>
@@ -83,7 +83,7 @@ $user = $userModel->getUserById($_SESSION['id']);
 						</form>
 					</div>
 				</div>
-			</li>
+			</li> -->
 		</ul> 
 	  </div>
 		
