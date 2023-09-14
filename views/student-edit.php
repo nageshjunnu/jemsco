@@ -33,9 +33,9 @@ else{
 
 $studenstModel = new StudentController();
 $students = $studenstModel->getStudentDetailsById($studentId);
-// echo "<pre>";
-// print_r($students);
-// echo "</pre>";
+echo "<pre>";
+print_r($students);
+echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
 
@@ -265,6 +265,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
   </div>
   <!-- /.content-wrapper -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
 	$(document).ready(function() {
