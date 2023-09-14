@@ -162,11 +162,12 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							
 						
 					  </div>
+					</div>
 					  <!-- /.box -->			
-              		  <div class="col-lg-6 col-12">
-					  <div class="box">
-						<div class="box-header with-border">
-						</div>
+              		  	<div class="col-lg-6 col-12">
+						<div class="box">
+							<div class="box-header with-border">
+							</div>	
 					
 							<div class="box-body">
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> School Info</h4>
