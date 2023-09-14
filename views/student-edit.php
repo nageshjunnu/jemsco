@@ -107,43 +107,50 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									  <input type="number" class="form-control" name="mobile" value="<?php echo $students['mobile'];?>" placeholder="<?php echo $students['mobile'];?>">
 									</div>
 								  </div>
-                                  
-								</div>
-                                <div class="col-md-6">
-									<div class="form-group">
-									  <label class="form-label">Alternate Number</label>
-									  <input type="number" class="form-control" name="alrernate_mobile" value="<?php echo $students['alrernate_mobile'];?>" placeholder="<?php echo $students['mobile'];?>">
+                               
+									<div class="col-md-6">
+										<div class="form-group">
+										<label class="form-label">Alternate Number</label>
+										<input type="number" class="form-control" name="alrernate_mobile" value="<?php echo $students['alrernate_mobile'];?>" placeholder="<?php echo $students['mobile'];?>">
+										</div>
 									</div>
-								  </div>
-								</div>
-								<h4 class="box-title text-info mb-0 mt-20"><i class="ti-save me-15"></i> Address info</h4>
-								<hr class="my-15">
-								
-								<div class="box-body">
-								<div class="form-group">
-									  <label class="form-label">Address</label>
-									  <input type="text" class="form-control" name="address" value="<?php echo $students['address'];?>" placeholder="<?php echo $students['address'];?>">									
-								</div>
-								  <div class="col-md-6">
-									<div class="form-group">
-                                    <label class="form-label">City</label>
-									  <input type="text" class="form-control" name="city" value="<?php echo $students['city'];?>" placeholder="<?php echo $students['city'];?>">
 									</div>
-								  </div>
-								  <div class="col-md-6">
+									<h4 class="box-title text-info mb-0 mt-20"><i class="ti-save me-15"></i> Address info</h4>
+									<hr class="my-15">
+									
+									<div class="box-body">
 									<div class="form-group">
-                                    <label class="form-label">District</label>
-									  <input type="text" class="form-control" name="district" value="<?php echo $students['district'];?>" placeholder="<?php echo $students['district'];?>">
+										<label class="form-label">Address</label>
+										<input type="text" class="form-control" name="address" value="<?php echo $students['address'];?>" placeholder="<?php echo $students['address'];?>">									
 									</div>
-								  </div>
-								</div>
-								<div class="form-group">
-                                    <label class="form-label">State</label>
-									  <input type="text" class="form-control" name="state" value="<?php echo $students['state'];?>" placeholder="<?php echo $students['state'];?>">
-								</div>
-                                <div class="form-group">
-                                    <label class="form-label">Pincode</label>
-									  <input type="text" class="form-control" name="pincode" value="<?php echo $students['pincode'];?>" placeholder="<?php echo $students['pincode'];?>">
+									<div class="col-md-6">
+										<div class="form-group">
+										<label class="form-label">City</label>
+										<input type="text" class="form-control" name="city" value="<?php echo $students['city'];?>" placeholder="<?php echo $students['city'];?>">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										<label class="form-label">District</label>
+										<input type="text" class="form-control" name="district" value="<?php echo $students['district'];?>" placeholder="<?php echo $students['district'];?>">
+										</div>
+									</div>
+									</div>
+
+									<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label">State</label>
+										<input type="text" class="form-control" name="state" value="<?php echo $students['state'];?>" placeholder="<?php echo $students['state'];?>">
+									</div>
+									</div>
+
+									<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label">Pincode</label>
+										<input type="text" class="form-control" name="pincode" value="<?php echo $students['pincode'];?>" placeholder="<?php echo $students['pincode'];?>">
+									</div>
+									</div>
+								   
 								</div>
 							</div>
 							
