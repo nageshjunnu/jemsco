@@ -763,7 +763,7 @@
 	
 	<!-- Vendor JS -->
 	<script src="assets/src/js/vendors.min.js"></script>
-	<script src="assets/src/js/pages/chat-popup.js"></script>
+	<!-- <script src="assets/src/js/pages/chat-popup.js"></script> -->
     <script src="assets/assets/icons/feather-icons/feather.min.js"></script>
 	
 	<script src="assets/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
