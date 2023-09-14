@@ -213,6 +213,7 @@ class UserModel {
             }
         } catch (PDOException $e) {
             // Handle any potential exceptions here
+            echo $e->getMessage();
             return false;
         }
     }
