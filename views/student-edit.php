@@ -118,11 +118,12 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 								</div>
 								<h4 class="box-title text-info mb-0 mt-20"><i class="ti-save me-15"></i> Address info</h4>
 								<hr class="my-15">
+								
+								<div class="box-body">
 								<div class="form-group">
 									  <label class="form-label">Address</label>
 									  <input type="text" class="form-control" name="address" value="<?php echo $students['address'];?>" placeholder="<?php echo $students['address'];?>">									
 								</div>
-								<div class="row">
 								  <div class="col-md-6">
 									<div class="form-group">
                                     <label class="form-label">City</label>
