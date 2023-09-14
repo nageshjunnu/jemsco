@@ -187,8 +187,8 @@ class UserModel {
 
         $con = new dbModel();
         $connection = $con->conn();
-        print_r($connection->query($stmt));
-        if ($connection->query($stmt) === TRUE) {
+        
+        if ($connection->query($stmt)) {
             return true;
         } else {
             return false;
