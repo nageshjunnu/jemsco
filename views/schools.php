@@ -115,13 +115,6 @@ $schools = $schoolController->showAllSchool();
       
     
 </div>
-<!-- ./wrapper -->
-	
-	
-	
-	<!-- Page Content overlay -->
-	
-	
 	<!-- Vendor JS -->
 	<script src="assets/src/js/vendors.min.js"></script>
 	<script src="assets/src/js/pages/chat-popup.js"></script>
@@ -132,10 +125,6 @@ $schools = $schoolController->showAllSchool();
 	<!-- CRMi App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
-
-	
-	
-
 </body>
 
 </html>
