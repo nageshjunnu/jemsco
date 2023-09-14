@@ -180,21 +180,44 @@ class UserModel {
     }
 
     public function updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state ) {
+        try {
+            $query = "UPDATE student SET student_name = :student_name, father_name = :father_name  , mobile = :mobile , email = :email , alrernate_mobile = :alrernate_mobile , address = :address , city = :city  , district = :district , state = :state , pincode = :pincode , school_name = :school_name , school_address = :school_address , school_city = :school_city ,  school_district = :school_district , school_state = :school_state  WHERE id = :studentId";
 
-        $query = "UPDATE student SET student_name = '$student_name', father_name = '$father_name' , mobile = '$mobile', email = '$email', alrernate_mobile = '$alrernate_mobile', address = '$address', city = '$city ', district = '$district', state = '$state', pincode = '$pincode', school_name = '$school_name', school_address = '$school_address', school_city = '$school_city',  school_district = '$school_district', school_state = '$school_state' WHERE id = $studentId";
+            // echo $stmt;
 
-        // echo $stmt;
+            $con = new dbModel();
+            $connection = $con->conn();
 
-        $con = new dbModel();
-        $connection = $con->conn();
-        $stmt = $connection->prepare($query);
-        $stmt->execute();
-        if ($stmt->rowCount() == 1) {
-            return true;
-        } else {
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':student_name', $student_name);
+            $stmt->bindParam(':father_name', $father_name);
+            $stmt->bindParam(':mobile', $mobile);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':alrernate_mobile', $alrernate_mobile);
+            $stmt->bindParam(':address', $address);
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':district', $district);
+            $stmt->bindParam(':state', $state);
+            $stmt->bindParam(':pincode', $pincode);
+            $stmt->bindParam(':school_name', $school_name);
+            $stmt->bindParam(':school_address', $school_address);
+            $stmt->bindParam(':school_city', $school_city);
+            $stmt->bindParam(':school_district', $school_district);
+            $stmt->bindParam(':school_state', $school_state);
+            $stmt->bindParam(':id', $studentId);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
             return false;
         }
     }
+
+    
 
 }
 ?>
