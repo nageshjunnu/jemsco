@@ -95,7 +95,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									<p><?php echo $students['address'];?></p>
 								</div>
 							</div>
-							<div><a href = "student-edit.php?id=<?php echo $student['id'];  ?>" style="width:100%;" class="btn btn-primary  mt-10" >Edit</a></div> 
+							<div><a href = "student-edit.php?id=<?php echo $students['id'];  ?>" style="width:100%;" class="btn btn-primary  mt-10" >Edit</a></div> 
 							<hr>
 							<br>
 							<!-- <div class="row mt-15">
