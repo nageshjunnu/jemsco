@@ -138,6 +138,8 @@
 	<!-- JEMSCO App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/dashboard.js"></script>
+    <script src="assets/src/js/pages/data-table.js"></script>
+
 	
 </body>
 
