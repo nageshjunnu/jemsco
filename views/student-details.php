@@ -58,7 +58,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							</ol>
 						</nav>
 					</div>
-					<a href = "student-edit.php?id=<?php echo $student['id']; ?>" ><span class="badge badge-lg badge-info">Edit</span></a>
+					<div style="float:right;"><a href = "student-edit.php?id=<?php echo $student['id']; ?>" ><span class="badge badge-lg badge-info">Edit</span></a></div>
 				</div>				
 			</div>
 		</div>
