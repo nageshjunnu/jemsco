@@ -1,6 +1,6 @@
 //[mailbox Javascript]
 
-//Project:	COA - Responsive Admin Template
+//Project:	JEMSCO - Responsive Admin Template
 //Primary use:   Used only for the  mailbox
 
 

@@ -1,6 +1,6 @@
 //[c3 charts Javascript]
 
-//Project:	COA - Responsive Admin Template
+//Project:	JEMSCO - Responsive Admin Template
 //Primary use:   Used only for the morris charts
 
 

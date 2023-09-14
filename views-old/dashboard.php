@@ -569,7 +569,7 @@ $user = $userModel->getUserById($_SESSION['id']);
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
 		  <li class="nav-item">
-			<a class="nav-link" href="https://themeforest.net/item/COA-bootstrap-admin-dashboard-template/33405709" target="_blank">Purchase Now</a>
+			<a class="nav-link" href="https://themeforest.net/item/JEMSCO-bootstrap-admin-dashboard-template/33405709" target="_blank">Purchase Now</a>
 		  </li>
 		</ul>
     </div>
@@ -1216,7 +1216,7 @@ $user = $userModel->getUserById($_SESSION['id']);
 		
 	<!-- ./side demo panel -->
 	<div class="sticky-toolbar">	    
-	    <a href="https://themeforest.net/item/COA-bootstrap-admin-dashboard-template/33405709" data-bs-toggle="tooltip" data-bs-placement="left" title="Buy Now" class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
+	    <a href="https://themeforest.net/item/JEMSCO-bootstrap-admin-dashboard-template/33405709" data-bs-toggle="tooltip" data-bs-placement="left" title="Buy Now" class="waves-effect waves-light btn btn-success btn-flat mb-5 btn-sm" target="_blank">
 			<span class="icon-Money"><span class="path1"></span><span class="path2"></span></span>
 		</a>
 	    <a href="https://themeforest.net/user/multipurposethemes/portfolio" data-bs-toggle="tooltip" data-bs-placement="left" title="Portfolio" class="waves-effect waves-light btn btn-danger btn-flat mb-5 btn-sm" target="_blank">
@@ -1347,7 +1347,7 @@ $user = $userModel->getUserById($_SESSION['id']);
 	
 	<script src="assets/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 	
-	<!-- COA App -->
+	<!-- JEMSCO App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/dashboard.js"></script>
 	

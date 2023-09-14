@@ -1,7 +1,7 @@
 //[custom Javascript]
 
-//Project:	COA - Responsive Admin Template
-//Primary use:	COA - Responsive Admin Template
+//Project:	JEMSCO - Responsive Admin Template
+//Primary use:	JEMSCO - Responsive Admin Template
 
 //should be included in all pages. It controls some layout
 

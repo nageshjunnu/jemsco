@@ -1,7 +1,7 @@
 //[Master Javascript]
 
-//Project:	COA Admin - Responsive Admin Template
-//Primary use:	COA Admin - Responsive Admin Template
+//Project:	JEMSCO Admin - Responsive Admin Template
+//Primary use:	JEMSCO Admin - Responsive Admin Template
 
 //should be included in all pages. It controls some layout
 

@@ -29,7 +29,7 @@ $user = $userModel->getUserById($_SESSION['id']);
     <meta name="author" content="">
     <link rel="icon" href="assets/images/favicon.ico">
 
-    <title>COA - Dashboard</title>
+    <title>JEMSCO - Dashboard</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="assets/src/css/vendors_css.css">
@@ -51,12 +51,12 @@ $user = $userModel->getUserById($_SESSION['id']);
 		<a href="index.html" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-30">
-			  <span class="light-logo"><img src="assets/images/logo-letter.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="assets/images/logo-letter-white.png" alt="logo"></span>
+			  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
 		  </div>
 		  <div class="logo-lg">
-			  <span class="light-logo"><img src="assets/images/logo-dark-text.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="assets/images/logo-light-text.png" alt="logo"></span>
+			  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
 		  </div>
 		</a>	
 	</div>   

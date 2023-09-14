@@ -98,7 +98,7 @@
 					</div> -->
 				  </div>
 				<div class="copyright text-center m-25">
-					<p><strong class="d-block">COA Dashboard</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
+					<p><strong class="d-block">JEMSCO Dashboard</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
 				</div>
 			  </div>
 		  </div>

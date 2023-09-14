@@ -3,7 +3,7 @@
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
 		  <li class="nav-item">
-			<a class="nav-link" href="https://themeforest.net/item/COA-bootstrap-admin-dashboard-template/33405709" target="_blank">Purchase Now</a>
+			<a class="nav-link" href="https://themeforest.net/item/JEMSCO-bootstrap-admin-dashboard-template/33405709" target="_blank">Purchase Now</a>
 		  </li>
 		</ul>
     </div>
@@ -771,7 +771,7 @@
 	<script src="assets/vendor_components/datatable/datatables.min.js"></script>
 
 	
-	<!-- COA App -->
+	<!-- JEMSCO App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/dashboard.js"></script>
 	
