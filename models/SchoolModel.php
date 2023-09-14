@@ -21,6 +21,8 @@ class SchoolModel {
         } else {
             return false;
         }
+        $stmt->close();
+        $conn->close();
     }
 
     public function getAllSchool() {
