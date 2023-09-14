@@ -4,7 +4,7 @@ require_once '../models/UserModel.php';
 
 // Check if the user is logged in (session variable exists)
 if (!isset($_SESSION['id'])) {
-    header('Location: auth_login.html'); // Redirect to the login page if not logged in
+   // header('Location: auth_login.html'); // Redirect to the login page if not logged in
     exit();
 }
 if (isset($_SESSION['id'])) {
