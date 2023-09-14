@@ -7,7 +7,7 @@ require_once '../models/SchoolModel.php';
 
 $studentModel = new SchoolModel();
 $totalStudents = $studentModel->getStudentsCount();
-// print_r($totalStudents);
+print_r($totalStudents);
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
