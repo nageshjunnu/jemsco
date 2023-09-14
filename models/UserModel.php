@@ -10,7 +10,7 @@ class UserModel {
         // Implement your database query here to create a new user.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (username, password, role, status) VALUES (:username, :password, :role, :status)";
+        $query = "INSERT INTO users (username, password, role) VALUES (:username, :password, :role)";
         $con = new dbModel();
         $connection = $con->conn();
         
@@ -19,7 +19,6 @@ class UserModel {
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':role', $role);
-        $stmt->bindParam(':status', 0);
 
 
         if ($stmt->execute()) {
