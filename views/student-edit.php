@@ -137,27 +137,25 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									</div>
 									</div>
 									<div class="row">	
-									<div class="col-md-6">
-										<div class="form-group">
-										<label class="form-label">District</label>
-										<input type="text" class="form-control" name="district" value="<?php echo $students['district'];?>" placeholder="<?php echo $students['district'];?>">
+										<div class="col-md-6">
+											<div class="form-group">
+											<label class="form-label">District</label>
+											<input type="text" class="form-control" name="district" value="<?php echo $students['district'];?>" placeholder="<?php echo $students['district'];?>">
+											</div>
 										</div>
-									</div>
-									</div>
-
-									<div class="col-md-6">
-									<div class="form-group">
-										<label class="form-label">State</label>
-										<input type="text" class="form-control" name="state" value="<?php echo $students['state'];?>" placeholder="<?php echo $students['state'];?>">
-									</div>
-									</div>
+										<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label">State</label>
+											<input type="text" class="form-control" name="state" value="<?php echo $students['state'];?>" placeholder="<?php echo $students['state'];?>">
+										</div>
 									
-									<div class="col-md-6">
-									<div class="form-group">
-										<label class="form-label">Pincode</label>
-										<input type="text" class="form-control" name="pincode" value="<?php echo $students['pincode'];?>" placeholder="<?php echo $students['pincode'];?>">
-									</div>
-									</div>
+									
+										<div class="col-md-6">
+										<div class="form-group">
+											<label class="form-label">Pincode</label>
+											<input type="text" class="form-control" name="pincode" value="<?php echo $students['pincode'];?>" placeholder="<?php echo $students['pincode'];?>">
+										</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -202,6 +200,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 								  </div>
                                   
 								</div>
+								<div class="row">
                                 <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">State</label>
@@ -209,21 +208,22 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 									</div>
 								  </div>
 								</div>
-								<div class="col-md-6">
+									<div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">Pincode</label>
 									  <input type="number" class="form-control" name="school_pincode" value="<?php echo $students['school_pincode'];?>" placeholder="<?php echo $students['school_pincode'];?>">
 									</div>
 								  </div>
-								</div>
+								
+								
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="form-label">Board</label>
 										<input type="text" class="form-control" name="board_syllabus" value="<?php echo $students['board_syllabus'];?>" placeholder="<?php echo $students['board_syllabus'];?>">									
 									</div>
 								</div>
-								
-							</div>
+								</div>
+							
 							<!-- /.box-body -->
 							<div class="box-footer">
 								<button type="button" class="btn btn-warning me-1">
@@ -233,7 +233,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 								  <i class="ti-save-alt"></i> Save
 								</button>
 							</div>  
-						
+							</div>
 					  </div>
 					  <!-- /.box -->		
 					  </form>	
