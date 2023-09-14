@@ -9,9 +9,9 @@
 			  <div class="logo-mini">
 				  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
 			  </div>
-			  <!-- <div class="logo-lg">
-				  <span class="light-logo fs-36 fw-700">CRM<span class="text-primary">i</span></span>
-			  </div> -->
+			  <div class="logo-lg">
+				  <span class="light-logo fs-36 fw-700">JEM<span class="text-primary">SCO</span></span>
+			  </div>
 			</a>	
 		</div> 
 		<div class="user-profile my-15 px-20 py-10 b-1 rounded10 mx-15">
