@@ -48,7 +48,7 @@ $user = $userModel->getUserById($_SESSION['id']);
   <header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start d-md-none d-block">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="dashboard.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-30">
 			  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
