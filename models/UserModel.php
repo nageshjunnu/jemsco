@@ -300,6 +300,30 @@ class UserModel {
         }
     }
 
+    public function deleteUser($userId) {
+        try {
+            $query = "UPDATE users SET status = :status  WHERE id = :id";
+
+            // echo $stmt;
+            $status =9;
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':status', $status);
+            $stmt->bindParam(':id', $userid);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
     
 
 }

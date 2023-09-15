@@ -74,7 +74,7 @@ $usersdata = $usersModel->getAllUsers();
 								<td><?php echo $item['mobile']; ?></td>
 								<td><?php echo $item['role']; ?></td>
 								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
-								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
+								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <a class="badge badge-danger" class="delete-user" data-user-id="<?php echo $item['id']; ?>">Delete</a></td>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>
@@ -125,7 +125,34 @@ $usersdata = $usersModel->getAllUsers();
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
 
-	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.delete-user').click(function() {
+                var userId = $(this).data('user-id');
+                
+                if (confirm('Are you sure you want to delete this user?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'controllers/UserController.php',
+                        data: { user_id: userId, action:"delete-user" },
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.success) {
+                                alert(response.message);
+                                // Reload the user list or perform any other action as needed
+                            } else {
+                                alert(response.message);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 	
 
 </body>
