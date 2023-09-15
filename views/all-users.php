@@ -6,9 +6,9 @@ require_once '../models/UserModel.php';
 $usersModel = new UserModel();
 $usersdata = $usersModel->getAllUsers();
 
-echo "<pre>";
-print_r($usersdata);
-echo "</pre>";
+// echo "<pre>";
+// print_r($usersdata);
+// echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
 
@@ -74,7 +74,7 @@ echo "</pre>";
 								<td><?php echo $item['mobile']; ?></td>
 								<td><?php echo $item['role']; ?></td>
 								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
-								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="add-new-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
+								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
 						</tbody>
