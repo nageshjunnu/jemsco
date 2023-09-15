@@ -134,7 +134,7 @@ require_once '../controllers/StudentController.php';
 			
 			$.ajax({
 				type: "POST",
-				url: "../controllers/AdminStudentController.php",
+				url: "../controllers/AdminUsersController.php",
 				data: $(this).serialize(),
 				dataType: "json",
 				success: function(response) {
