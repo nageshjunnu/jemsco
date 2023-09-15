@@ -30,9 +30,9 @@ else{
 
 $studenstModel = new StudentController();
 $students = $studenstModel->getStudentById($studentId);
-echo "<pre>";
-print_r($students);
-echo "</pre>";
+// echo "<pre>";
+// print_r($students);
+// echo "</pre>";
 // die;
 // echo substr("srikanth", 0, 2);
 
