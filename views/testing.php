@@ -4590,9 +4590,9 @@
     <script src="assets/assets/icons/feather-icons/feather.min.js"></script>
 	
 	<script src="assets/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 	
 	<script src="assets/vendor_components/datatable/datatables.min.js"></script>
-
 	
 	<!-- COA App -->
 	<script src="assets/src/js/template.js"></script>
