@@ -36,7 +36,7 @@ require_once '../controllers/StudentController.php';
 		<form class="form" id="newuser">	
 			<div class="row">
 					  
-				<div class="col-lg-6 col-12">
+				<div class="col-lg-12 col-12">
 					  <div class="box">
 						<div class="box-header with-border">
 						
@@ -48,6 +48,13 @@ require_once '../controllers/StudentController.php';
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> Personal Info</h4>
 								<hr class="my-15">
 								<div class="row">
+                                <div class="col-md-6">
+									<div class="form-group">
+									  <label class="form-label">User Name</label>
+									  <input type="text" class="form-control" name="username" value="">
+									 
+									</div>
+								  </div>
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">First Name</label>

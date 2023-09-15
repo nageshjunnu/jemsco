@@ -5,7 +5,7 @@ require_once '../models/UserModel.php';
 // ini_set('display_errors', '1');
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-   echo $action = $_POST['action'];
+   //echo $action = $_POST['action'];
     if($action == 'add-new-user'){
         registerUser();
     }
