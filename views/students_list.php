@@ -142,6 +142,7 @@ $students = $studenstModel->showAllStudents();
 	<!-- Page Content overlay -->
 	
 
+	
 	<!-- Vendor JS -->
 	<script src="assets/src/js/vendors.min.js"></script>
 	<script src="assets/src/js/pages/chat-popup.js"></script>
@@ -155,7 +156,4 @@ $students = $studenstModel->showAllStudents();
 
 	
 	
-
-</body>
-
-</html>
+	<?php include("footer.php");  ?>
