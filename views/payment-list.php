@@ -30,6 +30,7 @@ $payments = $studenstModel->getAllPayments();
 // echo substr("srikanth", 0, 2);
 
 // die;
+
 ?>
 <?php include("header.php"); ?>
   
@@ -83,7 +84,9 @@ $payments = $studenstModel->getAllPayments();
 						</thead>
 						<tbody>
 						<?php foreach ($payments as $payment): ?>
-
+							<?php
+								print_r( $studenstModel->getStudentDetailsById($payment['student_id']));	
+							?>
 							<tr>
 								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><?php echo $payment['student_id']; ?></a></td>
 								<td><?php echo $payment['amount']; ?></td>
