@@ -19,6 +19,8 @@ else{
 
 $userModel = new AdminController();
 $user = $userModel->getUserDetailsBy($id);
+print_r($user);
+die;
   ?>
   
   <!-- Content Wrapper. Contains page content -->
