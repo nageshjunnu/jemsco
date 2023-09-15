@@ -598,7 +598,7 @@ require_once '../models/UserModel.php';
                             
                             Toast.fire({
                             icon: 'success',
-                            title: 'Registration successful'
+                            title: 'Payment successful'
                             })
 		        	  window.location.href = 'verify_payment.php';
 		        	}

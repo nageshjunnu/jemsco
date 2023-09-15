@@ -1,22 +1,54 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
    <head>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Contact | TownPress - Municipality HTML Template</title>
+      <title>Student Registration</title>
       <link rel="shortcut icon" href="images/favicon.png">
       <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
       <!-- STYLESHEETS : begin -->
       <link rel="stylesheet" type="text/css" href="library/css/style.css">
       <link rel="stylesheet" type="text/css" href="library/css/skin/red.css">
       <link rel="stylesheet" type="text/css" href="library/css/custom.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
       <!--[if lte IE 9]>
       <link rel="stylesheet" type="text/css" href="library/css/oldie.css" />
       <![endif]-->
       <!-- STYLESHEETS : end -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
       <style>
+            @media screen and (max-width: 1024px) {
+  .menu-bottom-arrow1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 7px auto;
+    width: 0;
+    height: 0;
+    border-top: 75px solid #0db1fd;
+    border-left: 117px solid transparent;
+    border-right: 103px solid transparent;
+}   
+         }
+         
+         @media only screen and (max-width: 1400px) and (min-width: 1025px)  {
+             .menu-bottom-arrow1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+    width: 0;
+    height: 0;
+    border-top: 85px solid #0db1fd;
+    border-left: 160px solid transparent;
+    border-right: 144px solid transparent;
+}
+         }
          .disabledbox {
             pointer-events: none;
             opacity: 0.2;   
@@ -26,6 +58,9 @@
          margin-top: 30px;
          margin-bottom: 0px;
          }
+         nav.side-menu.m-left-side.m-show-submenu.menu-bottom-arrow1 {
+    margin-bottom: 70px;
+}
          .bottom-arrow {
          color: #fff; 
          padding: 10px 8px; 
@@ -267,67 +302,17 @@
 									<li><a href="#">FAQs</a></li>
 									<li><a href="#">Downloads</a></li>
 									<li><a href="#">Contact Us</a></li>
-
-									<!-- <li><a href="town-hall.html">Government</a>
-										<ul>
-											<li><a href="town-hall.html">Town Hall</a></li>
-											<li><a href="town-council.html">Town Council</a></li>
-											<li><a href="phone-numbers.html">Phone Numbers</a></li>
-											<li><a href="document-list.html">Documents</a></li>
-											<li><a href="contact.html">Write To Mayor</a></li>
-										</ul>
-									</li> -->
-									<!-- <li><a href="post-list.html">Community</a>
-										<ul>
-											<li><a href="post-list.html">News</a></li>
-											<li><a href="notice-list.html">Notices</a></li>
-											<li><a href="event-list.html">Events</a></li>
-											<li><a href="gallery-list.html">Galleries</a></li>
-										</ul>
-									</li> -->
-									<!-- <li><a href="statistics.html">Pages</a>
-										<ul>
-											<li><a href="statistics.html">Statistics</a></li>
-											<li><a href="virtual-tour.html">Virtual Tour</a></li>
-											<li><a href="town-history.html">Town History</a></li>
-											<li><a href="elements.html">Elements</a></li>
-										</ul>
-									</li> -->
 								</ul>
 							</nav>
 							<!-- HEADER MENU : end -->
-
 							<!-- HEADER TOOLS : begin -->
 							<div class="header-tools">
-
-								<!-- HEADER SEARCH : begin -->
-								<!-- <div class="header-search">
-									<form method="get" action="http://demos.lsvr.sk/townpress.html/demo/search-results.html" class="c-search-form">
-										<div class="form-fields">
-											<input type="text" value="" placeholder="Search this site..." name="s">
-											<button type="submit" class="submit-btn"><i class="tp tp-magnifier"></i></button>
-										</div>
-									</form>
-								</div> -->
-								<!-- HEADER SEARCH : end -->
-
-								<!-- HEADER GMAP SWITCHER : begin -->
-								<!-- Remove following block if you are not using Google Map in this template -->
-								<!-- <button type="button" class="header-gmap-switcher" title="Show on Map">
-									<i class="ico-open tp tp-map2"></i>
-									<i class="ico-close tp tp-cross"></i>
-									<span>Map</span>
-								</button> -->
-								<!-- HEADER GMAP SWITCHER : end -->
-
 							</div>
 							<!-- HEADER TOOLS : end -->
-
 						</div>
 					</div>
 				</div>
 				<!-- HEADER CONTENT : end -->
-
 				<!-- HEADER GMAP : begin -->
 				<!-- Add your address into "data-address" attribute
 				Change zoom level with "data-zoom" attribute, bigger number = bigger zoom
@@ -343,14 +328,11 @@
 					</div>
 				</div>
 				<!-- HEADER GMAP : end -->
-
 			</div>
 		</header>
 		<!-- HEADER : end -->
-
 		<!-- HEADER BG : begin -->
 		<div class="header-bg">
-
 			<!-- HEADER IMAGE : begin -->
 			<!-- To add more images just copy and edit elements with "image-layer" class (see home-2.html template for example)
 			Change autoplay speed with "data-autoplay" attribute (in seconds), works only if there are more than one image -->
@@ -359,7 +341,6 @@
 				<!-- div class="image-layer" style="background-image: url( 'images/header-02.jpg' );"></div -->
 			</div>
 			<!-- HEADER IMAGE : begin -->
-
 		</div>
 		<!-- HEADER BG : end -->
       <!-- CORE : begin -->
@@ -388,33 +369,11 @@
                   <!-- PAGE CONTENT : begin -->
                   <div id="page-content">
                      <div class="page-content-inner">
-                        <!-- TEAM MEMBER : begin -->
-                        <!-- To use Team Member element without portrait, remove "m-has-portrait" class from the following element
-                           and remove element with "member-portrait" class -->
-                        <!-- <div class="c-team-member m-has-portrait">
-                           <div class="c-content-box">
-                           	<div class="team-member-inner">
-                           		<div class="member-portrait">
-                           			<img src="images/person-01.jpg" alt="Adam Ganizani">
-                           		</div>
-                           		<h3 class="member-name">Adam Ganizani</h3>
-                           		<h4 class="member-role">Town Mayor</h4>
-                           		<div class="member-description">
-                           			<p>You can ask me anything and I will try to reply within 24 hours.</p>
-                           		</div>
-                           		<ul class="member-social">
-                           			<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                           			<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                           		</ul>
-                           	</div>
-                           </div>
-                           </div> -->
-                        <!-- TEAM MEMBER : end -->
                         <!-- CONTACT FORM : begin -->
                         <!-- You have to host your site on PHP server for this form to work
                            Don't forget to set up your form in ajax/contact-form.php file -->
                         <div class="c-content-box">
-                           <form id="stuent-registration" method="post" class="m-ajax-form">
+                           <form id="registration-form" method="post" class="m-ajax-form1">
                               <input type="hidden" name="contact-form">
                               <!-- FORM VALIDATION ERROR MESSAGE : begin -->
                               <p class="c-alert-message m-warning m-validation-error" style="display: none;">
@@ -427,7 +386,11 @@
                               </p>
                               <!-- SENDING REQUEST ERROR MESSAGE : end -->
                               <!-- NAME FIELD : begin -->
-                              <div class="col-md-6">
+                              <!--<div class="col-md-12">-->
+                                  <h5>Student Details </h5>
+                              <!--</div>-->
+                              <div class="row">
+                              <div class="col-md-4">
                               <p>
                                  <label for="contact-name">Student Name <span>*</span></label>
                                  <input type="text" id="contact-name" name="student_name" required="required">
@@ -435,45 +398,93 @@
                               </div>
                               <!-- NAME FIELD : end -->
                               <!--  FATHER NAME FIELD : begin -->
-                              <div class="col-md-6">
+                              <div class="col-md-4">
                               <p>
                                  <label for="father-contact-name">Father's/Mother's Name <span>*</span></label>
                                  <input type="text" id="father-contact-name" name="father_name" required="required">
                               </p>
                               </div>
-                              
+                              <div class="col-md-4">
+                              <p>
+                                 <label for="date-of-birth">Date of Birth <span>*</span></label>
+                                 <input type="date" id="date of birth" name="dob" required="required">
+                              </p>
+                              </div>
+                              </div>
+                              <div class="row">
+                              <div class="col-md-4">
+                              <p>
+                                 <label for="date-of-birth">Gender <span>*</span></label>
+                                 <select class="form-select" aria-label="Default select example" name="gender" id="" >
+                                    <option value="Gender" selected> Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="custome">Custome</option>
+                                    
+                                 </select>
+                              </p>
+                              </div>
+                            <div class="col-md-4">
+                              <p>
+                                 <label for="student-mobile-number">Mobile Number <span>*</span></label>
+                                 <input type="number" id="student-mobile-number" name="mobile" required="required">
+                              </p>
+                              </div>
+                              <div class="col-md-4">
+                              <p>
+                                 <label for="Email">Email <span>*</span></label>
+                                 <input type="email" id="Email" name="email" required="required">
+                              </p>
+                              </div>
+                              </div>
+                              <!--<div class="col-md-12">-->
+                                  <h5>Student Address </h5>
+                              <!--</div>-->
+                              <div class="row">
                               <!--  Adderss : begin -->
                                <div class="col-md-6">
                               <p>
-                                 <label for="Address">Address <span>*</span></label>
+                                 <label for="Address">Address Line1<span>*</span></label>
                                  <input type="address" id="Address " name="address" required="required">
                               </p>
                               </div>
                                <div class="col-md-6">
                               <p>
+                                 <label for="Address Line2">Address Line2 <span>*</span></label>
+                                 <input type="text" id="Address Line1 " name="address2" required="required">
+                              </p>
+                              </div>
+                              </div>
+                              <div class="row">
+                               <div class="col-md-3">
+                              <p>
                                  <label for="City">City <span>*</span></label>
                                  <input type="text" id="City " name="city" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
+                               <div class="col-md-3">
                               <p>
                                  <label for="District">District <span>*</span></label>
                                  <input type="text" id="District " name="district" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
+                               <div class="col-md-3">
                               <p>
                                  <label for="State">State <span>*</span></label>
                                  <input type="text" id="State " name="state" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
-                              <p>
-                                 <label for="Pincode">Pincode <span>*</span></label>
-                                 <input type="text" id="Pincode" name="pincode" required="required">
-                              </p>
-                              </div>
+                              <div class="col-md-4">
+                                 <p>
+                                    <label for="Pincode">Pincode <span>*</span></label>
+                                    <input type="text" id="pincode" name="pincode" required="required">
+                                 </p>
+                                 </div>
+                              <!--</div>-->
                               <!--  Adderss : end -->
+                              <div class="col-md-12">
+                                  <h5>Student School Details </h5>
+                              </div>
                               <!--  School Name : Begin -->
                                <div class="col-md-6">
                               <p>
@@ -489,58 +500,58 @@
                                  <input type="text" id="SchoolAddress " name="school_address" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
+                              <div class="col-md-3">
                               <p>
-                                 <label for="school_city">City <span>*</span></label>
+                                 <label for="SchoolState">School State <span>*</span></label>
+                                 <input type="text" id="SchoolState " name="school_state" required="required">
+                              </p>
+                              </div>
+                               <div class="col-md-3">
+                              <p>
+                                 <label for="City">School City <span>*</span></label>
                                  <input type="text" id="City " name="school_city" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
+                               <div class="col-md-3">
                               <p>
-                                 <label for="school_district">District <span>*</span></label>
-                                 <input type="text" id="school_district " name="school_district" required="required">
+                                 <label for="SchoolDistrict">School District <span>*</span></label>
+                                 <input type="text" id="SchoolDistrict " name="school_district" required="required">
                               </p>
                               </div>
-                               <div class="col-md-4">
+                               <div class="col-md-3">
                               <p>
-                                 <label for="school_state">State <span>*</span></label>
-                                 <input type="text" id="school_state " name="school_state" required="required">
-                              </p>
-                              </div>
-                               <div class="col-md-6">
-                              <p>
-                                 <label for="school_pincode">Pincode <span>*</span></label>
-                                 <input type="text" id="school_pincode" name="school_pincode" required="required">
+                                 <label for="SchoolPincode">School Pincode <span>*</span></label>
+                                 <input type="text" id="SchoolPincode" name="school_pincode" required="required">
                               </p>
                               </div>
                               <!-- School Adderss : end -->
                               <!-- PHONE FIELD : begin -->
-                               <div class="col-md-6">
+                               <div class="col-md-4">
                               <p>
-                                 <label for="mobile">Mobile NO<span>*</span></label>
-                                 <input type="tel" id="mobile" name="mobile">
+                                 <label for="contact-phone">Mobile NO<span>*</span></label>
+                                 <input type="tel" id="school_mobile" name="mobile">
                               </p>
                               </div>
-                               <div class="col-md-6">
+                               <div class="col-md-4">
                               <p>
-                                 <label for="alternate_mobile">Alternate Mobile NO</label>
-                                 <input type="tel" id="alternate_mobile" name="alternate_mobile">
+                                 <label for="alternate-contact-phone">Alternate Mobile NO</label>
+                                 <input type="tel" id="school_alternate_mobile" name="alternate_mobile">
                               </p>
                               </div>
                               <!-- PHONE FIELD : end -->
                               <!-- EMAIL FIELD : begin -->
-                               <div class="col-md-6">
+                               <div class="col-md-4">
                               <p>
-                                 <label for="email">Email ID <span>*</span></label>
-                                 <input type="email" id="email" name="email" required="required">
+                                 <label for="contact-email">Email ID <span>*</span></label>
+                                 <input type="email" id="contact-email" name="school_email" required="required">
                               </p>
                               </div>
                              
                               <!-- SUBJECT FIELD : begin -->
                               <div class="col-md-6">
                               <p>
-                                 <label for="board_syllabus">Board / Syllabus Followed (Please Specify)<span>*</span></label>
-                                 <input type="text" id="board_syllabus" name="board_syllabus" required="required">
+                                 <label for="Syllabus">Board / Syllabus Followed (Please Specify)<span>*</span></label>
+                                 <input type="text" id="Syllabus" name="board_syllabus" required="required">
                               </p>
                               </div>
                               <!-- SUBJECT FIELD : end -->
@@ -550,19 +561,20 @@
                                  <label for="form-select">Class (Select Option) <span>*</span></label>
                                  <!-- <textarea id="contact-message" name="contact-message" class="m-required"></textarea> -->
                                  <select class="form-select" name="class" aria-label="Default select example" id="dropDownId" >
-                                    <option value="" selected> No Class</option>
-                                    <option value="3">Class 3</option>
-                                    <option value="4">Class 4</option>
-                                    <option value="5">Class 5</option>
-                                    <option value="6">Class 6</option>
-                                    <option value="7">Class 7</option>
-                                    <option value="8">Class 8</option>
-                                    <option value="9">Class 9</option>
-                                    <option value="10">Class 10</option>
-                                    <option value="11">Class 11</option>
-                                    <option value="12">Class 12</option>
+                                    <option value="1" selected> No Class</option>
+                                    <option value="2">Class 3</option>
+                                    <option value="3">Class 4</option>
+                                    <option value="4">Class 5</option>
+                                    <option value="5">Class 6</option>
+                                    <option value="6">Class 7</option>
+                                    <option value="7">Class 8</option>
+                                    <option value="8">Class 9</option>
+                                    <option value="9">Class 10</option>
+                                    <option value="10">Class 11</option>
+                                    <option value="11">Class 12</option>
                                  </select>
                               </p>
+                              </div>
                               </div>
                               <!-- MESSAGE FIELD : end -->
                               <!--option box begin  -->
@@ -571,7 +583,7 @@
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #2e73b4;" class="bottom-arrow bottom-arrow1" >
                                           <label class="optiondata">Option 1
-                                          <input type="checkbox" name="checkbox" class="cso" value="150">
+                                             <input type="checkbox" name="checkbox" class="cso" value="150">
                                           <span class="checkmark"></span>
                                           </label>
                                           <div>CSO</div>
@@ -584,26 +596,26 @@
                                     <div class="text-center option-boxs" id="second" >
                                        <div style="background-color: #ffc000;" class="bottom-arrow bottom-arrow2">
                                           <label class="optiondata">Option 2
-                                          <input type="checkbox" name="checkbox" class="ceo" value="150" >
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CEO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox" name="checkbox" class="ceo" value="150" >
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CEO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 cmo-box"  style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs" id="three">
                                        <div style="background-color: #a9d08d;" class="bottom-arrow bottom-arrow3">
                                           <label class="optiondata">Option 3
-                                          <input type="checkbox" name="checkbox" class="cmo" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CMO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox" name="checkbox" class="cmo" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CMO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <!-- </div>
@@ -612,78 +624,78 @@
                                     <div class="text-center option-boxs">
                                        <div style="background-color: #fed966;"class="bottom-arrow bottom-arrow4">
                                           <label class="optiondata">Option 4
-                                          <input type="checkbox" name="checkbox" class="cpo" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CPO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox" name="checkbox" class="cpo" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CPO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 cco-box" id="second" style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #7030a0;"class="bottom-arrow bottom-arrow5">
                                           <label class="optiondata">Option 5
-                                          <input type="checkbox"  name="checkbox" class="cco" value="150" >
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CCO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox"  name="checkbox" class="cco" value="150" >
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CCO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 cmpc-box" id="three" style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #c75811;"class="bottom-arrow bottom-arrow6">
                                           <label class="optiondata">Option 6
-                                          <input type="checkbox"  name="checkbox" class="cmpc" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CMPC</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox"  name="checkbox" class="cmpc" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CMPC</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 cbpc-box" id="first" style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs"  >
                                        <div style="background-color: #aa7941;"class="bottom-arrow bottom-arrow7">
                                           <label class="optiondata">Option 7
-                                          <input type="checkbox"  name="checkbox" class="cbpc" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CBPC</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox"  name="checkbox" class="cbpc" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CBPC</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 cbio-box" id="second" style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #d434d4;" class="bottom-arrow bottom-arrow8">
                                           <label class="optiondata">Option 8
-                                          <input type="checkbox"  name="checkbox" class="cbio" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CBIO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox"  name="checkbox" class="cbio" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CBIO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
                                  <div class="col-md-4 ccso-box" id="three" style="margin-top: 5px; margin-bottom: 5px;">
                                     <div class="text-center option-boxs" >
                                        <div style="background-color: #01e1e3;" class="bottom-arrow bottom-arrow9">
                                           <label class="optiondata">Option 9
-                                          <input type="checkbox"  name="checkbox" class="ccso" value="150">
-                                          <span class="checkmark"></span>
-                                          </label>
-                                          <div>CCSO</div>
-                                       </div>
-                                       <p class="para-text"><strong>Exam Fee</strong></p>
-                                       <h4>₹ 150</h4>
+                                             <input type="checkbox"  name="checkbox" class="ccso" value="150">
+                                             <span class="checkmark"></span>
+                                             </label>
+                                             <div>CCSO</div>
+                                          </div>
+                                          <p class="para-text"><strong>Exam Fee</strong></p>
+                                          <h4>₹ 150</h4>
                                     </div>
                                  </div>
 
@@ -717,116 +729,101 @@
                <hr class="c-separator m-margin-top-small m-margin-bottom-small m-transparent hidden-lg hidden-md">
             </div>
             <!-- MIDDLE COLUMN : end -->
-            <!-- LEFT COLUMN : begin -->
-            <div class="left-column col-md-3 col-md-pull-9">
-               <!-- SIDE MENU : begin -->
-               <nav class="side-menu m-left-side m-show-submenu">
-                  <ul>
-                     <li>
-                        <a href="#">CSO</a>
-                        <ul>
-                           <li><a href="#">About UIMO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                    <li>
-                        <a href="#">CEO</a>
-                        <ul>
-                           <li><a href="#">About CEO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">CMO</a>
-                        <ul>
-                           <li><a href="#">About CMO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">CPO</a>
-                        <ul>
-                           <li><a href="#">About CPO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">CCO</a>
-                        <ul>
-                           <li><a href="#">About CCO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">CMPC</a>
-                        <ul>
-                           <li><a href="#">About CMPC</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                      <li>
-                        <a href="#">CBPC</a>
-                        <ul>
-                           <li><a href="#">About CBPC</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                      <li>
-                        <a href="#">CBIO</a>
-                        <ul>
-                           <li><a href="#">About CBIO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                     <li>
-                        <a href="#">CCSO</a>
-                        <ul>
-                           <li><a href="#">About CCSO</a></li>
-                           <li><a href="#">Exam Fee</a></li>
-                           <li><a href="#">Registration</a></li>
-                        </ul>
-                     </li>
-                      <li>
-                        <a href="#">For Schools</a>
-                     </li>
-                     <li>
-                        <a href="#">Results</a>
-                     </li>
-                     <li>
-                        <a href="#">Achivers</a>
-                     </li>
-                  </ul>
-               </nav>
-               <!-- SIDE MENU : end -->
-               <!-- LEFT SIDEBAR : begin -->
-               <aside class="sidebar">
-                  <div class="widget-list">
-                     <!-- FEATURED GALLERY WIDGET : begin -->
-                     <div class="widget featured-gallery-widget">
-                        <div class="widget-inner">
-                           <h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-pictures"></i>Featured Gallery</h3>
-                           <div class="widget-content">
-                              <div class="gallery-image" title="Streets of TownPress">
-                                 <a href="gallery-detail.html"><img src="images/featured-gallery-01.jpg" alt=""></a>
-                              </div>
-                              <p class="show-all-btn"><a href="gallery-list.html">See All Galleries</a></p>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- FEATURED GALLERY WIDGET : end -->
+             <!-- LEFT COLUMN : begin -->
+               <div class="left-column col-md-3 col-md-pull-9 left-side-menu">
+                  <!-- SIDE MENU : begin -->
+                  <div style=" text-align: center; background-color:white;padding: 15px 0px;">
+                     <h1 style="font-size: 40px; margin-bottom: 1px;">JEMSCO</h1>
+                     <p style="margin:0px;">Catalyst Olympiads</p>
                   </div>
-               </aside>
-               <!-- LEFT SIDEBAR : end -->
-            </div>
-            <!-- LEFT COLUMN : end -->
+                  <nav class="side-menu m-left-side m-show-submenu menu-bottom-arrow1">
+                     <ul>
+                        <li>
+                           <a href="#">CSO</a>
+                           <ul>
+                              <li><a href="#">About UIMO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CEO</a>
+                           <ul>
+                              <li><a href="#">About CEO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CMO</a>
+                           <ul>
+                              <li><a href="#">About CMO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CPO</a>
+                           <ul>
+                              <li><a href="#">About CPO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CCO</a>
+                           <ul>
+                              <li><a href="#">About CCO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CMPC</a>
+                           <ul>
+                              <li><a href="#">About CMPC</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CBPC</a>
+                           <ul>
+                              <li><a href="#">About CBPC</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CBIO</a>
+                           <ul>
+                              <li><a href="#">About CBIO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">CCSO</a>
+                           <ul>
+                              <li><a href="#">About CCSO</a></li>
+                              <li><a href="#">Exam Fee</a></li>
+                              <li><a href="#">Registration</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#">For Schools</a>
+                        </li>
+                        <li>
+                           <a href="#">Results</a>
+                        </li>
+                        <li>
+                           <a href="#">Achivers</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <!-- SIDE MENU : end -->
+               </div>
+               <!-- LEFT COLUMN : end -->
          </div>
       </div>
       </div>
@@ -849,8 +846,7 @@
                                     <div class="widget-inner">
                                        <h3 class="widget-title">About TownPress</h3>
                                        <div class="widget-content">
-                                          <p></p>
-                                          <p></p>
+                                          <p>The Catalyst Olympiads is a first of its kind, to groom talented students. The Olympiads have certainly generated considerable excitement and interest among the meritorious students which inspired them to achieve their goals such as IIT, Civil Services and exposure to the communicative world.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -864,7 +860,7 @@
                                        <h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-telephone"></i>Phone Numbers</h3>
                                        <div class="widget-content">
                                           <dl>
-                                             <dt>Town Clerk</dt>
+                                             <dt>Catalyst Olympiads</dt>
                                              <dd>(123) 456-7890</dd>
                                              <dt>State Police</dt>
                                              <dd>(123) 456-7891</dd>
@@ -890,7 +886,7 @@
                                              action="http://lsvr.us14.list-manage.com/subscribe/post-json?u=8291218baaf54ddfd7dbc6016&amp;id=f3e5d696dc&amp;c=?">
                                              <div class="subscribe-inner">
                                                 <div class="description">
-                                                   <p>Join our newsletter to receive up to date news about our municipality.</p>
+                                                   <p>Join our newsletter to receive up to date news about our Jemsco.</p>
                                                 </div>
                                                 <!-- VALIDATION ERROR MESSAGE : begin -->
                                                 <p class="c-alert-message m-warning m-validation-error" style="display: none;"><i class="ico fa fa-exclamation-circle"></i>
@@ -908,7 +904,7 @@
                                                 </p>
                                                 <!-- SUCCESS MESSAGE : end -->
                                                 <div class="form-fields">
-                                                   <input type="text" placeholder="Email ID" name="EMAIL" class="m-required m-email">
+                                                   <input type="text" placeholder="Your Email Address" name="EMAIL" class="m-required m-email">
                                                    <button title="Subscribe" type="submit" class="submit-btn">
                                                    <i class="fa fa-chevron-right"></i>
                                                    <i class="fa fa-spinner fa-spin"></i>
@@ -926,11 +922,11 @@
                                  <div class="widget">
                                     <hr class="c-separator m-transparent hidden-lg hidden-md">
                                     <div class="widget-inner">
-                                       <h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Town Hall Address</h3>
+                                       <h3 class="widget-title m-has-ico"><i class="widget-ico tp tp-envelope"></i>Jemsco Address</h3>
                                        <div class="widget-content">
-                                          <p>P.O. Box 123 TownPress<br>VT 12345</p>
+                                          <p>P.O. Box 123 jemsco<br>VT 12345</p>
                                           <p>Phone: (123) 456-7890<br>Fax: (123) 456-7891<br>
-                                             Email: <a href="#">townhall@townpress.gov</a>
+                                             Email: <a href="#">jemsco@gmail.com</a>
                                           </p>
                                        </div>
                                     </div>
@@ -956,54 +952,10 @@
                               <li class="ico-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
                               <li class="ico-googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                               <li class="ico-instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                              <!--li><a href="#"><i class="fa fa-envelope"></i></a></li-->
-                              <!--li class="ico-angellist"><a href="#"><i class="fa fa-angellist"></i></a></li-->
-                              <!--li class="ico-behance"><a href="#"><i class="fa fa-behance"></i></a></li-->
-                              <!--li class="ico-bitbucket"><a href="#"><i class="fa fa-bitbucket"></i></a></li-->
-                              <!--li class="ico-bitcoin"><a href="#"><i class="fa fa-bitcoin"></i></a></li-->
-                              <!--li class="ico-codepen"><a href="#"><i class="fa fa-codepen"></i></a></li-->
-                              <!--li class="ico-delicious"><a href="#"><i class="fa fa-delicious"></i></a></li-->
-                              <!--li class="ico-deviantart"><a href="#"><i class="fa fa-deviantart"></i></a></li-->
-                              <!--li class="ico-digg"><a href="#"><i class="fa fa-digg"></i></a></li-->
-                              <!--li class="ico-dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li-->
-                              <!--li class="ico-dropbox"><a href="#"><i class="fa fa-dropbox"></i></a></li-->
-                              <!--li class="ico-flickr"><a href="#"><i class="fa fa-flickr"></i></a></li-->
-                              <!--li class="ico-foursquare"><a href="#"><i class="fa fa-foursquare"></i></a></li-->
-                              <!--li class="ico-git"><a href="#"><i class="fa fa-git"></i></a></li-->
-                              <!--li class="ico-github"><a href="#"><i class="fa fa-github"></i></a></li-->
-                              <!--li class="ico-lastfm"><a href="#"><i class="fa fa-lastfm"></i></a></li-->
-                              <!--li class="ico-linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li-->
-                              <!--li class="ico-paypal"><a href="#"><i class="fa fa-paypal"></i></a></li-->
-                              <!--li class="ico-pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li-->
-                              <!--li class="ico-reddit"><a href="#"><i class="fa fa-reddit"></i></a></li-->
-                              <!--li class="ico-skype"><a href="#"><i class="fa fa-skype"></i></a></li-->
-                              <!--li class="ico-soundcloud"><a href="#"><i class="fa fa-soundcloud"></i></a></li-->
-                              <!--li class="ico-spotify"><a href="#"><i class="fa fa-spotify"></i></a></li-->
-                              <!--li class="ico-steam"><a href="#"><i class="fa fa-steam"></i></a></li-->
-                              <!--li class="ico-trello"><a href="#"><i class="fa fa-trello"></i></a></li-->
-                              <!--li class="ico-tumblr"><a href="#"><i class="fa fa-tumblr"></i></a></li-->
-                              <!--li class="ico-twitch"><a href="#"><i class="fa fa-twitch"></i></a></li-->
-                              <!--li class="ico-vimeo"><a href="#"><i class="fa fa-vimeo"></i></a></li-->
-                              <!--li class="ico-vine"><a href="#"><i class="fa fa-vine"></i></a></li-->
-                              <!--li class="ico-vk"><a href="#"><i class="fa fa-vk"></i></a></li-->
-                              <!--li class="ico-wordpress"><a href="#"><i class="fa fa-wordpress"></i></a></li-->
-                              <!--li class="ico-xing"><a href="#"><i class="fa fa-xing"></i></a></li-->
-                              <!--li class="ico-yahoo"><a href="#"><i class="fa fa-yahoo"></i></a></li-->
-                              <!--li class="ico-yelp"><a href="#"><i class="fa fa-yelp"></i></a></li-->
-                              <!--li class="ico-youtube"><a href="#"><i class="fa fa-youtube"></i></a></li-->
                            </ul>
                         </div>
-                        <!-- FOOTER SOCIAL : end -->
-                        <!-- FOOTER MENU : begin -->
-                        <nav class="footer-menu">
-                           <ul>
-                              
-                           </ul>
-                        </nav>
-                        <!-- FOOTER MENU : end -->
-                        <!-- FOOTER TEXT : begin -->
                         <div class="footer-text">
-                           <p></p>
+                           <p>© 2023 JEMSCO Catalyst Olympiads. All Rights Reserved.</p>
                         </div>
                         <!-- FOOTER TEXT : end -->
                      </div>
@@ -1015,6 +967,7 @@
       </footer>
       <!-- FOOTER : end -->
       <!-- SCRIPTS : begin -->
+      <script src="library/js/jquery-1.9.1.min.js" type="text/javascript"></script>
       <script src="library/js/third-party.js" type="text/javascript"></script>
       <script src="library/js/library.js" type="text/javascript"></script>
       <script src="library/js/scripts.js" type="text/javascript"></script>
@@ -1054,25 +1007,25 @@
           
           var values = [];
           checkboxContainer.addEventListener('change', e => {
-         
-
+          
          if (e.target.tagName == "INPUT") {
            const floatValue = parseFloat(e.target.value);
            if (e.target.checked) {
-            console.log(e.target.className);
+            //console.log(e.target.className);
             values.push(e.target.className);
          	total += floatValue;
            } else {
          	total -= floatValue;
             values = values.filter(x => x != e.target.className);
+            
            }
            console.log(values);
            $("#arrayInput").val(values)
          }
           
          // recalculateText.innerHTML = formatter.format(total);
-            document.getElementById("demo1").innerHTML = formatter.format(total)
-            $("#class_price").val(total)
+         document.getElementById("demo1").innerHTML = formatter.format(total);
+         $("#class_price").val(total);
           });
           
       </script>
@@ -1096,20 +1049,19 @@
             $('#dropDownId').on('change', function() {
 
                var classvalue =  this.value ;
-
-               //console.log(classvalue)
-
-               if(classvalue >= 3 && classvalue <= 6){
+               console.log(classvalue)
+               if(classvalue >= 2 && classvalue <= 5){
                   $(".cso-box").removeClass("disabledbox");
                   $(".ceo-box").removeClass("disabledbox");
                }
-               else if(classvalue >= 7 && classvalue <= 10){
+               else if(classvalue >= 6 && classvalue <= 9){
                   console.log("cmo")
                   $(".cmo-box").removeClass("disabledbox");
                   $(".cpo-box").removeClass("disabledbox");
                   $(".cco-box").removeClass("disabledbox");
                }
-               else if(classvalue >= 11 && classvalue <= 12){
+               else if(classvalue >= 10 && classvalue <= 11){
+                  console.log("cmo")
                   $(".cmpc-box").removeClass("disabledbox");
                   $(".cbpc-box").removeClass("disabledbox");
                }
@@ -1117,46 +1069,35 @@
                   hideall()
                }
 
-               if(classvalue >= 7 && classvalue <= 10){
+               if(classvalue >= 6 && classvalue <= 9){
                   $(".cbio-box").removeClass("disabledbox");
                }
 
-               if(classvalue >= 6 && classvalue <= 12){
+               if(classvalue >= 6 && classvalue <= 11){
                   $(".ccso-box").removeClass("disabledbox");
                }
 
-            });           
+            });
+           
+           
         }); 
          
       </script>
-
       <script>
 			$(document).ready(function() {
-				$('#stuent-registration').submit(function(e) {   
-					e.preventDefault();
-
-					var data = $("#stuent-registration").serialize().split("&");
-					console.log(data);
-					var obj={};
-					for(var key in data)
-					{
-						console.log(data[key]);
-						obj[data[key].split("=")[0]] = data[key].split("=")[1];
-					}
-				
-					console.log(obj);
-
-					localStorage.setItem('payment-data', JSON.stringify(obj));
-
+				$("#registration-form").submit(function(event) {
+					event.preventDefault();
+					
 					$.ajax({
-						type: 'POST',
-						url: 'controllers/AuthController.php',
-						data: $('#stuent-registration').serialize(),
-						dataType: 'json',
+						type: "POST",
+						url: "controllers/AuthController.php",
+						data: $(this).serialize(),
+						dataType: "json",
 						success: function(response) {
 							if (response.success) {
-								$("#stuent-registration")[0].reset();
-								/*const Toast = Swal.mixin({
+								console.log(response.message);
+								$("#registration-form")[0].reset();
+								const Toast = Swal.mixin({
 									toast: true,
 									position: 'top-end',
 									showConfirmButton: false,
@@ -1171,12 +1112,11 @@
 								  Toast.fire({
 									icon: 'success',
 									title: 'Registration successful'
-								  })*/
-								  window.location ="payments/payment_form.php"
-								//alert('Registration successful');
-								// You can redirect the user to the login page or perform other actions.
+								  })
+								  window.location ="payments/payment_form.php?email="+response.student_email
 							} else {
-								/*const Toast = Swal.mixin({
+								console.log(response.message);
+								const Toast = Swal.mixin({
 									toast: true,
 									position: 'top-end',
 									showConfirmButton: false,
@@ -1191,15 +1131,12 @@
 								  Toast.fire({
 									icon: 'warning',
 									title: 'Registration failed: ' + response.message
-								  })*/
-                          return false;
-								alert('Registration failed: ' + response.message);
+								  })
 							}
 						}
 					});
 				});
 			});
-			
 		</script>
    </body>
 </html>
