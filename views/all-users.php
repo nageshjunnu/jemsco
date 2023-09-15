@@ -133,7 +133,7 @@ $usersdata = $usersModel->getAllUsers();
                 if (confirm('Are you sure you want to delete this user?')) {
                     $.ajax({
                         type: 'POST',
-                        url: 'controllers/UserController.php',
+                        url: '../controllers/UserController.php',
                         data: { user_id: userId, action:"delete-user" },
                         dataType: 'json',
                         success: function(response) {
