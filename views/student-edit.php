@@ -237,9 +237,9 @@ $students = $studenstModel->getStudentById($studentId);
 							
 							<!-- /.box-body -->
 							<div class="box-footer">
-								<button type="button" class="btn btn-warning me-1">
+								<a  href="student-details.php?id=<?php echo $studentId; ?>" type="button" class="btn btn-warning me-1">
 								  <i class="ti-trash"></i> Cancel
-								</button>
+</a>
 								<button type="submit" class="btn btn-primary">
 								  <i class="ti-save-alt"></i> Save
 								</button>
