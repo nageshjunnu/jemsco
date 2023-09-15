@@ -28,6 +28,32 @@ class UserModel {
         }
     }
 
+    public function newUser($name, $last_name, $role, $email, $mobile, $password, $username) {
+        // Implement your database query here to create a new user.
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO users (username,name,last_name,email,mobile, password, role, status) VALUES (:username, :name, :last_name, :email, :mobile, :password, :role, :status)";
+        $con = new dbModel();
+        $connection = $con->conn();
+        
+        $stmt = $connection->prepare($query);
+
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':mobile', $mobile);
+        $stmt->bindParam(':password', $hashedPassword);
+        $stmt->bindParam(':role', $role);
+        $stmt->bindParam(':status', 1);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function getUserByUsername($username) {
         // Implement your database query here to fetch user details by username.
         $query = "SELECT * FROM users WHERE username = :username";

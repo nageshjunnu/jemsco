@@ -49,7 +49,7 @@ $usersdata = $usersModel->getAllUsers();
 				<div class="box-header with-border">
 				  <!-- <h3 class="box-title">Hover Export Data Table</h3> -->
 				  <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
-                  <a href="#" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" style="float: right;">Add New user</a>
+                  <a href="add-new-user.php" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" style="float: right;">Add New user</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
