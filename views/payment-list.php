@@ -85,7 +85,8 @@ $payments = $studenstModel->getAllPayments();
 						<tbody>
 						<?php foreach ($payments as $payment): ?>
 							<?php
-								print_r( $studenstModel->getStudentDetailsById($payment['student_id']));	
+								$rollnumber = $studenstModel->getStudentDetailsById($payment['student_id']);
+								echo $rollnumber["roll_number"];
 							?>
 							<tr>
 								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><?php echo $payment['student_id']; ?></a></td>
