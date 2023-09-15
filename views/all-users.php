@@ -125,7 +125,6 @@ $usersdata = $usersModel->getAllUsers();
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $('.delete-user').click(function() {
