@@ -1,25 +1,7 @@
 <?php
-// session_start();
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
-require_once '../models/UserModel.php';
-require_once '../controllers/StudentController.php';
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
 
-// Check if the user is logged in (session variable exists)
-// if (!isset($_SESSION['id'])) {
-//     header('Location: auth_login.html'); // Redirect to the login page if not logged in
-//     exit();
-// }
-// if (isset($_SESSION['id'])) {
-//     $username = $_SESSION['id'];
-//    // echo json_encode(['id' => $username]);
-// } else {
-//    // echo json_encode(['id' => null]);
-// }
-// $userModel = new UserModel();
-// $user = $userModel->getUserById($_SESSION['id']);
+require_once '../controllers/StudentController.php';
+
 
 $studenstModel = new StudentController();
 $students = $studenstModel->showAllStudents();
@@ -92,20 +74,10 @@ $students = $studenstModel->showAllStudents();
 								<td><?php echo $student['email']; ?></td>
 								<td><?php echo $student['state']; ?></td>
 								<td><?php echo $student['mobile']; ?></td>
-								<td><a href = "student-details.php?id=<?php echo $student['id']; ?>"><span class="badge badge-primary">View</span></a> | <a href="student-edit.php?id=<?php echo $student['id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
+								<td><a href = "student-details.php?id=<?php echo $student['id']; ?>"><span class="badge badge-primary">View</span></a> | <span class="badge badge-info">Edit</span> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
-						<tfoot>
-							<tr>
-								<th>Roll Number</th>
-								<th>Name</th>
-								<th>Class</th>
-								<th>Email</th>
-								<th>State</th>
-								<th>Mobile</th>
-								<th>Action</th>
-							</tr>
-						</tfoot>
+						</tbody>
 					</table>
 					</div>              
 				</div>
@@ -141,7 +113,6 @@ $students = $studenstModel->showAllStudents();
 	
 	<!-- Page Content overlay -->
 	
-
 	
 	<!-- Vendor JS -->
 	<script src="assets/src/js/vendors.min.js"></script>
@@ -154,6 +125,4 @@ $students = $studenstModel->showAllStudents();
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
 
-	
-	
 	<?php include("footer.php");  ?>
