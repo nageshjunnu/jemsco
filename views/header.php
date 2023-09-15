@@ -37,6 +37,12 @@ $user = $userModel->getUserById($_SESSION['id']);
 	<!-- Style-->  
 	<link rel="stylesheet" href="assets/src/css/style.css">
 	<link rel="stylesheet" href="assets/src/css/skin_color.css">
+	<style>
+		.border-end {
+    border-right: 1px solid #dee2e6 !important;
+    word-wrap: break-word !important;
+}
+	</style>
      
   </head>
 
