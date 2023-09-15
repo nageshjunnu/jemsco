@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from crm-admin-dashboard-template.multipurposethemes.com/university/vertical/main/tables_data.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Sep 2023 14:46:21 GMT -->
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -4584,19 +4583,18 @@
 	
 	<!-- Page Content overlay -->
 	
+
 	
-    <script src="assets/src/js/vendors.min.js"></script>
+	<!-- Vendor JS -->
+	<script src="assets/src/js/vendors.min.js"></script>
 	<script src="assets/src/js/pages/chat-popup.js"></script>
     <script src="assets/assets/icons/feather-icons/feather.min.js"></script>
-	
-	<script src="assets/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-	
 	<script src="assets/vendor_components/datatable/datatables.min.js"></script>
-	
-	<!-- COA App -->
+
+	<!-- CRMi App -->
 	<script src="assets/src/js/template.js"></script>
-	<script src="assets/src/js/pages/dashboard.js"></script>
+	<script src="assets/src/js/pages/data-table.js"></script>
+
 	
 
 </body>
