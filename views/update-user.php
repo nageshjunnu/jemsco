@@ -18,7 +18,7 @@ else{
 }
 
 $userModel = new AdminController();
-$user = $userModel->getUserDetailsBy($id);
+$user = $userModel->getUserDetailsBy($userId);
 print_r($user);
 die;
   ?>
