@@ -1050,7 +1050,11 @@
 
                var classvalue =  parseInt(this.value) ;
                console.log(classvalue)
-               if(classvalue >= 3 || classvalue <= 5){
+               if(classvalue == 3){
+                  $(".cso-box").removeClass("disabledbox");
+                  $(".ceo-box").removeClass("disabledbox");
+               }
+               else if(classvalue == 5){
                   $(".cso-box").removeClass("disabledbox");
                   $(".ceo-box").removeClass("disabledbox");
                }
