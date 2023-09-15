@@ -43,7 +43,7 @@ function updateStudent() {
             $userModel = new UserModel();
             // Check if the update was successful
             if ($userModel->updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state )) {
-                echo json_encode(['success' => true, 'message'=>'Successfully Updated']);
+                echo json_encode(['success' => true, 'message'=>'Successfully Updated', 'stuent_id'=>$studentId]);
                  exit;
             } else {
                 echo json_encode(['success' => false, 'message' => 'Failed']);

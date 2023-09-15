@@ -296,6 +296,7 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							icon: 'success',
 							title: 'Update successful'
 							})
+							window.location ="student-details.php?id="+response.stuent_id;
 					} else {
 						console.log(response.message);
 						const Toast = Swal.mixin({
