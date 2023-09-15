@@ -146,5 +146,4 @@ $students = $studenstModel->showAllStudents();
 	<script src="assets/src/js/pages/data-table.js"></script>
 
 	
-	
-	<?php include("footer.php");  ?>
+
