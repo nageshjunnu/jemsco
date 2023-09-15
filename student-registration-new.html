@@ -1006,14 +1006,19 @@
          if (e.target.tagName == "INPUT") {
            const floatValue = parseFloat(e.target.value);
            if (e.target.checked) {
+            console.log(e.target.className);
+            values.push(e.target.className);
          	total += floatValue;
            } else {
          	total -= floatValue;
+            values = values.filter(x => x != e.target.className);
+            
            }
          }
           
          // recalculateText.innerHTML = formatter.format(total);
-         document.getElementById("demo1").innerHTML = formatter.format(total)
+         document.getElementById("demo1").innerHTML = formatter.format(total);
+         $("#class_price").val(total);
           });
           
       </script>
