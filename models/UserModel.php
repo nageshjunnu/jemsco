@@ -179,6 +179,19 @@ class UserModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getRollNumberById($id) {
+       // Implement your database query here to fetch user details by username.
+       $query = "SELECT roll_number FROM student WHERE id = :id";
+       $con = new dbModel();
+       $connection = $con->conn();
+      
+       $stmt = $connection->prepare($query);
+       $stmt->bindParam(':id', $id);
+       $stmt->execute();
+
+       return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function getLastStudent() {
         $query = "SELECT * FROM student ORDER BY id DESC LIMIT 1";
         $con = new dbModel();
