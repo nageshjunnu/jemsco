@@ -102,10 +102,10 @@ class UserModel {
 
     // Student Module
 
-    public function createStudent($student_name, $father_name, $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role){
+    public function createStudent($student_name, $father_name,$dob,$gender , $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role){
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO student (student_name, father_name, mother_name,class, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (:student_name, :father_name, :mother_name, :address, :city, :district, :state, :pincode, :school_name, :school_address, :school_city, :school_district, :school_state, :school_pincode, :mobile, :email, :password, :board_syllabus, :catalyst_olympiad, :roll_number,:role )";
+        // $query = "INSERT INTO student (student_name, father_name,dob, mother_name,class, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (:student_name, :father_name,:dob, :mother_name, :address, :city, :district, :state, :pincode, :school_name, :school_address, :school_city, :school_district, :school_state, :school_pincode, :mobile, :email, :password, :board_syllabus, :catalyst_olympiad, :roll_number,:role )";
        // echo $query;
         $con = new dbModel();
         $connection = $con->conn();
@@ -116,11 +116,11 @@ class UserModel {
             $date=date("Y/m/d h:i:sa");
             
 
-            $query = "INSERT INTO student (student_name, father_name, mother_name,class, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile,alrernate_mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+            $query = "INSERT INTO student (student_name, father_name,dob,gender, mother_name,class, address, city, district, state, pincode, school_name, school_address, school_city, school_district, school_state, school_pincode, mobile,alrernate_mobile, email, password, board_syllabus, catalyst_olympiad, roll_number,role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)";
            
             $stmt = $connection->prepare($query);
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $stmt->execute([$student_name, $father_name, $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$hashedPassword, $board_syllabus, $catalyst_olympiad, $roll_number, $role]);        
+            $stmt->execute([$student_name, $father_name,$dob,$gender , $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$hashedPassword, $board_syllabus, $catalyst_olympiad, $roll_number, $role]);        
             // $stmt = $connection->prepare($query);
             // print_r($stmt->rowCount());
             

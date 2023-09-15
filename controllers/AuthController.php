@@ -105,6 +105,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $student_name = $_POST['student_name']?? "";
             $father_name = $_POST['father_name']?? "";
+            $dob = $_POST['father_name']?? "";
+            $gender = $_POST['gender']?? "";
             $mother_name = $father_name;
             $class = $_POST['classes']?? "";
             $address = $_POST['address']?? "";
@@ -149,7 +151,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             
             if($userAlready == "")
             {
-                if ($userModel->createStudent($student_name, $father_name, $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
+                if ($userModel->createStudent($student_name, $father_name,$dob,$gender , $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
                     session_start();
                     $_SESSION['email'] = $email;
                     
@@ -181,7 +183,9 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $father_name = $_POST["father_name"];
             $mobile = $_POST["mobile"];
             $alrernate_mobile = $_POST["alrernate_mobile"];
-            $address = $_POST["address"];
+            $address1 = $_POST["address"];
+            $address2 = $_POST["address2"];
+            $address = $address1."  ".$address2;
             $city = $_POST["city"];
             $district = $_POST["district"];
             $state = $_POST["state"];
