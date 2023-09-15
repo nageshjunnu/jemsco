@@ -28,7 +28,7 @@ class UserModel {
         }
     }
 
-    public function newUser($name, $last_name, $role, $email, $mobile, $password, $username, $status) {
+    public function newUser($username, $password, $name, $last_name, $email, $mobile,$role, $status) {
         // Implement your database query here to create a new user.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -256,6 +256,37 @@ class UserModel {
             $stmt->bindParam(':board_syllabus', $board_syllabus);
 
             $stmt->bindParam(':id', $studentId);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
+    public function updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password ){
+        try {
+            $query = "UPDATE users SET username = :username, name = :name  , last_name = :last_name , role = :role , email = :email , mobile = :mobile , password = :password  WHERE id = :id";
+
+            // echo $stmt;
+
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':last_name', $last_name);
+            $stmt->bindParam(':role', $role);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':mobile', $mobile);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':id', $userid);
             
             if ($stmt->execute()) {
                 return true;

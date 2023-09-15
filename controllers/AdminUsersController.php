@@ -9,6 +9,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($action == 'add-new-user'){
         registerUser();
     }
+
+    if($action == 'update-user'){
+        updateUser();
+    }
 }   
 
 
@@ -33,6 +37,36 @@ function registerUser() {
         } else {
             echo json_encode(['success' => false, 'message' => 'User adding failed']);
         }
+    }
+}
+
+
+function updateUser() {
+    if (isset($_POST["studentId"]) && isset($_POST["student_name"])) {
+        $userid = $_POST["userid"]?? "";
+        $username = $_POST["username"]?? "";
+        $name = $_POST["name"]?? "";
+        $last_name = $_POST["last_name"]?? "";
+        $role = $_POST["role"]?? "";
+        $email = $_POST["email"]?? "";
+        $mobile = $_POST["mobile"]?? "";
+        $password = $_POST["password"]?? "";
+
+
+        // Perform the update operation in your database
+        // Example: $this->model->updateStudent($studentId, $name, $email);
+        $userModel = new UserModel();
+        // Check if the update was successful
+        if ($userModel->updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password )) {
+            echo json_encode(['success' => true, 'message'=>'Successfully Updated', 'stuent_id'=>$studentId]);
+             exit;
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Failed']);
+             exit;
+        }
+    } else {
+        echo json_encode(['success' => false, 'message' => 'No Id Available']);
+             exit;
     }
 }
 

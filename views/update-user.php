@@ -7,6 +7,18 @@
 // require_once '../models/UserModel.php';
 require_once '../controllers/StudentController.php';
 
+
+if(isset($_GET['id']))
+{
+    $userId = $_GET['id'];
+}
+else{
+    header('Location: all-users.php'); // Redirect to the login page if not logged in
+    exit();
+}
+
+$userModel = new StudentController();
+$user = $userModel->getUserDetailsBy($id);
   ?>
   
   <!-- Content Wrapper. Contains page content -->
@@ -51,21 +63,21 @@ require_once '../controllers/StudentController.php';
                                 <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">User Name</label>
-									  <input type="text" class="form-control" name="username" value="">
+									  <input type="text" class="form-control" name="username" value="<?php echo $user['username']; ?>">
 									 
 									</div>
 								  </div>
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">First Name</label>
-									  <input type="text" class="form-control" name="name" value="">
+									  <input type="text" class="form-control" name="name" value="<?php echo $user['name']; ?>">
 									 
 									</div>
 								  </div>
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">Last Name</label>
-									  <input type="text" class="form-control" name="last_name" value="">
+									  <input type="text" class="form-control" name="last_name" value="<?php echo $user['last_name']; ?>">
 									  
 									</div>
 								  </div>
@@ -73,7 +85,7 @@ require_once '../controllers/StudentController.php';
 									<div class="form-group">
 									  <label class="form-label">Role</label>
 									  <select class="form-select"  name="role" required>
-										<option value=""> Select Role </option>
+										<option value="<?php echo $user['role']; ?>" selected> <?php echo $user['role']; ?> </option>
                                         <option value="admin">Admin</option>
                                         <option value="editor">editor</option>
                                         <option value="viewer">viewer</option>
@@ -84,7 +96,7 @@ require_once '../controllers/StudentController.php';
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">E-mail</label>
-									  <input type="email" class="form-control" name ="email" value="" placeholder="Email" required>
+									  <input type="email" class="form-control" name ="email" value="<?php echo $user['email']; ?>" placeholder="Email" required>
 									</div>
 								  </div>
 								  
@@ -93,13 +105,13 @@ require_once '../controllers/StudentController.php';
 								    <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="form-label">Contact Number</label>
-                                        <input type="number" class="form-control" name="mobile" value="" placeholder="number">
+                                        <input type="number" class="form-control" name="mobile" value="<?php echo $user['mobile']; ?>" placeholder="number">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="form-label">Password</label>
-                                        <input type="password" class="form-control" name="password" value="" placeholder="password">
+                                        <input type="password" class="form-control" name="password" value="<?php echo $user['password']; ?>" placeholder="password">
                                         </div>
                                     </div>
 									
@@ -107,11 +119,13 @@ require_once '../controllers/StudentController.php';
 								</div>								
 							
 							<div class="box-footer">
-                                <input type="hidden" name="action" value="add-new-user">
+                                <input type="hidden" name="action" value="update-user">
+                                <input type="hidden" name="userid" value="<?php echo $user['id']; ?>">
+
 								<a  href="all-users.php" type="button" class="btn btn-warning me-1">
 								  <i class="ti-trash"></i> Cancel </a>
 								<button type="submit" class="btn btn-primary">
-								  <i class="ti-save-alt"></i> Save
+								  <i class="ti-save-alt"></i> Update
 								</button>
 							</div>		
                             </div>				
