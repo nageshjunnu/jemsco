@@ -21,12 +21,12 @@ function registerUser() {
         $email = $_POST['email'];
         $mobile = $_POST['mobile'];
         $password = $_POST['password'];
-
+        $status = 1;
         // $transactionId = $_POST['transaction_id']; // Retrieve this from Razorpay's response
         $userModel = new UserModel();
 
         // Validate and process payment
-        if ($userModel->newUser($name, $last_name, $role, $email, $mobile, $password, $username)) {
+        if ($userModel->newUser($name, $last_name, $role, $email, $mobile, $password, $username, $status)) {
            
             //emailtemplate($studentId, $amount, $payment_id);
             echo json_encode(['success' => true, 'message' => 'New user added successful']);

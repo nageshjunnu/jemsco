@@ -28,7 +28,7 @@ class UserModel {
         }
     }
 
-    public function newUser($name, $last_name, $role, $email, $mobile, $password, $username) {
+    public function newUser($name, $last_name, $role, $email, $mobile, $password, $username, $status) {
         // Implement your database query here to create a new user.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -45,7 +45,7 @@ class UserModel {
         $stmt->bindParam(':mobile', $mobile);
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':role', $role);
-        $stmt->bindParam(':status', 1);
+        $stmt->bindParam(':status', $status);
 
         if ($stmt->execute()) {
             return true;
