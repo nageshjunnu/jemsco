@@ -78,8 +78,8 @@ function updateUser() {
 function deleteUser() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'])) {
         $userId = $_POST['user_id'];
-
-        if ($this->model->deleteUser($userId)) {
+        $userModel = new UserModel();
+        if ($userModel->deleteUser($userId)) {
             echo json_encode(['success' => true, 'message' => 'User deleted successfully']);
         } else {
             echo json_encode(['success' => false, 'message' => 'User deletion failed']);
