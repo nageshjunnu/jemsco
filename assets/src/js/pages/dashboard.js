@@ -1,6 +1,6 @@
 //[Dashboard Javascript]
 
-//Project:	COA - Responsive Admin Template
+//Project:	CRMi - Responsive Admin Template
 //Primary use:   Used only for the main dashboard (index.html)
 
 

@@ -1,6 +1,6 @@
 //[widget flot charts Javascript]
 
-//Project:	COA - Responsive Admin Template
+//Project:	CRMi - Responsive Admin Template
 //Primary use:   Used only for the  widget flot charts
 
 

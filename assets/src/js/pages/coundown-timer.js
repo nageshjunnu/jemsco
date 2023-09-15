@@ -1,6 +1,6 @@
 //[timer contact Javascript]
 
-//Project:	COA - Responsive Admin Template
+//Project:	CRMi - Responsive Admin Template
 
 $(function () {
     "use strict";

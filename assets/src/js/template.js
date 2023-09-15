@@ -1,7 +1,7 @@
 //[Master Javascript]
 
-//Project:	COA Admin - Responsive Admin Template
-//Primary use:	COA Admin - Responsive Admin Template
+//Project:	CRMi Admin - Responsive Admin Template
+//Primary use:	CRMi Admin - Responsive Admin Template
 
 //should be included in all pages. It controls some layout
 
