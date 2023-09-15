@@ -1,8 +1,8 @@
 <?php include("header.php"); ?>
   
   <?php include("sidebar.php"); 
-  error_reporting(E_ALL);
-ini_set('display_errors', '1');
+//   error_reporting(E_ALL);
+// ini_set('display_errors', '1');
   // session_start();
 // require_once '../models/UserModel.php';
 require_once '../controllers/StudentController.php';
@@ -32,7 +32,7 @@ else{
 }
 
 $studenstModel = new StudentController();
-$students = $studenstModel->getStudentDetailsById($studentId);
+$students = $studenstModel->getStudentById($studentId);
 // echo "<pre>";
 // print_r($students);
 // echo "</pre>";
