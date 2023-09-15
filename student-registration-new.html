@@ -1108,7 +1108,7 @@
 									icon: 'success',
 									title: 'Registration successful'
 								  })
-								  window.location ="payments/payment_form.php"
+								  window.location ="payments/payment_form.php?email="+response.student_email
 							} else {
 								console.log(response.message);
 								const Toast = Swal.mixin({

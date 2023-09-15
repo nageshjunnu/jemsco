@@ -156,11 +156,11 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
                     $_SESSION['email'] = $email;
                     
                     if(sendmail($father_name,$student_name,$mobile,$email,$city,$school_name,$currentDateTime->format('d-m-y'),$password, $roll_number)){
-                        echo json_encode(['success' => true, 'message'=>'Email Sent Successfully']);
+                        echo json_encode(['success' => true, 'message'=>'Email Sent Successfully', 'student_email'=>$email]);
                         exit;
                     }
                     else{
-                        echo json_encode(['success' => true, 'message'=>'Email Failed']);
+                        echo json_encode(['success' => true, 'message'=>'Email Failed', 'student_email'=>$email]);
                         exit;
                     }
                    
