@@ -85,7 +85,7 @@ $schools = $schoolController->showAllSchool();
 								<td><a href = "student-details.php?id=<?php echo $school['id']; ?>"><span class="badge badge-primary">View</span></a> | <span class="badge badge-info">Edit</span> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
-						</tfoot>
+						
 					</table>
 					</div>              
 				</div>

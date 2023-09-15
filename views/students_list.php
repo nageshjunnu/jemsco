@@ -95,6 +95,16 @@ $students = $studenstModel->showAllStudents();
 								<td><a href = "student-details.php?id=<?php echo $student['id']; ?>"><span class="badge badge-primary">View</span></a> | <a href="student-edit.php?id=<?php echo $student['id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
+						<tfoot>
+							<tr>
+								<th>Roll Number</th>
+								<th>Name</th>
+								<th>Class</th>
+								<th>Email</th>
+								<th>State</th>
+								<th>Mobile</th>
+								<th>Action</th>
+							</tr>
 						</tfoot>
 					</table>
 					</div>              

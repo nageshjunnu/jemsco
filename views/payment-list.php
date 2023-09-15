@@ -93,7 +93,7 @@ $payments = $studenstModel->getAllPayments();
 								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-primary">View</span></a> | <a href="student-edit.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
-						</tfoot>
+						
 					</table>
 					</div>              
 				</div>
