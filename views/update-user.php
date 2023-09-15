@@ -5,7 +5,7 @@
 // ini_set('display_errors', '1');
   // session_start();
 // require_once '../models/UserModel.php';
-require_once '../controllers/StudentController.php';
+require_once '../controllers/AdminController.php';
 
 
 if(isset($_GET['id']))
@@ -17,7 +17,7 @@ else{
     exit();
 }
 
-$userModel = new StudentController();
+$userModel = new AdminController();
 $user = $userModel->getUserDetailsBy($id);
   ?>
   
