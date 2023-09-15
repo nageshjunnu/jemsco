@@ -123,6 +123,10 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             $mobile = $_POST['mobile']?? "";
             $alrernate_mobile = $_POST['alternate_mobile']?? "";
             $email = $_POST['email']?? "";
+            $school_mobile = $_POST['school_mobile']?? "";
+            $school_alternate_mobile = $_POST['school_alternate_mobile']?? "";
+            $school_email = $_POST['school_email']?? "";
+
             $board_syllabus = $_POST['board_syllabus']?? "";
             $catalyst_olympiad = $_POST['class']?? "";
             $roll_number = $_POST['student_name']?? "";
@@ -151,7 +155,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
             
             if($userAlready == "")
             {
-                if ($userModel->createStudent($student_name, $father_name,$dob,$gender , $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
+                if ($userModel->createStudent($student_name, $father_name,$dob,$gender , $mother_name,$class, $address, $city, $district, $state, $pincode, $school_name,  $school_address,  $school_city, $school_district,  $school_state, $school_pincode, $mobile,$alrernate_mobile, $email,$school_mobile, $school_alternate_mobile,$school_email, $password, $board_syllabus, $catalyst_olympiad, $roll_number, $role)) {
                     session_start();
                     $_SESSION['email'] = $email;
                     
