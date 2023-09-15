@@ -58,6 +58,8 @@ $usersdata = $usersModel->getAllUsers();
 						<thead class="bg-primary">
 							<tr>
 								<th>Name</th>
+								<th>User Name</th>
+
 								<th>Email</th>
 								<th>Mobile</th>
 								<th>Role</th>
@@ -70,6 +72,8 @@ $usersdata = $usersModel->getAllUsers();
 							<?php if($item['status'] != 9){ ?>
 							<tr>
 								<td><?php echo $item['name']; ?></td>
+								<td><?php echo $item['username']; ?></td>
+
 								<td><?php echo $item['email']; ?></td>
 								<td><?php echo $item['mobile']; ?></td>
 								<td><?php echo $item['role']; ?></td>
