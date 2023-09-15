@@ -1050,7 +1050,7 @@
 
                var classvalue =  parseInt(this.value) ;
                console.log(classvalue)
-               if(classvalue >= 3 && classvalue <= 5){
+               if(classvalue >= 3 || classvalue <= 5){
                   $(".cso-box").removeClass("disabledbox");
                   $(".ceo-box").removeClass("disabledbox");
                }
@@ -1059,14 +1059,14 @@
                   $(".ceo-box").removeClass("disabledbox");
                   $(".ccso-box").removeClass("disabledbox");
                }
-               else if(classvalue == 7 && classvalue == 8 && classvalue == 9 && classvalue == 10){
+               else if(classvalue == 7 || classvalue == 8 || classvalue == 9 || classvalue == 10){
                   $(".cmo-box").removeClass("disabledbox");
                   $(".cpo-box").removeClass("disabledbox");
                   $(".cco-box").removeClass("disabledbox");
                   $(".cbio-box").removeClass("disabledbox");
                   $(".ccso-box").removeClass("disabledbox");
                }
-               else if(classvalue == 11 && classvalue == 12){
+               else if(classvalue == 11 || classvalue == 12){
                   $(".cmpc-box").removeClass("disabledbox");
                   $(".cbpc-box").removeClass("disabledbox");
                   $(".ccso-box").removeClass("disabledbox");
