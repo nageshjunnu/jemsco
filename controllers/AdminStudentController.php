@@ -42,7 +42,7 @@ function updateStudent() {
             // Example: $this->model->updateStudent($studentId, $name, $email);
             $userModel = new UserModel();
             // Check if the update was successful
-            if ($userModel->updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state )) {
+            if ($userModel->updateStudent($studentId,$student_name,$father_name, $mobile ,$email,$alrernate_mobile ,$address ,$city ,$district ,$state ,$pincode ,$school_name ,$school_address ,$school_city ,$school_district ,$school_state, $school_pincode,$board_syllabus  )) {
                 echo json_encode(['success' => true, 'message'=>'Successfully Updated', 'stuent_id'=>$studentId]);
                  exit;
             } else {
