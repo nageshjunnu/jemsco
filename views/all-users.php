@@ -67,7 +67,7 @@ $usersdata = $usersModel->getAllUsers();
 						</thead>
 						<tbody>
 						<?php foreach ($usersdata as $item): ?>
-
+							<?php if($item['status'] != 9){ ?>
 							<tr>
 								<td><?php echo $item['name']; ?></td>
 								<td><?php echo $item['email']; ?></td>
@@ -76,6 +76,7 @@ $usersdata = $usersModel->getAllUsers();
 								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
 								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <button class="badge badge-danger delete-user" data-user-id="<?php echo $item['id']; ?>">Delete</button></td>
 							</tr>
+							<?php } ?>
 							<?php endforeach; ?>
 						</tbody>
 					</table>
