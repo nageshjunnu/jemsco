@@ -1048,7 +1048,7 @@
 
             $('#dropDownId').on('change', function() {
 
-               var classvalue =  this.value ;
+               var classvalue =  parseInt(this.value) ;
                console.log(classvalue)
                if(classvalue >= 3 && classvalue <= 5){
                   $(".cso-box").removeClass("disabledbox");
