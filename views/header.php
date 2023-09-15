@@ -1,3 +1,23 @@
+<?php
+session_start();
+require_once '../models/UserModel.php';
+
+// Check if the user is logged in (session variable exists)
+if (!isset($_SESSION['id'])) {
+   // header('Location: auth_login.html'); // Redirect to the login page if not logged in
+    exit();
+}
+if (isset($_SESSION['id'])) {
+    $username = $_SESSION['id'];
+   // echo json_encode(['id' => $username]);
+} else {
+   // echo json_encode(['id' => null]);
+}
+$userModel = new UserModel();
+$user = $userModel->getUserById($_SESSION['id']);
+// print_r($user);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -9,7 +29,7 @@
     <meta name="author" content="">
     <link rel="icon" href="assets/images/favicon.ico">
 
-    <title>COA - Dashboard</title>
+    <title>JEMSCO - Dashboard</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="assets/src/css/vendors_css.css">
@@ -28,15 +48,15 @@
   <header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start d-md-none d-block">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="dashboard.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-30">
-			  <span class="light-logo"><img src="assets/images/logo-letter.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="assets/images/logo-letter-white.png" alt="logo"></span>
+			  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
 		  </div>
 		  <div class="logo-lg">
-			  <span class="light-logo"><img src="assets/images/logo-dark-text.png" alt="logo"></span>
-			  <span class="dark-logo"><img src="assets/images/logo-light-text.png" alt="logo"></span>
+			  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
+			  <span class="dark-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
 		  </div>
 		</a>	
 	</div>   
@@ -50,7 +70,7 @@
 					<i class="icon-Menu"><span class="path1"></span><span class="path2"></span></i>
 			    </a>
 			</li>
-			<li class="btn-group d-lg-inline-flex d-none">
+			<!-- <li class="btn-group d-lg-inline-flex d-none">
 				<div class="app-menu">
 					<div class="search-bx mx-5">
 						<form>
@@ -63,108 +83,13 @@
 						</form>
 					</div>
 				</div>
-			</li>
+			</li> -->
 		</ul> 
 	  </div>
 		
       <div class="navbar-custom-menu r-side">
         <ul class="nav navbar-nav">
-			<li class="dropdown notifications-menu btn-group nav-item">
-				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" data-bs-toggle="dropdown" title="Notifications">
-					<i class="icon-Notifications"><span class="path1"></span><span class="path2"></span></i>
-					<div class="pulse-wave"></div>
-			    </a>
-				<ul class="dropdown-menu animated bounceIn">
-				  <li class="header">
-					<div class="p-20">
-						<div class="flexbox">
-							<div>
-								<h4 class="mb-0 mt-0">Notifications</h4>
-							</div>
-							<div>
-								<a href="#" class="text-danger">Clear All</a>
-							</div>
-						</div>
-					</div>
-				  </li>
-				  <li>
-					<!-- inner menu: contains the actual data -->
-					<ul class="menu sm-scrol">
-					  <li>
-						<a href="#">
-						  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
-						</a>
-					  </li>
-					  <li>
-						<a href="#">
-						  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
-						</a>
-					  </li>
-					</ul>
-				  </li>
-				  <li class="footer">
-					  <a href="#">View all</a>
-				  </li>
-				</ul>
-			</li>
-			<li class="btn-group nav-item">
-				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" data-bs-toggle="modal" data-bs-target="#quick_actions_toggle">
-					<i class="icon-Layout-arrange"><span class="path1"></span><span class="path2"></span></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item d-xl-inline-flex d-none">
-				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" data-bs-toggle="modal" data-bs-target="#quick_panel_toggle">
-					<i class="icon-Notification"><span class="path1"></span><span class="path2"></span></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item d-xl-inline-flex d-none">
-				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" data-bs-toggle="modal" data-bs-target="#quick_shop_toggle">
-					<i class="icon-Cart1"><span class="path1"></span><span class="path2"></span></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item d-xl-inline-flex d-none">
-				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" id="live-chat">
-					<i class="icon-Chat"><span class="path1"></span><span class="path2"></span></i>
-			    </a>
-			</li>
 			
-			<li class="btn-group d-xl-inline-flex d-none">
-			    <a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon dropdown-toggle" data-bs-toggle="dropdown">
-					<img class="rounded" src="assets/images/svg-icon/usa.svg" alt="">
-				</a>
-			    <div class="dropdown-menu">
-					<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="assets/images/svg-icon/usa.svg" alt=""> English</a>
-					<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="assets/images/svg-icon/spain.svg" alt=""> Spanish</a>
-					<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="assets/images/svg-icon/ger.svg" alt=""> German</a>
-					<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="assets/images/svg-icon/jap.svg" alt=""> Japanese</a>
-					<a class="dropdown-item my-5" href="#"><img class="w-20 rounded me-10" src="assets/images/svg-icon/fra.svg" alt=""> French</a>
-			    </div>
-			</li>
 			
 			<li class="btn-group nav-item d-xl-inline-flex d-none">
 				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen">
