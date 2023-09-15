@@ -105,7 +105,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['HTTP_REFERER'];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $student_name = $_POST['student_name']?? "";
             $father_name = $_POST['father_name']?? "";
-            $dob = $_POST['father_name']?? "";
+            $dob = $_POST['dob']?? "";
             $gender = $_POST['gender']?? "";
             $mother_name = $father_name;
             $class = $_POST['classes']?? "";

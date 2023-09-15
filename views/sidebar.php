@@ -46,7 +46,7 @@
 					<span>Dashboard</span>
 				  </a>
 				</li>
-				<li class="treeview">
+				<!--<li class="treeview">
 				  <a href="#">
 					<i class="icon-Address-card"></i>
 					<span>Users</span>
@@ -56,10 +56,10 @@
 				  </a>
 				  <ul class="treeview-menu">
 					<li><a href="all-users.php"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Users List</a></li>
-					<!-- <li><a href="professors.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Professors Details</a></li> -->
+					 <li><a href="professors.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Professors Details</a></li>
 				  </ul>
-				</li>
-				<li class="treeview">
+				</li>-->
+				<!--<li class="treeview">
 				  <a href="#">
 					<i class="icon-User"><span class="path1"></span><span class="path2"></span></i>
 					<span>Students</span>
@@ -69,9 +69,11 @@
 				  </a>
 				  <ul class="treeview-menu">
 					<li><a href="students_list.php"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Students List</a></li>
-					<!-- <li><a href="students.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Students Details</a></li> -->
+					<li><a href="students.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Students Details</a></li>
 				  </ul>
-				</li>
+				</li>-->
+				<li><a href="all-users.php"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Users List</a></li>
+				<li><a href="students_list.php"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Students List</a></li>
 				<li>
 				  <a href="schools.php">
 					<i class="icon-Ticket"></i>
