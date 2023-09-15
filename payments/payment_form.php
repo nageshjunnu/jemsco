@@ -17,7 +17,7 @@ require_once '../models/UserModel.php';
 
 	$userModel = new UserModel();
 	$user = $userModel->getStudentByEmail($_SESSION['email']);
-	// print_r($user);
+	print_r($user);
 	
 ?>
 
