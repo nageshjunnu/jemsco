@@ -77,7 +77,7 @@ $usersdata = $usersModel->getAllUsers();
 								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <span class="badge badge-info">Edit</span> | <span class="badge badge-danger">Delete</span></td>
 							</tr>
 							<?php endforeach; ?>
-						
+						</tbody>
 					</table>
 					</div>              
 				</div>
