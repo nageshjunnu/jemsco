@@ -123,7 +123,8 @@
 		
 
 	<!-- Page Content overlay -->
-	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 	
 	<!-- Vendor JS -->
 	<script src="assets/src/js/vendors.min.js"></script>
