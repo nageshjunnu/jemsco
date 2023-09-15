@@ -124,19 +124,21 @@
 
 	<!-- Page Content overlay -->
 	
-	
-	<script src="assets/src/js/pages/chat-popup.js"></script>
-    <script src="assets/assets/icons/feather-icons/feather.min.js"></script>
-	
-	<script src="assets/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-	
 
 	
-	<!-- COA App -->
+	<!-- Vendor JS -->
+	<script src="assets/src/js/vendors.min.js"></script>
+	<script src="assets/src/js/pages/chat-popup.js"></script>
+    <script src="assets/assets/icons/feather-icons/feather.min.js"></script>
+	<script src="assets/vendor_components/datatable/datatables.min.js"></script>
+
+	
+	<!-- CRMi App -->
 	<script src="assets/src/js/template.js"></script>
-	<script src="assets/src/js/pages/dashboard.js"></script>
+	<script src="assets/src/js/pages/data-table.js"></script>
 
 	
 </body>
 
 </html>
+<?php include("footer.php");  ?>
