@@ -14,6 +14,9 @@ $TotalrecievedTayments = $studentModel->getTotalRecievedAmount();
 
 $TotalPendingTayments = $studentModel->getTotalPendingAmount();
 
+$examsCount = $studentModel->getExamsCount();
+
+
 // print_r($totalStudents);
 ?>
   <!-- Content Wrapper. Contains page content -->
@@ -85,6 +88,27 @@ $TotalPendingTayments = $studentModel->getTotalPendingAmount();
 									<?php foreach ($TotalPendingTayments as $pending): ?>
 									<h4 class="fw-600"><?php  echo $pending['total'];  ?> ₹</h4>
 									<!-- <p class="mb-0"><span class="text-success"><?php echo $pending['total']/100; ?>%</span> Increase</p> -->
+									<?php endforeach; ?>
+								</div>
+								<div>
+									<img src="assets/images/svg-icon/color-svg/custom-27.svg" class="w-100" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 col-12">
+					<div class="box">
+						<div class="box-body">
+							<div class="d-flex justify-content-between">
+								<div>
+									<h4 class="text-fade"><b> EXAMS opted </b></h4>
+									<?php foreach ($examsCount as $exams): ?>
+									<h4 class="fw-600"><?php  echo $exams['total'];  ?> ₹</h4>
+									<?php foreach ($totalStudents as $totalStudent): ?>										
+										<p class="mb-0"><span class="text-success"><?php echo $exams['total']/$totalStudent['total']; ?>%</span> Increase</p>
+									<?php endforeach; ?>
+									
 									<?php endforeach; ?>
 								</div>
 								<div>

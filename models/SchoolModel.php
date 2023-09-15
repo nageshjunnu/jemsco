@@ -51,6 +51,7 @@ class SchoolModel {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    
 
     public function getTotalRecievedAmount() {
         $query = "SELECT SUM(amount) as total from student_payments where payment_status = 'completed'";
@@ -63,6 +64,15 @@ class SchoolModel {
 
     public function getTotalPendingAmount() {
         $query = "SELECT SUM(amount) as total from student_payments where payment_status = 'pending'";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getExamsCount() {
+        $query = "SELECT count(*) as total from student_payments where payment_status = 'completed'";
         $con = new dbModel();
         $connection = $con->conn();
         $stmt = $connection->prepare($query);
