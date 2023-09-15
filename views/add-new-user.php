@@ -98,7 +98,7 @@ require_once '../controllers/StudentController.php';
 									
 									</div>
 								</div>								
-							</div>
+							
 							<div class="box-footer">
                                 <input type="hidden" name="add-new-user" value="add-new-user">
 								<a  href="all-users.php" type="button" class="btn btn-warning me-1">
@@ -106,7 +106,8 @@ require_once '../controllers/StudentController.php';
 								<button type="submit" class="btn btn-primary">
 								  <i class="ti-save-alt"></i> Save
 								</button>
-							</div>						
+							</div>		
+                            </div>				
 					  </div>
 					</div>					 
 				</div>  
