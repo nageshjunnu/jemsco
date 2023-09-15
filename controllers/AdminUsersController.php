@@ -42,7 +42,7 @@ function registerUser() {
 
 
 function updateUser() {
-    if (isset($_POST["studentId"]) && isset($_POST["student_name"])) {
+    if (isset($_POST["userid"])) {
         $userid = $_POST["userid"]?? "";
         $username = $_POST["username"]?? "";
         $name = $_POST["name"]?? "";
