@@ -78,6 +78,12 @@
 					<span>Schools</span>
 				  </a>
 				</li>
+				<li>
+				  <a href="payment-list.php">
+					<i class="icon-Ticket"></i>
+					<span>Payment List</span>
+				  </a>
+				</li>
 				<!-- <li>
 				  <a href="contact_app_chat.html">
 					<i class="icon-Chat2"></i>

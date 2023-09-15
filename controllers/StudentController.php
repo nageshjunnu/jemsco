@@ -20,6 +20,12 @@ class StudentController {
         $students = $userModel->getStudentById($id);
         return $students;
     }
+
+    public function getAllPayments() {
+        $userModel = new UserModel();
+        $students = $userModel->getAllPaymentsModel();
+        return $students;
+    }
 }
 
 

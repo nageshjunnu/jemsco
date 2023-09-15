@@ -160,9 +160,9 @@ $students = $studenstModel->getStudentDetailsById($studentId);
 							<div class="progress">
 								<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;"> <span class="sr-only">50% Complete</span> </div>
 							</div> -->
-							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">Selected Exams</h4>
+							<h4 class="box-title my-20 fw-500 py-20 border-bottom d-block">EXAMS opted</h4>
 							<div class="d-flex no-block fa fa-check-circle text-success">
-								<h6 class="ms-10 text-dark"><?php echo $students['class'];?></h6>
+								<h2 class="ms-10 text-dark uppercase" style="text-transform: uppercase;font-weight:700" ><?php echo $students['class'];?></h2>
 							</div>
 							
 							

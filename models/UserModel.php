@@ -170,6 +170,15 @@ class UserModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getAllPaymentsModel() {
+        $query = "SELECT * FROM student_payments";
+        $con = new dbModel();
+        $connection = $con->conn();
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getLastStudent() {
         $query = "SELECT * FROM student ORDER BY id DESC LIMIT 1";
         $con = new dbModel();

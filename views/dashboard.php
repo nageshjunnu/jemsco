@@ -65,7 +65,7 @@ $TotalPendingTayments = $studentModel->getTotalPendingAmount();
 								<div>
 									<h4 class="text-fade">Fees Collection</h4>
 									<?php foreach ($TotalrecievedTayments as $payment): ?>
-									<h4 class="fw-600"><?php  echo $payment['total'];  ?></h4>
+									<h4 class="fw-600"><?php  echo $payment['total'];  ?> ₹</h4>
 									<!-- <p class="mb-0"><span class="text-success"><?php echo $payment['total']/100; ?>%</span> Increase</p> -->
 									<?php endforeach; ?>
 								</div>
@@ -83,7 +83,7 @@ $TotalPendingTayments = $studentModel->getTotalPendingAmount();
 								<div>
 									<h4 class="text-fade">Fees Pending</h4>
 									<?php foreach ($TotalPendingTayments as $pending): ?>
-									<h4 class="fw-600"><?php  echo $pending['total'];  ?></h4>
+									<h4 class="fw-600"><?php  echo $pending['total'];  ?> ₹</h4>
 									<!-- <p class="mb-0"><span class="text-success"><?php echo $pending['total']/100; ?>%</span> Increase</p> -->
 									<?php endforeach; ?>
 								</div>
