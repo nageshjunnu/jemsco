@@ -69,7 +69,7 @@ class UserModel {
 
     public function getAllUsers() {
         // Implement your database query here to fetch user details by username.
-        $query = "SELECT * FROM users where status != 9";
+        $query = "SELECT * FROM users ";
         $con = new dbModel();
         $connection = $con->conn();
         $stmt = $connection->prepare($query);
