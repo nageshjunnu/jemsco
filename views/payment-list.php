@@ -22,7 +22,7 @@ require_once '../controllers/StudentController.php';
 // $user = $userModel->getUserById($_SESSION['id']);
 
 $studenstModel = new StudentController();
-$payments = $studenstModel->getAllPayments()();
+$payments = $studenstModel->getAllPayments();
 // echo "<pre>";
 // print_r($students);
 // echo "</pre>";
