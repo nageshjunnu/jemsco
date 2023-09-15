@@ -86,10 +86,10 @@ $payments = $studenstModel->getAllPayments();
 						<?php foreach ($payments as $payment): ?>
 							<?php
 								$rollnumber = $studenstModel->getStudentDetailsById($payment['student_id']);
-								echo $rollnumber["roll_number"];
+								//echo $rollnumber["roll_number"];
 							?>
 							<tr>
-								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><?php echo $payment['student_id']; ?></a></td>
+								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><?php echo $rollnumber["roll_number"]; ?></a></td>
 								<td><?php echo $payment['amount']; ?></td>
 								<td><?php echo $payment['payment_id']; ?></td>
 								<td><?php echo $payment['payment_status']; ?></td>
