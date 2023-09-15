@@ -15,6 +15,12 @@ class StudentController {
         return $students;
     }
 
+    public function getStudentById($id) {
+        $userModel = new UserModel();
+        $students = $userModel->getStudentById($id);
+        return $students;
+    }
+
     public function getStudentDetailsById($id) {
         $userModel = new UserModel();
         $students = $userModel->getRollNumberById($id);

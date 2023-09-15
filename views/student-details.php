@@ -29,7 +29,7 @@ else{
 }
 
 $studenstModel = new StudentController();
-$students = $studenstModel->getStudentDetailsById($studentId);
+$students = $studenstModel->getStudentById($studentId);
 echo "<pre>";
 print_r($students);
 echo "</pre>";
