@@ -1006,7 +1006,7 @@
          if (e.target.tagName == "INPUT") {
            const floatValue = parseFloat(e.target.value);
            if (e.target.checked) {
-            console.log(e.target.className);
+            //console.log(e.target.className);
             values.push(e.target.className);
          	total += floatValue;
            } else {
@@ -1014,6 +1014,8 @@
             values = values.filter(x => x != e.target.className);
             
            }
+           console.log(values);
+           $("#arrayInput").val(values)
          }
           
          // recalculateText.innerHTML = formatter.format(total);
