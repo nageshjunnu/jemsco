@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 
     if($action == 'delete-user'){
-        deleteUser();
+        deleteUserData();
     }
 }   
 
@@ -75,7 +75,7 @@ function updateUser() {
 }
 
 
-function deleteUser() {
+function deleteUserData() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'])) {
         $userId = $_POST['user_id'];
         $userModel = new UserModel();
