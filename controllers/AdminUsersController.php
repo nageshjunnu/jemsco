@@ -99,7 +99,7 @@ function updateUser() {
 function schoolUpdate(){
     if (isset($_POST["id"])) {
         $id = $_POST['id'];
-        $name = $_POST['name'];
+        $name = $_POST['student_name'];
         $address = $_POST['address']?? "";
         $city = $_POST['city']?? "";
         $district = $_POST['district']?? "";
