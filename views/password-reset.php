@@ -104,7 +104,7 @@
 							
 							Toast.fire({
 							icon: 'success',
-							title: 'Added successful'
+							title: 'Password Changed successful'
 							})
 							window.location ="auth_login.html";
 
