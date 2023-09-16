@@ -161,13 +161,13 @@ $students = $studenstModel->showAllStudents();
 	<script>
         $(document).ready(function() {
             $('.delete-student').click(function() {
-                var userId = $(this).data('student-id');
+                var student_id = $(this).data('student-id');
                 
                 if (confirm('Are you sure you want to delete this user?')) {
                     $.ajax({
                         type: 'POST',
                         url: '../controllers/AdminUsersController.php',
-                        data: { user_id: userId, action:"delete-student" },
+                        data: { student_id: student_id, action:"delete-student" },
                         dataType: 'json',
                         success: function(response) {
                             if (response.success) {

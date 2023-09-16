@@ -91,14 +91,19 @@ function deleteUserData() {
     }
 }
 
-function deleteStudentByid($id) {
-    $userModel = new UserModel();
-    if ($userModel->deleteStudent($studentId,$status)) {
-        echo json_encode(['success' => true, 'message'=>'Successfully Deleted']);
-         exit;
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Deletion Failed']);
-         exit;
+function deleteStudentByid() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['student_id'])) {
+        $student_id = $_POST['student_id'];
+        $status = 9;
+
+        $userModel = new UserModel();
+        if ($userModel->deleteStudent($student_id,$status)) {
+            echo json_encode(['success' => true, 'message'=>'Successfully Deleted']);
+            exit;
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Deletion Failed']);
+            exit;
+        }
     }
 }
 

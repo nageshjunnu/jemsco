@@ -282,7 +282,7 @@ class UserModel {
         }
     }
 
-    public function deleteStudent($studentId,$status) {
+    public function deleteStudent($student_id,$status) {
         try {
             $query = "UPDATE student SET status = :status WHERE id = :id";
 
