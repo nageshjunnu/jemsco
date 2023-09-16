@@ -38,12 +38,12 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 		<div class="content-header">
 			<div class="d-flex align-items-center">
 				<div class="me-auto">
-					<h4 class="page-title">School</h4>
+					<h4 class="page-title"><?php echo $schoolDetails['name']; ?> </h4>
 					<div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page"><?php echo $schoolDetails['name']; ?> 
+								<li class="breadcrumb-item active" aria-current="page">
                                 <?php if($schoolDetails['status'] == 1){  ?>
                                      <span class="badge badge-success">Active</span>
                                 <?php }else{ ?>
@@ -86,11 +86,11 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								<hr>
 							</div>
 							<div class="reviews">
-                            <p class="mt-15"><?php echo $schoolDetails['address'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['city'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['district'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['state'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['state'].", ".$schoolDetails['pincode'];  ?> </p>
+                            <p class="mt-15"> <?php echo $schoolDetails['address'];  ?></p>
+								<p class="mt-15"> <?php echo $schoolDetails['city'];  ?></p>
+								<p class="mt-15"> <?php echo $schoolDetails['district'];  ?></p>
+								<p class="mt-15"> <?php echo $schoolDetails['state'];  ?></p>
+								<p class="mt-15"> <?php echo $schoolDetails['state'].", ".$schoolDetails['pincode'];  ?> </p>
 								<p class="mt-15">GST : <?php echo $schoolDetails['gst'];  ?></p>
 							</div>
 						</div>
@@ -107,10 +107,9 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
                             <h4 class="box-title"><strong>Principal</strong> Details</h4>
 								<ul class="list-unstyled">
 									<li><p><i class="fa fa-graduation-cap me-5"></i><strong>Trust/Society:</strong> <?php echo $schoolDetails['is_trust_society'];  ?></p></li>
-									<li><p><i class="mdi mdi-star me-5"></i><strong>Pricipal:</strong><?php echo $schoolDetails['principal'];  ?></p></li>
+									<li><p><i class="mdi mdi-star me-5"></i><strong>Pricipal:</strong> <?php echo $schoolDetails['principal'];  ?></p></li>
 									<li><p><i class="fa fa-heart me-5"></i><strong>Principal Phone:</strong> <?php echo $schoolDetails['principal_phone'];  ?></p></li>
 									<li><p><i class="mdi mdi-label me-5"></i><strong>Principal EMail:</strong>  <?php echo $schoolDetails['principal_email'];  ?></p></li>
-									<li><p><i class="mdi mdi-label me-5"></i><strong>Projects:</strong> Map Creation</p></li>
 								</ul>
 								<hr>
                             <h4 class="box-title"><strong>Co-ordinator</strong> Details</h4>
@@ -132,25 +131,32 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								<div class="box-body p-0">
 								  <div class="media-list media-list-hover">
 									<a class="media media-single" href="#">
-									  <span class="avatar avatar-lg bg-primary-light rounded"><i class="fa-building-o"></i></span>
+									  <span class="avatar avatar-lg bg-primary-light rounded"><i class="fa fa-building-o"></i></span>
 									  <div class="media-body fw-500">
 										<p class="fs-16"><?php echo $schoolDetails['board'];  ?></p>
 									
 									  </div>
 									</a>
-                                    <div class="box-header">
-                                        <h4 class="box-title"><strong>Catalyst Olympiad</strong></h4>
-                                    </div>
+								  </div>
+								</div>
+							</div>  
+						</div>
+
+                        <div class="col-lg-6 col-md-12">
+							<div class="box">
+								<div class="box-header">
+									<h4 class="box-title"><strong>Catalyst Olympiad</strong></h4>
+								</div>
+								<div class="box-body p-0">
+								  <div class="media-list media-list-hover">
+								
 									<a class="media media-single" href="#">
-									  <span class="avatar avatar-lg bg-success-light rounded"><i class="fa-graduation-cap"></i></span>
+									  <span class="avatar avatar-lg bg-success-light rounded"><i class="fa fa-graduation-cap"></i></span>
 									  <div class="media-body fw-500">
                                       <p class="fs-16"><?php echo $schoolDetails['catalyst_olympiad'];  ?></p>
 
 									  </div>
 									</a>
-
-									
-
 								  </div>
 								</div>
 							</div>  
