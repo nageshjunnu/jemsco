@@ -8,7 +8,7 @@
 require_once '../controllers/AdminController.php';
 
 
-if(isset($_GET['id']))
+if(isset($_GET['id']) && $permissions["update_permission"] == 1 )
 {
     $userId = $_GET['id'];
 }
@@ -22,13 +22,7 @@ $user = $userModel->getUserDetailsBy($userId);
 // print_r($user);
 // die;
   ?>
-    <?php
-   if($permissions["update_permission"] == 1 ){ 
-
-		header('Location: all-users.php'); // Redirect to the login page if not logged in
-		exit();
-  }
-  ?>
+ 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">
