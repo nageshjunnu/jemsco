@@ -31,6 +31,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($action == 'forgot-password'){
         forgotPassword();
     }
+
+    if($action == 'reset_password'){
+        resetPassword();
+    }
 }   
 
 
