@@ -1,11 +1,10 @@
 <?php
 // session_start();
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 require_once '../models/UserModel.php';
 require_once '../controllers/schoolsControllers.php';
-// error_reporting(E_ALL);
-// ini_set('display_errors', '1');
+
 
 
 // $userModel = new UserModel();
