@@ -62,7 +62,7 @@ function updateUser() {
         $userModel = new UserModel();
         // Check if the update was successful
         if ($userModel->updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password )) {
-            echo json_encode(['success' => true, 'message'=>'Successfully Updated', 'stuent_id'=>$studentId]);
+            echo json_encode(['success' => true, 'message'=>'Successfully Updated', 'stuent_id'=>$userid]);
              exit;
         } else {
             echo json_encode(['success' => false, 'message' => 'Failed']);
