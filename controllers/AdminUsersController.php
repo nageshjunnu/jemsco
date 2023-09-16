@@ -139,7 +139,7 @@ function forgotPassword() {
 function resetPassword() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'])) {
         $email = $_POST['user_id'];
-        $newPassword = $_POST['newPassword']; 
+        $newPassword = $_POST['new_password']; 
 
         $userModel = new UserModel();
         if (resetPasswordById($email, $newPassword)) {
