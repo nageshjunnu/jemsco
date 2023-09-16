@@ -168,7 +168,7 @@ $schools = $schoolController->showAllSchool();
 								icon: 'success',
 								title: 'Deleted successfully'
 								})
-								window.location ="school.php";
+								window.location ="schools.php";
 								} else {
 									//alert(response.message);
 									const Toast = Swal.mixin({
