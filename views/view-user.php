@@ -73,7 +73,7 @@ $user = $userModel->getUserDetailsBy($userId);
 						  <div class="description-block">
 							<h5 class="description-header">Status</h5>
 							<span class="description-text">
-                                <?php if($user['role'] == 1){ ?><span class="badge badge-success">Active</span><?php }else{ ?>
+                                <?php if($user['status'] == 1){ ?><span class="badge badge-success">Active</span><?php }else{ ?>
                                     <span class="badge badge-warning">In Active</span>
                                 <?php } ?>
                             </span>
