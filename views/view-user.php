@@ -105,6 +105,7 @@ $user = $userModel->getUserDetailsBy($userId);
 						
 					  </div>
 					</div>
+					<div><a href="update-user.php?id=<?php echo $user['id']; ?>" style="width:100%;" class="btn btn-primary  mt-10">Edit</a></div>
 					<!-- /.box-body -->
 				  </div>
 			
