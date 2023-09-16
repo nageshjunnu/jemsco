@@ -103,7 +103,7 @@ class UserModel {
         
     }
 
-    public function getPermissions($id) {
+    public function getPermissionsByid($id) {
         // Implement your database query here to fetch user details by username.
         $query = "SELECT * FROM role_access WHERE id = :id";
         $con = new dbModel();

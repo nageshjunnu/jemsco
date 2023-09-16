@@ -12,8 +12,8 @@ class AdminController {
 
     public function getPermissions($id) {
         $userModel = new UserModel();
-        $students = $userModel->getPermissionsByid($id);
-        return $students;
+        $permissions = $userModel->getPermissionsByid($id);
+        return $permissions;
     }
 
 }
