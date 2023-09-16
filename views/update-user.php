@@ -113,7 +113,7 @@ $user = $userModel->getUserDetailsBy($userId);
                                     <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="form-label">Password</label>
-                                        <input type="password" class="form-control" name="password" value="<?php echo $user['password']; ?>" placeholder="password">
+                                        <input type="password" class="form-control" name="password" <?php if($user['role'] == "superadmin"){ echo "readonly"; } ?> value="<?php echo $user['password']; ?>" placeholder="password">
                                         </div>
                                     </div>
 									
