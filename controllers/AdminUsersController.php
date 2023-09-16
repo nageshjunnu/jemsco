@@ -335,8 +335,8 @@ function passwordResetLink($email)
     <td style=overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:Lato,sans-serif align=left>
     <div style=font-size:14px;line-height:140%;text-align:left;word-wrap:break-word>
     <p style=font-size:14px;line-height:140%><span style=font-size:16px;line-height:22.4px;color:#ecf0f1>Contact</span></p>
-    <p style=font-size:14px;line-height:140%><span style=font-size:14px;line-height:19.6px;color:#ecf0f1>1912 &nbsp;Mcwhorter Road, FL 11223</span></p>
-    <p style=font-size:14px;line-height:140%><span style=font-size:14px;line-height:19.6px;color:#ecf0f1>+111 222 333 | Info@company.com</span></p>
+
+    <p style=font-size:14px;line-height:140%><span style=font-size:14px;line-height:19.6px;color:#ecf0f1>+91 98859 26836 | Info@jemsco.in</span></p>
     </div>
     </td>
     </tr>
@@ -358,13 +358,7 @@ function passwordResetLink($email)
     <div style=display:table;max-width:187px>
     <!--[if (mso)|(IE)]><table width="187" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-collapse:collapse;" align="left"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:187px;"><tr><![endif]-->
     <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 15px;" valign="top"><![endif]-->
-    <table align=left border=0 cellspacing=0 cellpadding=0 width=32 height=32 style=width:32px!important;height:32px!important;display:inline-block;border-collapse:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;vertical-align:top;margin-right:15px>
-    <tbody><tr style=vertical-align:top><td align=left valign=middle style=word-break:break-word;border-collapse:collapse!important;vertical-align:top>
-    <a href="" title=Facebook target=_blank>
-    <img src=images/image-1.png alt=Facebook title=Facebook width=32 style=outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;display:block!important;border:none;height:auto;float:none;max-width:32px!important>
-    </a>
-    </td></tr>
-    </tbody></table>
+  
     <!--[if (mso)|(IE)]></td><![endif]-->
     <!--[if (mso)|(IE)]><td width="32" style="width:32px; padding-right: 15px;" valign="top"><![endif]-->
     <table align=left border=0 cellspacing=0 cellpadding=0 width=32 height=32 style=width:32px!important;height:32px!important;display:inline-block;border-collapse:collapse;table-layout:fixed;border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;vertical-align:top;margin-right:15px>
@@ -405,7 +399,7 @@ function passwordResetLink($email)
     <tr>
     <td style="overflow-wrap:break-word;word-break:break-word;padding:5px 10px 10px;font-family:Lato,sans-serif" align=left>
     <div style=font-size:14px;line-height:140%;text-align:left;word-wrap:break-word>
-    <p style=line-height:140%;font-size:14px><span style=font-size:14px;line-height:19.6px><span style=color:#ecf0f1;font-size:14px;line-height:19.6px><span style=line-height:19.6px;font-size:14px>Company &copy;&nbsp; All Rights Reserved</span></span></span></p>
+    <p style=line-height:140%;font-size:14px><span style=font-size:14px;line-height:19.6px><span style=color:#ecf0f1;font-size:14px;line-height:19.6px><span style=line-height:19.6px;font-size:14px>Jemsco.in &copy;&nbsp; All Rights Reserved</span></span></span></p>
     </div>
     </td>
     </tr>
