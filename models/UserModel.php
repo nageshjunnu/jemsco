@@ -105,12 +105,12 @@ class UserModel {
 
     public function getPermissionsByid($id) {
         // Implement your database query here to fetch user details by username.
-        $query = "SELECT * FROM role_access WHERE id = :id";
+        $query = "SELECT * FROM role_access WHERE role = :role";
         $con = new dbModel();
         $connection = $con->conn();
        
         $stmt = $connection->prepare($query);
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':role', $id);
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);

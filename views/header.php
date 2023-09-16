@@ -20,7 +20,7 @@ $user = $userModel->getUserById($_SESSION['id']);
 
 $permissionsController = new AdminController();
 
-$permissions =  $permissionsController->getPermissions($_SESSION['id']);
+$permissions =  $permissionsController->getPermissions($user['role']);
 
 ?>
 
