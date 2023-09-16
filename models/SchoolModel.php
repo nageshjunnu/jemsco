@@ -42,6 +42,7 @@ class SchoolModel {
             $stmt->bindParam(':pincode', $pincode);
             $stmt->bindParam(':is_trust_society', $is_trust_society);
             $stmt->bindParam(':gst', $gst);
+            $stmt->bindParam(':phone', $phone);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':alternate_email', $alternate_email);
             $stmt->bindParam(':principal', $principal);
