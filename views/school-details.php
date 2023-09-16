@@ -131,7 +131,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								<div class="box-body p-0">
 								  <div class="media-list media-list-hover">
 									<a class="media media-single" href="#">
-									  <span class="avatar avatar-lg bg-primary-light rounded"><i class="fas fa-school	"></i></span>
+									  <span class="avatar avatar-lg bg-primary-light rounded"><i class="fa-building-o"></i></span>
 									  <div class="media-body fw-500">
 										<p class="fs-16"><?php echo $schoolDetails['board'];  ?></p>
 									
@@ -141,7 +141,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
                                         <h4 class="box-title"><strong>Catalyst Olympiad</strong></h4>
                                     </div>
 									<a class="media media-single" href="#">
-									  <span class="avatar avatar-lg bg-success-light rounded"><i class="fas fa-graduation-cap"></i></span>
+									  <span class="avatar avatar-lg bg-success-light rounded"><i class="fa-graduation-cap"></i></span>
 									  <div class="media-body fw-500">
                                       <p class="fs-16"><?php echo $schoolDetails['catalyst_olympiad'];  ?></p>
 
