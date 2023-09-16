@@ -349,6 +349,31 @@ class UserModel {
         $stmt->execute([$userId]);
         return $stmt->rowCount() == 1;
     }
+
+    public function resetPasswordById($userId, $newPassword){
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+
+        try {
+            $query = "UPDATE users SET password = :newPassword WHERE id = :id";
+
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':password', $hashedPassword);
+            $stmt->bindParam(':id', $userid);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
     
 
 }

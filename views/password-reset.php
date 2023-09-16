@@ -33,11 +33,14 @@
 								<h3 class="mb-0 text-primary">Recover Password</h3>								
 							</div>
 							<div class="p-40">
-								<form id="forgot-password-form" method="post">
+								<form id="reset-password-form" method="post">
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
-											<input type="email" name="email" class="form-control ps-15 bg-transparent" value="" placeholder="Your Email" required>
+                                            <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>">
+											<input type="password" name="new_password" placeholder="New Password" required>
+											<input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
 										</div>
 									</div>
 									  <div class="row">
@@ -46,6 +49,7 @@
 										</div>
 										<!-- /.col -->
 									  </div>
+                                      <div id="message"></div>
 								</form>	
 							</div>
 						</div>
@@ -63,21 +67,28 @@
     <script src="assets/icons/feather-icons/feather.min.js"></script>	
 	<script>
 		$(document).ready(function() {
-			// Handle "Forgot Password" form submission
-			$('#forgot-password-form').submit(function(event) {
-				event.preventDefault();
-				
-				var email = $('#forgot-password-form input[name="email"]').val();
-				
-				// Send an AJAX request to UserController to send the password reset email
-				$.ajax({
-					type: 'POST',
-					url: '../controllers/AdminUsersController.php',
-					data: { email: email, action:'forgot-password' },
-					dataType: 'json',
-					success: function(response) {
-						//alert(response.message);
-						const Toast = Swal.mixin({
+            // Handle "Reset Password" form submission
+            $('#reset-password-form').submit(function(event) {
+                event.preventDefault();
+                
+                var userId = $('#reset-password-form input[name="user_id"]').val();
+                var newPassword = $('#reset-password-form input[name="new_password"]').val();
+                var confirmPassword = $('#reset-password-form input[name="confirm_password"]').val();
+                
+                if (newPassword !== confirmPassword) {
+                    $('#message').text('Password and confirm password do not match.');
+                    return;
+                }
+                
+                // Send an AJAX request to UserController to update the password
+                $.ajax({
+                    type: 'POST',
+                    url: '../controllers/AdminUsersController.php',
+                    data: { user_id: userId, new_password: newPassword, reset_password:"reset_password" },
+                    dataType: 'json',
+                    success: function(response) {
+                       // $('#message').text(response.message);
+                       const Toast = Swal.mixin({
 							toast: true,
 							position: 'top-end',
 							showConfirmButton: false,
@@ -93,10 +104,12 @@
 							icon: 'success',
 							title: 'Added successful'
 							})
-					},
-					error: function(xhr, status, error) {
-						//console.error(error);
-						const Toast = Swal.mixin({
+							window.location ="auth_login.html";
+
+                    },
+                    error: function(xhr, status, error) {
+                        //console.error(error);
+                        const Toast = Swal.mixin({
 							toast: true,
 							position: 'top-end',
 							showConfirmButton: false,
@@ -112,11 +125,10 @@
 							icon: 'warning',
 							title: 'failed: ' + response.message
 							})
-					}
-				});
-			});
-
-		});
+                    }
+                });
+            });
+        });
 
 	</script>
 	

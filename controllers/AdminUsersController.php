@@ -132,6 +132,21 @@ function forgotPassword() {
     }
 }
 
+function resetPassword() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userId'])) {
+        $userId = $_POST['userId'];
+        $newPassword = $_POST['newPassword']; 
+
+        $userModel = new UserModel();
+        if (resetPasswordById($userId, $newPassword)) {
+            echo json_encode(['success' => true, 'message'=>'Password Updated Successfully !!!']);
+            exit;
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Updation Failed']);
+            exit;
+        }
+    }
+}
 
 function passwordResetLink($email)
 {
@@ -485,6 +500,45 @@ function passwordResetLink($email)
 }
 
 function sendmail($email)
+{
+    
+
+    // Initialize PHPMailer
+    $mail = new PHPMailer(true);
+    $emailtemp = passwordResetLink($email);
+
+    try {
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'mail.jemsco.in';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'info@jemsco.in';                        //SMTP username
+        $mail->Password   = 'N8MQ[Cgi';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        // $mail->SMTPDebug =2;
+        //Recipients
+        $mail->setFrom("info@jemsco.in", 'JEMSCO');
+        $mail->addAddress($email, "Forgot Password");     //Add a recipient
+        $mail->addReplyTo('info@jemsco.in', 'JEMSCO 2023');
+        $mail->addBCC('nageshy.php@gmail.com');
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'JEMSCO 2023';
+        $mail->Body    = $emailtemp;
+        $mail->AltBody = '--------';
+
+        $mail->send();
+        //echo 'Message has been sent';
+        return true;
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
+
+function sendResetmail($email)
 {
     
 
