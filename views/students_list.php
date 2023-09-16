@@ -92,7 +92,7 @@ $students = $studenstModel->showAllStudents();
 								<td><?php echo $student['email']; ?></td>
 								<td><?php echo $student['state']; ?></td>
 								<td><?php echo $student['mobile']; ?></td>
-								<td><a href = "student-details.php?id=<?php echo $student['id']; ?>">
+								<td><a href = "school-details.php?id=<?php echo $student['id']; ?>">
 
 								<?php if($permissions["read_permission"] == 1 ){ ?>
 								<span class="badge badge-primary">View</span></a> 

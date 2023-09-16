@@ -82,7 +82,16 @@ $schools = $schoolController->showAllSchool();
 								<td><?php echo $school['email']; ?></td>
 								<td><?php echo $school['phone']; ?></td>
 								<td><?php echo $school['principal']; ?></td>
-								<td><a href = "student-details.php?id=<?php echo $school['id']; ?>"><span class="badge badge-primary">View</span></a> | <span class="badge badge-info">Edit</span> | <span class="badge badge-danger">Delete</span></td>
+								<td>
+								<?php if($permissions["read_permission"] == 1 ){ ?>
+									<a href = "school-details.php?id=<?php echo $school['id']; ?>"><span class="badge badge-primary">View</span></a>
+									<?php } ?>
+									<?php if($permissions["update_permission"] == 1 ){ ?>
+								 | <span class="badge badge-info">Edit</span> |
+								 <?php } ?>
+								<?php if($permissions["delete_permission"] == 1 ){ ?>
+								 <span class="badge badge-danger">Delete</span></td>
+								 <?php } ?>
 							</tr>
 							<?php endforeach; ?>
 						
