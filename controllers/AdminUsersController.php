@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php'; // Include the PHPMailer autoloader
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-  echo $action = $_POST['action'];
+    $action = $_POST['action'];
     if($action == 'add-new-user'){
         registerUser();
     }
@@ -137,8 +137,8 @@ function forgotPassword() {
 }
 
 function resetPassword() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userId'])) {
-        $email = $_POST['userId'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user_id'])) {
+        $email = $_POST['user_id'];
         $newPassword = $_POST['newPassword']; 
 
         $userModel = new UserModel();
