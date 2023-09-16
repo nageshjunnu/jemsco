@@ -270,6 +270,8 @@ class UserModel {
     }
 
     public function updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password ){
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
         try {
             $query = "UPDATE users SET username = :username, name = :name  , last_name = :last_name , role = :role , email = :email , mobile = :mobile , password = :password  WHERE id = :id";
 
