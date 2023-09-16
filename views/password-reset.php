@@ -84,7 +84,7 @@
                 $.ajax({
                     type: 'POST',
                     url: '../controllers/AdminUsersController.php',
-                    data: { user_id: userId, new_password: newPassword, reset_password:"reset_password" },
+                    data: { user_id: userId, new_password: newPassword, action:"reset_password" },
                     dataType: 'json',
                     success: function(response) {
                        // $('#message').text(response.message);
