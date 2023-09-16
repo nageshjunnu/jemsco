@@ -1,5 +1,7 @@
 <?php
 require_once '../models/UserModel.php';
+require_once '../models/SchoolModel.php';
+
 // header('Content-Type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
