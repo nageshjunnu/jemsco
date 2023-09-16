@@ -102,7 +102,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">E-mail</label>
-									  <input type="number" class="form-control" name ="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
+									  <input type="email" class="form-control" name ="email" value="<?php echo $schoolDetails['email'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
 									</div>
 								  </div>
 								  
