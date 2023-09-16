@@ -110,7 +110,7 @@ $permissions =  $permissionsController->getPermissions($user['role']);
 			</li>
 			
 			<li class="btn-group nav-item">
-				<a href="reports.html" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" title="Full Screen">
+				<a href="payment-list.php" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" title="Full Screen">
 					Reports
 			    </a>
 			</li>
