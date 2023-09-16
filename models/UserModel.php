@@ -312,7 +312,7 @@ class UserModel {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         try {
-            $query = "UPDATE users SET username = :username, name = :name  , last_name = :last_name , role = :role , email = :email , mobile = :mobile , password = :password  WHERE id = :id";
+            $query = "UPDATE users SET username = :username, name = :name  , last_name = :last_name , role = :role , email = :email , mobile = :mobile   WHERE id = :id";
 
             // echo $stmt;
 
@@ -326,7 +326,7 @@ class UserModel {
             $stmt->bindParam(':role', $role);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':mobile', $mobile);
-            $stmt->bindParam(':password', $hashedPassword);
+            // $stmt->bindParam(':password', $hashedPassword);
             $stmt->bindParam(':id', $userid);
             
             if ($stmt->execute()) {

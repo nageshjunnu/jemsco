@@ -102,21 +102,19 @@ $user = $userModel->getUserDetailsBy($userId);
 									  <input type="email" class="form-control" name ="email" value="<?php echo $user['email']; ?>" placeholder="Email" required>
 									</div>
 								  </div>
-								  
-								</div>
-								<div class="row">
+								
 								    <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="form-label">Contact Number</label>
                                         <input type="number" class="form-control" name="mobile" value="<?php echo $user['mobile']; ?>" placeholder="number">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="form-label">Password</label>
                                         <input type="password" class="form-control" name="password" <?php if($user['role'] == "superadmin"){ echo "readonly"; } ?> value="<?php echo password_hash($user['password'], PASSWORD_DEFAULT); ?>" placeholder="password">
                                         </div>
-                                    </div>
+                                    </div> -->
 									
 									</div>
 								</div>								
