@@ -4,10 +4,10 @@
     <section class="sidebar position-relative">
 		<div class="d-flex align-items-center logo-box justify-content-start d-md-block d-none">	
 			<!-- Logo -->
-			<a href="index.html" class="logo">
+			<a href="dashboard.php" class="logo">
 			  <!-- logo-->
 			  <div class="logo-mini">
-				  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" alt="logo"></span>
+				  <span class="light-logo"><img src="https://jemsco.in/demo/images/header-logo.2x.png" style="width: 55px !important;" alt="logo"></span>
 			  </div>
 			  <div class="logo-lg">
 				  <span class="light-logo fs-36 fw-700">JEM<span class="text-primary">SCO</span></span>
