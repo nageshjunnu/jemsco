@@ -64,7 +64,7 @@ $schools = $schoolController->showAllSchool();
 						<thead class="bg-primary">
 							<tr>
 								<th>Name</th>
-								<th>Address</th>
+								<th width="30%">Address</th>
 								<th>City</th>
 								<th>Email</th>
 								<th>Mobile</th>
@@ -77,7 +77,7 @@ $schools = $schoolController->showAllSchool();
 
 							<tr>
 								<td><?php echo $school['name']; ?></td>
-								<td><?php echo $school['address']; ?></td>
+								<td width="30%"><?php echo $school['address']; ?></td>
 								<td><?php echo $school['city']; ?></td>
 								<td><?php echo $school['email']; ?></td>
 								<td><?php echo $school['phone']; ?></td>
