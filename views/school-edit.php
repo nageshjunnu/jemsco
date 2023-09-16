@@ -85,18 +85,18 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 	                                <div class="form-group"> <label class="form-label">School Name</label> <input type="text" class="form-control" name="student_name" value="<?php echo $schoolDetails['name'];?>"> <input type="hidden" value="<?php echo $schoolDetails['id'];?>" name="id"> </div>
 	                            </div>
 	                            <div class="col-md-6">
-	                                <div class="form-group"> <label class="form-label">Contact Number</label> <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" placeholder="<?php echo $schoolDetails['phone'];?>"> </div>
+	                                <div class="form-group"> <label class="form-label">Contact Number</label> <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" > </div>
 	                            </div>
 	                        </div>
 	                        <div class="row">
 	                            <div class="col-md-6">
-	                                <div class="form-group"> <label class="form-label">Alternate Number</label> <input type="number" class="form-control" name="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>"> </div>
+	                                <div class="form-group"> <label class="form-label">Alternate Number</label> <input type="number" class="form-control" name="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>"> </div>
 	                            </div>
 	                            <div class="col-md-6">
-	                                <div class="form-group"> <label class="form-label">Email</label> <input type="email" class="form-control" name="email" value="<?php echo $schoolDetails['email'];?>" placeholder="<?php echo $schoolDetails['email'];?>"> </div>
+	                                <div class="form-group"> <label class="form-label">Email</label> <input type="email" class="form-control" name="email" value="<?php echo $schoolDetails['email'];?>" > </div>
 	                            </div>
 	                            <div class="col-md-6">
-	                                <div class="form-group"> <label class="form-label">Alternate Email</label> <input type="email" class="form-control" name="alternate_email" value="<?php echo $schoolDetails['alternate_email'];?>" placeholder="<?php echo $schoolDetails['alternate_email'];?>"> </div>
+	                                <div class="form-group"> <label class="form-label">Alternate Email</label> <input type="email" class="form-control" name="alternate_email" value="<?php echo $schoolDetails['alternate_email'];?>" > </div>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -106,25 +106,25 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 	                            <hr class="my-15">
 	                            <div class="row">
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Address</label> <input type="text" class="form-control" name="address" value="<?php echo $schoolDetails['address'];?>" placeholder="<?php echo $schoolDetails['address'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">Address</label> <input type="text" class="form-control" name="address" value="<?php echo $schoolDetails['address'];?>" > </div>
 	                                </div>
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">City</label> <input type="text" class="form-control" name="city" value="<?php echo $schoolDetails['city'];?>" placeholder="<?php echo $schoolDetails['city'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">City</label> <input type="text" class="form-control" name="city" value="<?php echo $schoolDetails['city'];?>" > </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">District</label> <input type="text" class="form-control" name="district" value="<?php echo $schoolDetails['district'];?>" placeholder="<?php echo $schoolDetails['district'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">District</label> <input type="text" class="form-control" name="district" value="<?php echo $schoolDetails['district'];?>" > </div>
 	                                </div>
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">State</label> <input type="text" class="form-control" name="state" value="<?php echo $schoolDetails['state'];?>" placeholder="<?php echo $schoolDetails['state'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">State</label> <input type="text" class="form-control" name="state" value="<?php echo $schoolDetails['state'];?>"> </div>
 	                                </div>
 	                                <div class="row">
 	                                    <div class="col-md-6">
-	                                        <div class="form-group"> <label class="form-label">Pincode</label> <input type="text" class="form-control" name="pincode" value="<?php echo $schoolDetails['pincode'];?>" placeholder="<?php echo $schoolDetails['pincode'];?>"> </div>
+	                                        <div class="form-group"> <label class="form-label">Pincode</label> <input type="text" class="form-control" name="pincode" value="<?php echo $schoolDetails['pincode'];?>" > </div>
 	                                    </div>
 	                                    <div class="col-md-6">
-	                                        <div class="form-group"> <label class="form-label">Trust/City</label> <input type="text" class="form-control" name="is_trust_society" value="<?php echo $schoolDetails['is_trust_society'];?>" placeholder="<?php echo $schoolDetails['is_trust_society'];?>"> </div>
+	                                        <div class="form-group"> <label class="form-label">Trust/City</label> <input type="text" class="form-control" name="is_trust_society" value="<?php echo $schoolDetails['is_trust_society'];?>" > </div>
 	                                    </div>
 	                                </div>
 	                            </div>
@@ -149,31 +149,31 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 	                            </div>
 	                            <div class="row">
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Principal Phone</label> <input type="text" class="form-control" name="principal_phone" value="<?php echo $schoolDetails['principal_phone'];?>" placeholder="<?php echo $schoolDetails['principal_phone'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">Principal Phone</label> <input type="text" class="form-control" name="principal_phone" value="<?php echo $schoolDetails['principal_phone'];?>" > </div>
 	                                </div>
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Principal Email</label> <input type="text" class="form-control" name="principal_email" value="<?php echo $schoolDetails['principal_email'];?>" placeholder="<?php echo $schoolDetails['principal_email'];?>"> </div>
-	                                </div>
-	                            </div>
-	                            <div class="row">
-	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Co Ordinator Name</label> <input type="text" class="form-control" name="co_ordinator_name" value="<?php echo $schoolDetails['co_ordinator_name'];?>" placeholder="<?php echo $schoolDetails['co_ordinator_name'];?>"> </div>
-	                                </div>
-	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Co Ordinator Phone</label> <input type="number" class="form-control" name="co_ordinator_phone" value="<?php echo $schoolDetails['co_ordinator_phone'];?>" placeholder="<?php echo $schoolDetails['co_ordinator_phone'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">Principal Email</label> <input type="text" class="form-control" name="principal_email" value="<?php echo $schoolDetails['principal_email'];?>" > </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Co Ordinator Email</label> <input type="text" class="form-control" name="co_ordinator_email" value="<?php echo $schoolDetails['co_ordinator_email'];?>" placeholder="<?php echo $schoolDetails['co_ordinator_email'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">Co Ordinator Name</label> <input type="text" class="form-control" name="co_ordinator_name" value="<?php echo $schoolDetails['co_ordinator_name'];?>" > </div>
 	                                </div>
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Board</label> <input type="text" class="form-control" name="board_syllabus" value="<?php echo $schoolDetails['board'];?>" placeholder="<?php echo $schoolDetails['board_syllabus'];?>"> </div>
+	                                    <div class="form-group"> <label class="form-label">Co Ordinator Phone</label> <input type="number" class="form-control" name="co_ordinator_phone" value="<?php echo $schoolDetails['co_ordinator_phone'];?>" > </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Catalyst Olympiad</label> <input type="text" class="form-control" readonly value="<?php echo $schoolDetails['catalyst_olympiad'];?>" placeholder="<?php echo $schoolDetails['catalyst_olympiad'];?>"> <select class="form-select" name="catalyst_olympiad">
+	                                    <div class="form-group"> <label class="form-label">Co Ordinator Email</label> <input type="text" class="form-control" name="co_ordinator_email" value="<?php echo $schoolDetails['co_ordinator_email'];?>" > </div>
+	                                </div>
+	                                <div class="col-md-6">
+	                                    <div class="form-group"> <label class="form-label">Board</label> <input type="text" class="form-control" name="board_syllabus" value="<?php echo $schoolDetails['board'];?>" > </div>
+	                                </div>
+	                            </div>
+	                            <div class="row">
+	                                <div class="col-md-6">
+	                                    <div class="form-group"> <label class="form-label">Catalyst Olympiad</label> <input type="text" class="form-control" readonly value="<?php echo $schoolDetails['catalyst_olympiad'];?>"> <select class="form-select" name="catalyst_olympiad">
 	                                            <option value="ceo">CEO</option>
 	                                            <option value="cso">CSO</option>
 	                                        </select> </div>
