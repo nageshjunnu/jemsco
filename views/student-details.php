@@ -95,7 +95,9 @@ $students = $studenstModel->getStudentById($studentId);
 									<p><?php echo $students['address'];?></p>
 								</div>
 							</div>
+							<?php if($user['role'] == "superadmin"){ ?>
 							<div><a href = "student-edit.php?id=<?php echo $students['id'];  ?>" style="width:100%;" class="btn btn-primary  mt-10" >Edit</a></div> 
+							<?php } ?>
 							<hr>
 							<br>
 							<!-- <div class="row mt-15">
