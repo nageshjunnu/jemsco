@@ -18,9 +18,9 @@ $userModel = new UserModel();
 $user = $userModel->getUserById($_SESSION['id']);
 // print_r($user);
 
-$studentModel = new AdminController();
+$permissionsController = new AdminController();
 
-$permissions = getPermissions($_SESSION['id']);
+$permissions =  $permissionsController->getPermissions($_SESSION['id']);
 
 ?>
 
