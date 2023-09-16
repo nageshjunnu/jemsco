@@ -64,7 +64,7 @@ $examsCount = $studentModel->getExamsCount();
 					</div>
 				</div>
 				<?php 
-					print_r($permissions);
+					if($permissions["read_permission"] == 1){
 				?>
 				<div class="col-xl-3 col-md-6 col-12">
 					<div class="box">
@@ -123,6 +123,7 @@ $examsCount = $studentModel->getExamsCount();
 						</div>
 					</div>
 				</div>
+				<?php } ?>
 				<!-- <div class="col-xl-8 col-12">
 					<div class="box">
 						<div class="box-header">
