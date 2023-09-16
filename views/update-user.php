@@ -57,12 +57,12 @@ $user = $userModel->getUserDetailsBy($userId);
 						  
 						</div>
 						<!-- /.box-header -->
-						
+						<?php if($user['role'] == "superadmin"){ echo "Nod Edit Access..."; }else{?>
 							<div class="box-body">
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> Personal Info</h4>
 								<hr class="my-15">
 								<div class="row">
-								<?php if($user['role'] == "no access"){ echo "No access to edit "; }else{?>
+							
                                 <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">User Name</label>
@@ -120,7 +120,7 @@ $user = $userModel->getUserDetailsBy($userId);
 									
 									</div>
 								</div>								
-							<?php } ?>
+							
 							<div class="box-footer">
                                 <input type="hidden" name="action" value="update-user">
                                 <input type="hidden" name="userid" value="<?php echo $user['id']; ?>">
@@ -131,6 +131,7 @@ $user = $userModel->getUserDetailsBy($userId);
 								  <i class="ti-save-alt"></i> Update
 								</button>
 							</div>		
+							<?php } ?>
                             </div>				
 					  </div>
 					</div>					 
