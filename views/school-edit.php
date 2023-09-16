@@ -73,56 +73,55 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 		<form class="form" id="updateSchoolForm">	
 			<div class="row">
 					  
-				<div class="col-lg-6 col-12">
-					  <div class="box">
-						<div class="box-header with-border">
-						  <h4 class="box-title"><?php echo $schoolDetails['name'];?></h4>
-						  
-						</div>
-						<!-- /.box-header -->
+					<div class="col-lg-6 col-12">
+					  	<div class="box">
+							<div class="box-header with-border">
+							<h4 class="box-title"><?php echo $schoolDetails['name'];?></h4>
+							
+							</div>		
 						
 							<div class="box-body">
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> School Info</h4>
 								<hr class="my-15">
-								<div class="row">
-								  <div class="col-md-6">
-									<div class="form-group">
-									  <label class="form-label">School Name</label>
-									  <input type="text" class="form-control" name="student_name" value="<?php echo $schoolDetails['name'];?>">
-									  <input type="hidden" value="<?php echo $schoolDetails['id'];?>" name="id">
-									</div>
-								  </div>
-								  <div class="col-md-6">
-									<div class="form-group">
-									  <label class="form-label">Contact Number</label>
-									  <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>">
-									</div>
-								  </div>							
-								 								  
-								</div>
-								<div class="row">
-								
+									<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-										<label class="form-label">Alternate Number</label>
-										<input type="number" class="form-control" name="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
+										<label class="form-label">School Name</label>
+										<input type="text" class="form-control" name="student_name" value="<?php echo $schoolDetails['name'];?>">
+										<input type="hidden" value="<?php echo $schoolDetails['id'];?>" name="id">
 										</div>
 									</div>
-									
-                                    <div class="col-md-6">
+									<div class="col-md-6">
 										<div class="form-group">
-										<label class="form-label">Email</label>
-										<input type="email" class="form-control" name="email" value="<?php echo $schoolDetails['email'];?>" placeholder="<?php echo $schoolDetails['email'];?>">
+										<label class="form-label">Contact Number</label>
+										<input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>">
+										</div>
+									</div>							
+																	
+									</div>
+
+									<div class="row">								
+										<div class="col-md-6">
+											<div class="form-group">
+											<label class="form-label">Alternate Number</label>
+											<input type="number" class="form-control" name="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
+											</div>
+										</div>
+										
+										<div class="col-md-6">
+											<div class="form-group">
+											<label class="form-label">Email</label>
+											<input type="email" class="form-control" name="email" value="<?php echo $schoolDetails['email'];?>" placeholder="<?php echo $schoolDetails['email'];?>">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+											<label class="form-label">Alternate Email</label>
+											<input type="email" class="form-control" name="alternate_email" value="<?php echo $schoolDetails['alternate_email'];?>" placeholder="<?php echo $schoolDetails['alternate_email'];?>">
+											</div>
 										</div>
 									</div>
-                                    <div class="col-md-6">
-										<div class="form-group">
-										<label class="form-label">Alternate Email</label>
-										<input type="email" class="form-control" name="alternate_email" value="<?php echo $schoolDetails['alternate_email'];?>" placeholder="<?php echo $schoolDetails['alternate_email'];?>">
-										</div>
-									</div>
-									</div>
-								</div>
+								
    								</div>
 								<div class="box">	
 									<div class="box-body">
@@ -179,7 +178,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 						</div>	
 					  </div>
 					</div>
-					</div>
+			
 					  <!-- /.box -->			
               		  	<div class="col-lg-6 col-12">
 							
@@ -285,7 +284,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
                                 <input type="hidden" value="school-update" name="action">
 								<a  href="student-details.php?id=<?php echo $studentId; ?>" type="button" class="btn btn-warning me-1">
 								  <i class="ti-trash"></i> Cancel
-</a>
+								</a>
 								<button type="submit" class="btn btn-primary">
 								  <i class="ti-save-alt"></i> Save
 								</button>
