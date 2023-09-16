@@ -125,7 +125,7 @@ function schoolUpdate(){
         $co_ordinator_email = $_POST['co_ordinator_email']?? "";
         $board = $_POST['board']?? "";
         $catalyst_olympiad = $_POST['catalyst_olympiad']?? "";
-        $status = $_POST['status']?? "0";
+        $status = $_POST['status']?? "";
         $bytes = random_bytes(16);
         // Basic form validation
         
