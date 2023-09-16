@@ -101,8 +101,9 @@ $students = $studenstModel->showAllStudents();
 								| <a href="student-edit.php?id=<?php echo $student['id']; ?>"><span class="badge badge-info">Edit</span></a>
 								<?php } ?>
 								<?php if($permissions["delete_permission"] == 1 ){ ?>
-								| <span class="badge badge-danger">Delete</span>
+								| <button class="badge badge-danger delete-student" data-student-id="<?php echo $student['id']; ?>">Delete</button>
 								<?php } ?>
+								</td>
 							</td>
 							</tr>
 							<?php endforeach; ?>
@@ -153,6 +154,67 @@ $students = $studenstModel->showAllStudents();
 	<!-- CRMi App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
-
+									
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	
 
+	<script>
+        $(document).ready(function() {
+            $('.delete-student').click(function() {
+                var userId = $(this).data('student-id');
+                
+                if (confirm('Are you sure you want to delete this user?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '../controllers/AdminUsersController.php',
+                        data: { user_id: userId, action:"delete-student" },
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.success) {
+                               // alert(response.message);
+                                // Reload the user list or perform any other action as needed
+								const Toast = Swal.mixin({
+								toast: true,
+								position: 'top-end',
+								showConfirmButton: false,
+								timer: 3000,
+								timerProgressBar: true,
+								didOpen: (toast) => {
+									toast.addEventListener('mouseenter', Swal.stopTimer)
+									toast.addEventListener('mouseleave', Swal.resumeTimer)
+								}
+								})
+								
+								Toast.fire({
+								icon: 'success',
+								title: 'Added successful'
+								})
+								window.location ="students_list.php";
+								} else {
+									//alert(response.message);
+									const Toast = Swal.mixin({
+									toast: true,
+									position: 'top-end',
+									showConfirmButton: false,
+									timer: 3000,
+									timerProgressBar: true,
+									didOpen: (toast) => {
+										toast.addEventListener('mouseenter', Swal.stopTimer)
+										toast.addEventListener('mouseleave', Swal.resumeTimer)
+									}
+									})
+									
+									Toast.fire({
+									icon: 'warning',
+									title: 'failed: ' + response.message
+									})
+								}
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>

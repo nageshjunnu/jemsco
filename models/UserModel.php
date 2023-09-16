@@ -282,6 +282,32 @@ class UserModel {
         }
     }
 
+    public function deleteStudent($studentId,$status) {
+        try {
+            $query = "UPDATE student SET status = :status WHERE id = :id";
+
+            // echo $stmt;
+
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':status', $status);
+
+            $stmt->bindParam(':id', $studentId);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
     public function updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password ){
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 

@@ -15,6 +15,7 @@ class AdminController {
         $permissions = $userModel->getPermissionsByid($id);
         return $permissions;
     }
+    
 
 }
 
