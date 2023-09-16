@@ -10,6 +10,12 @@ class AdminController {
         return $students;
     }
 
+    public function getPermissions($id) {
+        $userModel = new UserModel();
+        $students = $userModel->getPermissionsByid($id);
+        return $students;
+    }
+
 }
 
 

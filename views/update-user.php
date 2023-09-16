@@ -22,7 +22,13 @@ $user = $userModel->getUserDetailsBy($userId);
 // print_r($user);
 // die;
   ?>
-  
+    <?php
+   if($user['role'] != "superadmin"){ 
+
+		header('Location: students_list.php'); // Redirect to the login page if not logged in
+		exit();
+  }
+  ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">

@@ -5,6 +5,7 @@
 <?php
 require_once '../models/SchoolModel.php';
 
+
 $studentModel = new SchoolModel();
 $totalStudents = $studentModel->getStudentsCount();
 
@@ -15,6 +16,7 @@ $TotalrecievedTayments = $studentModel->getTotalRecievedAmount();
 $TotalPendingTayments = $studentModel->getTotalPendingAmount();
 
 $examsCount = $studentModel->getExamsCount();
+
 
 
 // print_r($totalStudents);
@@ -61,6 +63,9 @@ $examsCount = $studentModel->getExamsCount();
 						</div>
 					</div>
 				</div>
+				<?php 
+					print_r($permissions);
+				?>
 				<div class="col-xl-3 col-md-6 col-12">
 					<div class="box">
 						<div class="box-body">

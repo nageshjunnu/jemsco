@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../models/UserModel.php';
+require_once '../models/AdminController.php';
 
 // Check if the user is logged in (session variable exists)
 if (!isset($_SESSION['id'])) {
@@ -16,6 +17,10 @@ if (isset($_SESSION['id'])) {
 $userModel = new UserModel();
 $user = $userModel->getUserById($_SESSION['id']);
 // print_r($user);
+
+$studentModel = new AdminController();
+
+$permissions = getPermissions($_SESSION['id']);
 ?>
 
 <!DOCTYPE html>

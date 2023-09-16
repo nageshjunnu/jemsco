@@ -49,7 +49,11 @@ $usersdata = $usersModel->getAllUsers();
 				<div class="box-header with-border">
 				  <!-- <h3 class="box-title">Hover Export Data Table</h3> -->
 				  <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+				  <?php
+						if($user['role'] != "superadmin"){ 
+					?>
                   <a href="add-new-user.php" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" style="float: right;">Add New user</a>
+				  <?php } ?>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -78,7 +82,13 @@ $usersdata = $usersModel->getAllUsers();
 								<td><?php echo $item['mobile']; ?></td>
 								<td><?php echo $item['role']; ?></td>
 								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
-								<td><a href = "#"><span class="badge badge-primary">View</span></a> | <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <button class="badge badge-danger delete-user" data-user-id="<?php echo $item['id']; ?>">Delete</button></td>
+								<td><a href = "#"><span class="badge badge-primary">View</span></a>
+								<?php
+									if($user['role'] != "superadmin"){ 
+								?>
+								| <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a> | <button class="badge badge-danger delete-user" data-user-id="<?php echo $item['id']; ?>">Delete</button>
+								<?php } ?>
+								</td>
 							</tr>
 							<?php } ?>
 							<?php endforeach; ?>

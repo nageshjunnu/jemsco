@@ -103,6 +103,19 @@ class UserModel {
         
     }
 
+    public function getPermissions($id) {
+        // Implement your database query here to fetch user details by username.
+        $query = "SELECT * FROM role_access WHERE id = :id";
+        $con = new dbModel();
+        $connection = $con->conn();
+       
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function authenticate($username) {
         // Perform the database query to check the credentials
         // You should use prepared statements and password_hash for security
