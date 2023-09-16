@@ -287,7 +287,8 @@ class UserModel {
             $stmt->bindParam(':role', $role);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':mobile', $mobile);
-            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':password', $        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        );
             $stmt->bindParam(':id', $userid);
             
             if ($stmt->execute()) {
