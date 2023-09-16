@@ -73,7 +73,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 		<form class="form" id="updateSchoolForm">	
 			<div class="row">
 					  
-					<div class="col-lg-6 col-12">
+					  <div class="col-lg-6 col-12">
 					  	<div class="box">
 							<div class="box-header with-border">
 							<h4 class="box-title"><?php echo $schoolDetails['name'];?></h4>
@@ -176,8 +176,8 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 							</div>
 							</div>
 						</div>	
-					  </div>
-					</div>
+					
+					
 			
 					  <!-- /.box -->			
               		  	<div class="col-lg-6 col-12">
@@ -293,8 +293,8 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 					  </div>
 					  <!-- /.box -->		
 					 
-				</div>  
-				
+					</div>  
+				</div> 
 		    </div>
 			</form>	
 			<!--/.col (left) -->
