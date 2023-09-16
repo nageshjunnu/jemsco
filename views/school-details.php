@@ -67,12 +67,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 							<div>
 								<h3 class="mb-0"><strong><?php echo $schoolDetails['name'] ?></strong> <?php echo $schoolDetails['board'];  ?></h3>
 								<span class="job_post"><?php echo $schoolDetails['city'];  ?></span>
-								<p class="mt-15"><?php echo $schoolDetails['address'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['city'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['district'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['state'];  ?></p>
-								<p class="mt-15"><?php echo $schoolDetails['state'].", ".$schoolDetails['pincode'];  ?> </p>
-								<p class="mt-15">GST : <?php echo $schoolDetails['gst'];  ?></p>
+						
 								<p class="mt-15">Mobile : <?php echo $schoolDetails['mobile'].", ";  ?>  <?php echo $schoolDetails['alternate_phone'];  ?></p>
 								<p class="mt-15">Email : <?php echo $schoolDetails['email']." ".$schoolDetails['alternate_email'];  ?></p>
 
@@ -84,64 +79,28 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 							</div> -->
 						</div>                    
 					</div>                               
-					<!-- <div class="box">
+				<div class="box">
 						<div class="box-body">
 							<div class="workingtime">
-								<h5 class="fw-500">Working Time</h5>
-								<small class="text-muted">Monday to Friday</small>
-								<p>09:00 AM - 4:00 PM</p>
-								<hr>
-								<small class="text-muted">Saturday</small>
-								<p>09:00 AM - 12:30 PM</p>
+								<h5 class="fw-500">Address Info</h5>
 								<hr>
 							</div>
 							<div class="reviews">
-								<h5 class="fw-500">Reviews</h5>
-								<small class="text-muted">Staff</small>
-								<p class="fs-16">
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star-outline"></i>
-									<i class="mdi mdi-star-outline"></i>
-								</p>                            
-								<hr>
-								<small class="text-muted">Helpfulness</small>
-								<p class="fs-16">
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-								</p>
-								<hr>
-								<small class="text-muted">Knowledge</small>
-								<p class="fs-16">
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star-outline"></i>
-									<i class="mdi mdi-star-outline"></i>
-								</p>
-								<hr>
-								<small class="text-muted">Cost</small>
-								<p class="fs-16">
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star text-warning"></i>
-									<i class="mdi mdi-star-outline"></i>
-									<i class="mdi mdi-star-outline"></i>
-									<i class="mdi mdi-star-outline"></i>
-								</p>
-								<hr>
+                            <p class="mt-15"><?php echo $schoolDetails['address'];  ?></p>
+								<p class="mt-15"><?php echo $schoolDetails['city'];  ?></p>
+								<p class="mt-15"><?php echo $schoolDetails['district'];  ?></p>
+								<p class="mt-15"><?php echo $schoolDetails['state'];  ?></p>
+								<p class="mt-15"><?php echo $schoolDetails['state'].", ".$schoolDetails['pincode'];  ?> </p>
+								<p class="mt-15">GST : <?php echo $schoolDetails['gst'];  ?></p>
 							</div>
 						</div>
-					</div>            -->
+					</div>       
 				</div>
 				<div class="col-lg-8 col-md-12">
 					<div class="box box-body">
 						<ul class="nav nav-tabs">
 							<li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#about">About</a></li>
-							<li class="nav-item"><a class="nav-link show" data-bs-toggle="tab" href="#Account">Account</a></li>                        
+							<li class="nav-item"><a class="school-edit.php?id<?php echo $schoolDetails['id']; ?>" data-bs-toggle="tab" href="#Account">Edit</a></li>                        
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane py-30 active show" id="about">
