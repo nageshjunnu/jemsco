@@ -84,7 +84,7 @@ $usersdata = $usersModel->getAllUsers();
 								<td><?php if($item['status'] == 1){ echo "<span class='badge badge-info'>Active</span>"; }else{ echo "<span class='badge badge-danger'>In Active</span>"; } ?></td>
 								<td>
 								<?php if($permissions["read_permission"] == 1 ){ ?>	
-								<a href = "#"><span class="badge badge-primary">View</span></a>
+								<a href = "view-user.php?id=<?php echo $item['id']; ?>"><span class="badge badge-primary">View</span></a>
 								<?php } ?>
 								<?php if($permissions["update_permission"] == 1 ){ ?>
 								| <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a>
