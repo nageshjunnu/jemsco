@@ -159,10 +159,43 @@ $usersdata = $usersModel->getAllUsers();
                         dataType: 'json',
                         success: function(response) {
                             if (response.success) {
-                                alert(response.message);
+                                // alert(response.message);
+								const Toast = Swal.mixin({
+								toast: true,
+								position: 'top-end',
+								showConfirmButton: false,
+								timer: 3000,
+								timerProgressBar: true,
+								didOpen: (toast) => {
+									toast.addEventListener('mouseenter', Swal.stopTimer)
+									toast.addEventListener('mouseleave', Swal.resumeTimer)
+								}
+								})
+								
+								Toast.fire({
+								icon: 'success',
+								title: 'Deleted successfully'
+								})
+								window.location ="all-users.php";
                                 // Reload the user list or perform any other action as needed
                             } else {
-                                alert(response.message);
+                                //alert(response.message);
+								const Toast = Swal.mixin({
+									toast: true,
+									position: 'top-end',
+									showConfirmButton: false,
+									timer: 3000,
+									timerProgressBar: true,
+									didOpen: (toast) => {
+										toast.addEventListener('mouseenter', Swal.stopTimer)
+										toast.addEventListener('mouseleave', Swal.resumeTimer)
+									}
+									})
+									
+									Toast.fire({
+									icon: 'warning',
+									title: 'Deletion failed: ' + response.message
+									})
                             }
                         },
                         error: function(xhr, status, error) {
