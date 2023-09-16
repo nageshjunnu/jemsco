@@ -9,9 +9,8 @@ require_once '../controllers/StudentController.php';
 
 
 if($permissions["create_permission"] == 1 ){ 
-    header('Location: all-users.php'); 
-    exit();
-}
+   
+
     ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -194,4 +193,4 @@ if($permissions["create_permission"] == 1 ){
 		});
 	});
 </script>
-   <?php include("footer.php");?>
+   <?php } include("footer.php");?>

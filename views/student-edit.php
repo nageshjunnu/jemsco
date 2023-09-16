@@ -45,9 +45,7 @@ $students = $studenstModel->getStudentById($studentId);
   <?php
    if($permissions["update_permission"] == 1 ){ 
 
-		header('Location: students_list.php'); // Redirect to the login page if not logged in
-		exit();
-  }
+
   ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -330,4 +328,4 @@ $students = $studenstModel->getStudentById($studentId);
 		});
 	});
 </script>
-   <?php include("footer.php");?>
+   <?php } include("footer.php");?>

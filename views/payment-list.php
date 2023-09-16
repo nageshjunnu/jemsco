@@ -31,9 +31,8 @@ $payments = $studenstModel->getAllPayments();
 
 // die;
 if($permissions["read_permission"] == 1 ){ 
-    header('Location: dashboard.php'); 
-    exit();
-}
+ 
+
 ?>
 <?php include("header.php"); ?>
   
@@ -149,8 +148,4 @@ if($permissions["read_permission"] == 1 ){
 	<script src="assets/src/js/pages/data-table.js"></script>
 
 	
-	
-
-</body>
-
-</html>
+<?php } ?>
