@@ -100,7 +100,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 					<div class="box box-body">
 						<ul class="nav nav-tabs">
 							<li class="nav-item"><a class="nav-link active show" data-bs-toggle="tab" href="#about">About</a></li>
-							<li class="nav-item"><a class="school-edit.php?id<?php echo $schoolDetails['id']; ?>" data-bs-toggle="tab" href="#Account">Edit</a></li>                        
+							<li class="nav-item"><a class="nav-link show " data-bs-toggle="tab" href="school-edit.php?id<?php echo $schoolDetails['id']; ?>">Edit</a></li>                        
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane py-30 active show" id="about">
