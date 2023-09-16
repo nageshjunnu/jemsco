@@ -286,7 +286,7 @@ class UserModel {
         try {
             $query = "UPDATE student SET status = :status WHERE id = :id";
 
-            // echo $stmt;
+            // echo $query;
 
             $con = new dbModel();
             $connection = $con->conn();
@@ -295,7 +295,7 @@ class UserModel {
             $stmt->bindParam(':status', $status);
 
             $stmt->bindParam(':id', $studentId);
-            
+            echo $query;
             if ($stmt->execute()) {
                 return true;
             } else {
