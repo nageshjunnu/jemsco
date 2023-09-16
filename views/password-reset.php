@@ -38,8 +38,8 @@
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
                                             <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>">
-											<input type="password" name="new_password" placeholder="New Password" required>
-											<input type="password" name="confirm_password" placeholder="Confirm Password" required>
+											<input type="password" name="new_password"  class="form-control ps-15 bg-transparent" placeholder="New Password" required>
+											<input type="password" name="confirm_password"  class="form-control ps-15 bg-transparent" placeholder="Confirm Password" required>
 
 										</div>
 									</div>
