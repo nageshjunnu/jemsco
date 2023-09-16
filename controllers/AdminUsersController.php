@@ -1,8 +1,14 @@
 <?php
 require_once '../models/UserModel.php';
 // header('Content-Type: application/json');
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+// error_reporting(E_ALL);
+// ini_set('display_errors', '1');
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Include the PHPMailer autoloader
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
    $action = $_POST['action'];
