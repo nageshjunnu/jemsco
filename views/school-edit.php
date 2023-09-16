@@ -168,7 +168,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 	                                    <div class="form-group"> <label class="form-label">Co Ordinator Email</label> <input type="text" class="form-control" name="co_ordinator_email" value="<?php echo $schoolDetails['co_ordinator_email'];?>" > </div>
 	                                </div>
 	                                <div class="col-md-6">
-	                                    <div class="form-group"> <label class="form-label">Board</label> <input type="text" class="form-control" name="board_syllabus" value="<?php echo $schoolDetails['board'];?>" > </div>
+	                                    <div class="form-group"> <label class="form-label">Board</label> <input type="text" class="form-control" name="board" value="<?php echo $schoolDetails['board'];?>" > </div>
 	                                </div>
 	                            </div>
 	                            <div class="row">
