@@ -72,11 +72,11 @@
 				// Send an AJAX request to UserController to send the password reset email
 				$.ajax({
 					type: 'POST',
-					url: 'controllers/UserController.php',
+					url: '../controllers/UserController.php',
 					data: { email: email, action:"forgot-password" },
 					dataType: 'json',
 					success: function(response) {
-						$('#message').text(response.message);
+						alert(response.message);
 					},
 					error: function(xhr, status, error) {
 						console.error(error);
