@@ -94,33 +94,21 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								  </div>
 								  <div class="col-md-6">
 									<div class="form-group">
-									  <label class="form-label">Phone</label>
-									  <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>">
-									  
-									</div>
-								  </div>								
-								  <div class="col-md-6">
-									<div class="form-group">
-									  <label class="form-label">E-mail</label>
-									  <input type="email" class="form-control" name ="email" value="<?php echo $schoolDetails['email'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
-									</div>
-								  </div>
-								  
-								</div>
-								<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
 									  <label class="form-label">Contact Number</label>
 									  <input type="number" class="form-control" name="mobile" value="<?php echo $schoolDetails['mobile'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>">
 									</div>
-								  </div>
+								  </div>							
+								 								  
+								</div>
+								<div class="row">
+								
 									<div class="col-md-6">
 										<div class="form-group">
 										<label class="form-label">Alternate Number</label>
 										<input type="number" class="form-control" name="alternate_phone" value="<?php echo $schoolDetails['alternate_phone'];?>" placeholder="<?php echo $schoolDetails['alternate_phone'];?>">
 										</div>
 									</div>
-									</div>
+									
                                     <div class="col-md-6">
 										<div class="form-group">
 										<label class="form-label">Email</label>
@@ -136,7 +124,8 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 									</div>
 								</div>
 								</div>
-								<div class="col-lg-6 col-12">	
+								<div class="col-lg-6 col-12">
+								<div class="box">	
 									<div class="box-body">
 									<h4 class="box-title text-info mb-0 mt-20"><i class="ti-save me-15"></i> Address info</h4>
 									<hr class="my-15">
@@ -192,6 +181,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 					</div>
 					  <!-- /.box -->			
               		  	<div class="col-lg-6 col-12">
+							
 						<div class="box">
 							<div class="box-header with-border">
 							</div>	
