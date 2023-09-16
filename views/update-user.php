@@ -62,7 +62,7 @@ $user = $userModel->getUserDetailsBy($userId);
 								<h4 class="box-title text-info mb-0"><i class="ti-user me-15"></i> Personal Info</h4>
 								<hr class="my-15">
 								<div class="row">
-								<?php if($user['role'] == "superadmin"){ echo "readonly"; }else{?>
+								<?php if($user['role'] == "no access"){ echo "No access to edit "; }else{?>
                                 <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">User Name</label>
