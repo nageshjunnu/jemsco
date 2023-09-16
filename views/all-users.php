@@ -89,9 +89,11 @@ $usersdata = $usersModel->getAllUsers();
 								<?php if($permissions["update_permission"] == 1 ){ ?>
 								| <a href="update-user.php?id=<?php echo $item['id']; ?>"> <span class="badge badge-info">Edit</span></a>
 								<?php } ?>
-								<?php if($permissions["delete_permission"] == 1 ){ ?>
+								<?php if($permissions["delete_permission"] == 1  ){ 
+									 if($item['role'] == "superadmin"  ){ echo "No access"; }else{ ?>
+
 								| <button class="badge badge-danger delete-user" data-user-id="<?php echo $item['id']; ?>">Delete</button>
-								<?php } ?>
+								<?php } } ?>
 								</td>
 							</tr>
 							<?php } ?>
