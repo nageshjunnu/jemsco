@@ -142,7 +142,7 @@ function resetPassword() {
         $newPassword = $_POST['new_password']; 
 
         $userModel = new UserModel();
-        if (resetPasswordById($email, $newPassword)) {
+        if ($userModel->resetPasswordById($email, $newPassword)) {
            if(sendResetmail($email)){
             echo json_encode(['success' => true, 'message'=>'Password Updated Successfully !!!']);
             exit;
