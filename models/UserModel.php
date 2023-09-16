@@ -294,7 +294,7 @@ class UserModel {
             $stmt = $connection->prepare($query);
             $stmt->bindParam(':status', $status);
 
-            $stmt->bindParam(':id', $studentId);
+            $stmt->bindParam(':id', $student_id);
             echo $query;
             if ($stmt->execute()) {
                 return true;
