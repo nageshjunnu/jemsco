@@ -169,7 +169,7 @@ $schools = $schoolController->showAllSchool();
 								icon: 'success',
 								title: 'Deleted successfully'
 								})
-								window.location ="students_list.php";
+								window.location ="school.php";
 								} else {
 									//alert(response.message);
 									const Toast = Swal.mixin({

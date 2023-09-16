@@ -69,7 +69,7 @@ class SchoolModel {
     }
 
     public function getAllSchool() {
-        $query = "SELECT * FROM schools";
+        $query = "SELECT * FROM schools where status 1";
         $con = new dbModel();
         $connection = $con->conn();
         $stmt = $connection->prepare($query);
