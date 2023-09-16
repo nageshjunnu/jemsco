@@ -201,7 +201,7 @@ class UserModel {
     }
     
     public function getAllStudents() {
-        $query = "SELECT * FROM student";
+        $query = "SELECT * FROM student where status =1";
         $con = new dbModel();
         $connection = $con->conn();
         $stmt = $connection->prepare($query);
