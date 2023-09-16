@@ -61,6 +61,8 @@
 	<script src="assets/src/js/vendors.min.js"></script>
 	<script src="assets/src/js/pages/chat-popup.js"></script>
     <script src="assets/icons/feather-icons/feather.min.js"></script>	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 	<script>
 		$(document).ready(function() {
 			// Handle "Forgot Password" form submission
