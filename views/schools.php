@@ -87,7 +87,8 @@ $schools = $schoolController->showAllSchool();
 									<a href = "school-details.php?id=<?php echo $school['id']; ?>"><span class="badge badge-primary">View</span></a>
 									<?php } ?>
 									<?php if($permissions["update_permission"] == 1 ){ ?>
-								 | <span class="badge badge-info">Edit</span> |
+										<a href = "school-edit.php?id=<?php echo $school['id']; ?>">
+								 | <span class="badge badge-info">Edit</span></a> |
 								 <?php } ?>
 								<?php if($permissions["delete_permission"] == 1 ){ ?>
 								 <span class="badge badge-danger">Delete</span></td>
