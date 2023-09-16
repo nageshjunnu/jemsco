@@ -64,7 +64,7 @@ $examsCount = $studentModel->getExamsCount();
 					</div>
 				</div>
 				<?php 
-				print_r($permissions);
+				// print_r($permissions);
 					if($permissions["read_permission"] == 1){
 				?>
 				<div class="col-xl-3 col-md-6 col-12">

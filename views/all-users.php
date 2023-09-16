@@ -50,7 +50,7 @@ $usersdata = $usersModel->getAllUsers();
 				  <!-- <h3 class="box-title">Hover Export Data Table</h3> -->
 				  <h6 class="box-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
 				  <?php
-						if($user['role'] != "superadmin"){ 
+						if($permissions["create_permission"] == 1 ){ 
 					?>
                   <a href="add-new-user.php" class="waves-effect waves-light nav-link bg-primary btn-primary w-auto fs-14" style="float: right;">Add New user</a>
 				  <?php } ?>

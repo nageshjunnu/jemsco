@@ -30,7 +30,10 @@ $payments = $studenstModel->getAllPayments();
 // echo substr("srikanth", 0, 2);
 
 // die;
-
+if($permissions["read_permission"] == 1 ){ 
+    header('Location: dashboard.php'); 
+    exit();
+}
 ?>
 <?php include("header.php"); ?>
   

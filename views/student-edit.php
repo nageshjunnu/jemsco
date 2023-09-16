@@ -43,7 +43,7 @@ $students = $studenstModel->getStudentById($studentId);
 
   ?>
   <?php
-   if($user['role'] != "superadmin"){ 
+   if($permissions["update_permission"] == 1 ){ 
 
 		header('Location: students_list.php'); // Redirect to the login page if not logged in
 		exit();

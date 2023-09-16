@@ -7,8 +7,12 @@
 // require_once '../models/UserModel.php';
 require_once '../controllers/StudentController.php';
 
-  ?>
-  
+
+if($permissions["create_permission"] == 1 ){ 
+    header('Location: all-users.php'); 
+    exit();
+}
+    ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">

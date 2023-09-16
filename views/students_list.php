@@ -93,10 +93,15 @@ $students = $studenstModel->showAllStudents();
 								<td><?php echo $student['state']; ?></td>
 								<td><?php echo $student['mobile']; ?></td>
 								<td><a href = "student-details.php?id=<?php echo $student['id']; ?>">
-								
+
+								<?php if($permissions["read_permission"] == 1 ){ ?>
 								<span class="badge badge-primary">View</span></a> 
-								<?php if($user['role'] == "superadmin"){ ?>
-								| <a href="student-edit.php?id=<?php echo $student['id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span>
+								<?php } ?>
+								<?php if($permissions["update_permission"] == 1 ){ ?>
+								| <a href="student-edit.php?id=<?php echo $student['id']; ?>"><span class="badge badge-info">Edit</span></a>
+								<?php } ?>
+								<?php if($permissions["delete_permission"] == 1 ){ ?>
+								| <span class="badge badge-danger">Delete</span>
 								<?php } ?>
 							</td>
 							</tr>
