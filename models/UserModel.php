@@ -350,11 +350,11 @@ class UserModel {
         return $stmt->rowCount() == 1;
     }
 
-    public function resetPasswordById($userId, $newPassword){
+    public function resetPasswordById($email, $newPassword){
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
         try {
-            $query = "UPDATE users SET password = :newPassword WHERE email = :email";
+            $query = "UPDATE users SET password = :password WHERE email = :email";
 
             $con = new dbModel();
             $connection = $con->conn();
