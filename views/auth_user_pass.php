@@ -73,7 +73,7 @@
 				$.ajax({
 					type: 'POST',
 					url: '../controllers/AdminUsersController.php',
-					data: { email: email, action:"forgot-password" },
+					data: { "email": email, action:"forgot-password" },
 					dataType: 'json',
 					success: function(response) {
 						alert(response.message);
