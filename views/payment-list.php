@@ -82,7 +82,7 @@ if($permissions["read_permission"] == 1 ){
 								<th>Payment Id</th>
 								<th>Status</th>
 								<th>Date</th>
-								<th>Action</th>
+								<!-- <th>Action</th> -->
 							</tr>
 						</thead>
 						<tbody>
@@ -97,7 +97,7 @@ if($permissions["read_permission"] == 1 ){
 								<td><?php echo $payment['payment_id']; ?></td>
 								<td><?php echo $payment['payment_status']; ?></td>
 								<td><?php echo $payment['payment_timestamp']; ?></td>
-								<td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-primary">View</span></a> | <a href="student-edit.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td>
+								<!-- <td><a href = "student-details.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-primary">View</span></a> | <a href="student-edit.php?id=<?php echo $payment['student_id']; ?>"><span class="badge badge-info">Edit</span></a> | <span class="badge badge-danger">Delete</span></td> -->
 							</tr>
 							<?php endforeach; ?>
 						
