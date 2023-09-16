@@ -85,7 +85,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 	                                <div class="form-group"> <label class="form-label">School Name</label> <input type="text" class="form-control" name="student_name" value="<?php echo $schoolDetails['name'];?>"> <input type="hidden" value="<?php echo $schoolDetails['id'];?>" name="id"> </div>
 	                            </div>
 	                            <div class="col-md-6">
-	                                <div class="form-group"> <label class="form-label">Contact Number</label> <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>"> </div>
+	                                <div class="form-group"> <label class="form-label">Contact Number</label> <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['phone'];?>" placeholder="<?php echo $schoolDetails['phone'];?>"> </div>
 	                            </div>
 	                        </div>
 	                        <div class="row">
