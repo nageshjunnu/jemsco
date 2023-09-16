@@ -95,7 +95,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								  <div class="col-md-6">
 									<div class="form-group">
 									  <label class="form-label">Contact Number</label>
-									  <input type="number" class="form-control" name="mobile" value="<?php echo $schoolDetails['mobile'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>">
+									  <input type="number" class="form-control" name="phone" value="<?php echo $schoolDetails['mobile'];?>" placeholder="<?php echo $schoolDetails['mobile'];?>">
 									</div>
 								  </div>							
 								 								  
@@ -123,7 +123,7 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 									</div>
 									</div>
 								</div>
-								</div>
+								
 								<div class="col-lg-6 col-12">
 								<div class="box">	
 									<div class="box-body">
@@ -174,9 +174,10 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 										</div>
 									</div>
 								</div>
+								
 							</div>
-							
-						
+							</div>
+						</div>	
 					  </div>
 					</div>
 					  <!-- /.box -->			
