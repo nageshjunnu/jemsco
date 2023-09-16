@@ -30,13 +30,15 @@ $payments = $studenstModel->getAllPayments();
 // echo substr("srikanth", 0, 2);
 
 // die;
-if($permissions["read_permission"] == 1 ){ 
+
  
 
 ?>
 <?php include("header.php"); ?>
   
-  <?php include("sidebar.php"); ?>
+  <?php include("sidebar.php"); 
+ if($permissions["read_permission"] == 1 ){  
+  ?>
   
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
