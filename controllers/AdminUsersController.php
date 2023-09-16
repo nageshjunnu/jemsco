@@ -41,6 +41,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($action == 'school-update'){
         schoolUpdate();
     }
+
+    if($action == 'delete-school'){
+        deleteSchoolByid();
+    }
 }   
 
 
@@ -158,6 +162,22 @@ function deleteStudentByid() {
 
         $userModel = new UserModel();
         if ($userModel->deleteStudent($student_id,$status)) {
+            echo json_encode(['success' => true, 'message'=>'Successfully Deleted']);
+            exit;
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Deletion Failed']);
+            exit;
+        }
+    }
+}
+
+function deleteSchoolByid() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+        $id = $_POST['id'];
+        $status = 9;
+
+        $userModel = new UserModel();
+        if ($userModel->deleteSchool($id,$status)) {
             echo json_encode(['success' => true, 'message'=>'Successfully Deleted']);
             exit;
         } else {

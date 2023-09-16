@@ -308,6 +308,32 @@ class UserModel {
         }
     }
 
+    public function deleteSchool($id,$status) {
+        try {
+            $query = "UPDATE schools SET status = :status WHERE id = :id";
+
+            // echo $query;
+
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':status', $status);
+
+            $stmt->bindParam(':id', $id);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
     public function updateUserModal($userid,$username,$name, $last_name,$role,$email ,$mobile ,$password ){
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 

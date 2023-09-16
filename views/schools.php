@@ -90,9 +90,9 @@ $schools = $schoolController->showAllSchool();
 										<a href = "school-edit.php?id=<?php echo $school['id']; ?>">
 								 | <span class="badge badge-info">Edit</span></a> |
 								 <?php } ?>
-								<?php if($permissions["delete_permission"] == 1 ){ ?>
-								 <span class="badge badge-danger">Delete</span></td>
-								 <?php } ?>
+								 <?php if($permissions["delete_permission"] == 1 ){ ?>
+								| <button class="badge badge-danger delete-school" data-school-id="<?php echo $school['id']; ?>">Delete</button>
+								<?php } ?>
 							</tr>
 							<?php endforeach; ?>
 						
@@ -135,6 +135,69 @@ $schools = $schoolController->showAllSchool();
 	<!-- CRMi App -->
 	<script src="assets/src/js/template.js"></script>
 	<script src="assets/src/js/pages/data-table.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+	<script>
+        $(document).ready(function() {
+            $('.delete-school').click(function() {
+                var id = $(this).data('school-id');
+                
+                if (confirm('Are you sure you want to delete this user?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '../controllers/AdminUsersController.php',
+                        data: { id: id, action:"delete-school" },
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.success) {
+                               // alert(response.message);
+                                // Reload the user list or perform any other action as needed
+								const Toast = Swal.mixin({
+								toast: true,
+								position: 'top-end',
+								showConfirmButton: false,
+								timer: 3000,
+								timerProgressBar: true,
+								didOpen: (toast) => {
+									toast.addEventListener('mouseenter', Swal.stopTimer)
+									toast.addEventListener('mouseleave', Swal.resumeTimer)
+								}
+								})
+								
+								Toast.fire({
+								icon: 'success',
+								title: 'Deleted successfully'
+								})
+								window.location ="students_list.php";
+								} else {
+									//alert(response.message);
+									const Toast = Swal.mixin({
+									toast: true,
+									position: 'top-end',
+									showConfirmButton: false,
+									timer: 3000,
+									timerProgressBar: true,
+									didOpen: (toast) => {
+										toast.addEventListener('mouseenter', Swal.stopTimer)
+										toast.addEventListener('mouseleave', Swal.resumeTimer)
+									}
+									})
+									
+									Toast.fire({
+									icon: 'warning',
+									title: 'Deletion failed: ' + response.message
+									})
+								}
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
