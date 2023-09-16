@@ -37,7 +37,7 @@
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
-											<input type="email" class="form-control ps-15 bg-transparent" placeholder="Your Email" required>
+											<input type="email" name="email" class="form-control ps-15 bg-transparent" placeholder="Your Email" required>
 										</div>
 									</div>
 									  <div class="row">
@@ -73,7 +73,7 @@
 				$.ajax({
 					type: 'POST',
 					url: '../controllers/AdminUsersController.php',
-					data: { "email": email, action:"forgot-password" },
+					data: { email: email, action:'forgot-password' },
 					dataType: 'json',
 					success: function(response) {
 						alert(response.message);
