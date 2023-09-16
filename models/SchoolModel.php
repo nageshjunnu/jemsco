@@ -25,6 +25,48 @@ class SchoolModel {
         $conn->close();
     }
 
+    public function updateSchoolById($id, $name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad) {
+        try {
+            $query = "UPDATE schools SET name = :name, address = :address  , city = :city , state = :state , pincode = :pincode , is_trust_society = :is_trust_society , gst = :gst  , phone = :phone , email = :email , alternate_email = :alternate_email , principal = :principal , principal_phone = :principal_phone , principal_email = :principal_email ,  co_ordinator_name = :co_ordinator_name , co_ordinator_phone = :co_ordinator_phone, co_ordinator_email = :co_ordinator_email,board =:board,catalyst_olympiad = :catalyst_olympiad  WHERE id = :id";
+
+            // echo $stmt;
+
+            $con = new dbModel();
+            $connection = $con->conn();
+
+            $stmt = $connection->prepare($query);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':address', $address);
+            $stmt->bindParam(':city', $city);
+            $stmt->bindParam(':state', $state);
+            $stmt->bindParam(':pincode', $pincode);
+            $stmt->bindParam(':is_trust_society', $is_trust_society);
+            $stmt->bindParam(':gst', $gst);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':alternate_email', $alternate_email);
+            $stmt->bindParam(':principal', $principal);
+            $stmt->bindParam(':principal_phone', $principal_phone);
+            $stmt->bindParam(':principal_email', $principal_email);
+            $stmt->bindParam(':co_ordinator_name', $co_ordinator_name);
+            $stmt->bindParam(':co_ordinator_phone', $co_ordinator_phone);
+            $stmt->bindParam(':co_ordinator_email', $co_ordinator_email);
+            $stmt->bindParam(':board', $board);
+            $stmt->bindParam(':catalyst_olympiad', $catalyst_olympiad);
+
+            $stmt->bindParam(':id', $id);
+            
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            // Handle any potential exceptions here
+            echo $e->getMessage();
+            return false;
+        }
+    }
+
     public function getAllSchool() {
         $query = "SELECT * FROM schools";
         $con = new dbModel();

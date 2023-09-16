@@ -35,6 +35,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if($action == 'reset_password'){
         resetPassword();
     }
+
+    if($action == 'school-update'){
+        schoolUpdate();
+    }
 }   
 
 
@@ -89,6 +93,46 @@ function updateUser() {
     } else {
         echo json_encode(['success' => false, 'message' => 'No Id Available']);
              exit;
+    }
+}
+
+function schoolUpdate(){
+    if (isset($_POST["id"])) {
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $address = $_POST['address']?? "";
+        $city = $_POST['city']?? "";
+        $district = $_POST['district']?? "";
+        $state = $_POST['state']?? "";
+        $pincode = $_POST['pincode'];
+        $is_trust_society = $_POST['is_trust_society']?? "";
+        $gst = $_POST['gst']?? "";
+        $phone = $_POST['phone'];
+        $alternate_phone = $_POST['alternate_phone']?? "";
+        $email = $_POST['email']?? "";
+        $alternate_email = $_POST['alternate_email']?? "";
+        $principal = $_POST['principal']?? "";
+        $principal_phone = $_POST['principal_phone']?? "";
+        $principal_email = $_POST['principal_email']?? "";
+        $co_ordinator_name = $_POST['co_ordinator_name']?? "";
+        $co_ordinator_phone = $_POST['co_ordinator_phone']?? "";
+        $co_ordinator_email = $_POST['co_ordinator_email']?? "";
+        $board = $_POST['board']?? "";
+        $catalyst_olympiad = $_POST['catalyst_olympiad']?? "";
+        $status = $_POST['status']?? "0";
+        $bytes = random_bytes(16);
+        // Basic form validation
+        
+        $password = bin2hex($bytes);
+        // Save data to the database using the Student model
+        $schoolModel = new SchoolModel();
+        
+        if ($schoolModel->updateSchoolById($id, $name, $address, $city,$district, $state, $pincode, $is_trust_society, $gst, $phone, $alternate_phone,  $email,  $alternate_email, $principal,  $principal_phone, $principal_email, $co_ordinator_name,$co_ordinator_phone, $co_ordinator_email,$board, $catalyst_olympiad)) {
+            echo json_encode(['success' => true, 'message' => 'School Update successful!']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'School Updation failed.']);
+        }
+        
     }
 }
 
