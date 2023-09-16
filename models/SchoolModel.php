@@ -92,6 +92,19 @@ class SchoolModel {
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getSchoolByid($id) {
+        // Implement your database query here to fetch user details by username.
+        $query = "SELECT * FROM schools WHERE id = :id";
+        $con = new dbModel();
+        $connection = $con->conn();
+       
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 
 

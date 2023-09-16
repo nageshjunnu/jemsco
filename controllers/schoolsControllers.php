@@ -15,11 +15,11 @@ class SchoolContoller {
     //     return $students;
     // }
 
-    // public function getStudentDetailsById($id) {
-    //     $userModel = new UserModel();
-    //     $students = $userModel->getStudentById($id);
-    //     return $students;
-    // }
+    public function getSchoolDetailsById($id) {
+        $userModel = new SchoolModel();
+        $students = $userModel->getSchoolByid($id);
+        return $students;
+    }
 }
 
 
