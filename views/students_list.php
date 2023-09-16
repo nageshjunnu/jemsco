@@ -187,7 +187,7 @@ $students = $studenstModel->showAllStudents();
 								
 								Toast.fire({
 								icon: 'success',
-								title: 'Added successful'
+								title: 'Deleted successfully'
 								})
 								window.location ="students_list.php";
 								} else {
@@ -206,7 +206,7 @@ $students = $studenstModel->showAllStudents();
 									
 									Toast.fire({
 									icon: 'warning',
-									title: 'failed: ' + response.message
+									title: 'Deletion failed: ' + response.message
 									})
 								}
                         },
