@@ -175,11 +175,8 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 								
 							</div>
 							</div>
-						
-					
-					
-			
-					  <!-- /.box -->			
+
+							<!-- /.box -->			
               		  	<div class="col-lg-6 col-12">
 							
 						<div class="box">
@@ -294,7 +291,12 @@ $schoolDetails = $schoolController->getSchoolDetailsById($_GET['id']);
 					  <!-- /.box -->		
 					 
 					</div>  
-				<
+						</div>	
+					
+					
+			
+					  
+				
 		    </div>
 			</form>	
 			<!--/.col (left) -->
