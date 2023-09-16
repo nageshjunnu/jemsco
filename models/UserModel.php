@@ -354,14 +354,14 @@ class UserModel {
         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
         try {
-            $query = "UPDATE users SET password = :newPassword WHERE id = :id";
+            $query = "UPDATE users SET password = :newPassword WHERE email = :email";
 
             $con = new dbModel();
             $connection = $con->conn();
 
             $stmt = $connection->prepare($query);
             $stmt->bindParam(':password', $hashedPassword);
-            $stmt->bindParam(':id', $userid);
+            $stmt->bindParam(':email', $email);
             
             if ($stmt->execute()) {
                 return true;
